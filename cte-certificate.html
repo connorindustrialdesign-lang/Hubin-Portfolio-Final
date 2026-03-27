@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CTE Teaching Certificate — Connor Hubin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { background: #1a1a1a; position: relative; }
+      .letter-overlay { position: fixed; inset: 0; display: block; background: rgba(0,0,0,0.005); z-index: 1; }
+      .letter-wrap { position: relative; z-index: 2; max-width: 920px; margin: 0 auto; padding: 40px 20px 80px; }
+      .back-nav { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
+      .back-nav a { display: inline-flex; align-items: center; gap: 8px; color: #5B8FD4; text-decoration: none; font-size: 16px; font-weight: 500; transition: color 0.3s; }
+      .back-nav a:hover { color: #7aa5e8; }
+      .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(91, 143, 212, 0.1); }
+      .back-arrow svg { width: 16px; height: 16px; }
+      .letter-image-container { max-width: 860px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+      .letter-image-container img { width: 100%; height: auto; display: block; }
+      @media (max-width: 768px) {
+        .letter-wrap { padding: 30px 16px 60px; }
+        .back-nav { margin-bottom: 20px; }
+      }
+    </style>
+  </head>
+  <body data-page="certificate">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+      </div>
+    </header>
+
+    <a class="letter-overlay" href="about.html" aria-label="Back to Details"></a>
+
+    <div class="letter-wrap">
+      <div class="back-nav">
+        <a href="about.html">
+          <span class="back-arrow">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </span>
+          Back to Details
+        </a>
+      </div>
+
+      <div class="letter-image-container">
+        <picture>
+          <source srcset="https://deovv8pnl76k0.cloudfront.net/images/engineering%201%20%26%202/hubin-teaching-certificate-display.png">
+          <img src="assets/images/engineering 1 & 2/hubin-teaching-certificate-display.png" alt="CTE Teaching Certificate">
+        </picture>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
