@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drawings — Shope Concrete Products</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .portfolio-wrap { max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
+      .portfolio-header { text-align: center; margin-bottom: 50px; }
+      .portfolio-header h1 { font-size: 42px; margin: 0 0 12px 0; font-weight: 700; }
+      .portfolio-header p { font-size: 18px; color: var(--muted); margin: 0 0 20px 0; }
+      .back-link { display: inline-block; padding: 10px 20px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-size: 14px; transition: background 0.3s; margin-bottom: 40px; }
+      .back-link:hover { background: #333; }
+      
+      .drawings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .drawing-item { aspect-ratio: 3 / 4; background: #f5f5f5; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
+      .drawing-item:hover { transform: scale(1.02); }
+      .drawing-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      
+      @media (max-width: 1200px) { .drawings-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 900px) { .drawings-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) { .drawings-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body data-page="shope-portfolio">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10.5"/>
+              <circle cx="12" cy="8" r="1.5"/>
+              <path d="M12 11v6"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="industrial-design.html">Industrial Design</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="fabrication.html">Fabrication</a>
+      <a href="fine-arts.html">Fine Arts</a>
+    </nav>
+
+    <main class="portfolio-wrap">
+      <section class="portfolio-header">
+        <h1>Drawings</h1>
+        <p>Collection of technical drawings</p>
+        <a href="shope-concrete-detail.html" class="back-link">← Back to Project</a>
+      </section>
+
+      <section class="drawings-grid">
+        <!-- New Shope project images row -->
+        <div class="drawing-item"><img src="assets/images/shope/IMG_5523.jpeg" alt="Shope Project Photo 1"></div>
+        <div class="drawing-item"><img src="assets/images/shope/IMG_5524.jpeg" alt="Shope Project Photo 2"></div>
+        <div class="drawing-item"><img src="assets/images/shope/blueprint-example-display.jpg" alt="Blueprint Example Display"></div>
+
+        <!-- Example photos row (under blueprints) -->
+        <div class="drawing-item"><img src="assets/images/shope/blueprint-example.png" alt="Blueprint Example"></div>
+        <div class="drawing-item"><img src="assets/images/shope/blueprint-example 2.png" alt="Blueprint Example 2"></div>
+        <div class="drawing-item"><img src="assets/images/shope/blueprint-example-display 2.jpg" alt="Blueprint Example Display 2"></div>
+
+        <!-- Existing CAD drawing grid -->
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb.png" alt="CAD Drawing"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-1.png" alt="CAD Drawing 1"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-2.png" alt="CAD Drawing 2"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-3.png" alt="CAD Drawing 3"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-4.png" alt="CAD Drawing 4"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-5.png" alt="CAD Drawing 5"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-6.png" alt="CAD Drawing 6"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-7.png" alt="CAD Drawing 7"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-8.png" alt="CAD Drawing 8"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-9.png" alt="CAD Drawing 9"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-10.png" alt="CAD Drawing 10"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-11.png" alt="CAD Drawing 11"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-12.png" alt="CAD Drawing 12"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-13.png" alt="CAD Drawing 13"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-14.png" alt="CAD Drawing 14"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-15.png" alt="CAD Drawing 15"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-16.png" alt="CAD Drawing 16"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-17.png" alt="CAD Drawing 17"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-18.png" alt="CAD Drawing 18"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-19.png" alt="CAD Drawing 19"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-20.png" alt="CAD Drawing 20"></div>
+        <div class="drawing-item"><img src="assets/images/shope/cad drawings - Shope/thumb-21.png" alt="CAD Drawing 21"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fab Project 4 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: auto;
+            overflow: visible;
+            border-radius: 8px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .gallery-item.placeholder {
+            background: linear-gradient(135deg, #C97171 0%, #d98989 100%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 30px;
+            }
+
+            .project-header {
+                padding: 50px 30px 30px;
+            }
+
+            .project-header h1 {
+                font-size: 40px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .gallery-item.full-width {
+                grid-column: 1;
+            }
+
+            .project-header {
+                padding: 40px 20px 20px;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+
+            .gallery-item {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .project-header {
+                padding: 30px 16px 16px;
+            }
+
+            .project-header h1 {
+                font-size: 24px;
+                margin: 0 0 8px 0;
+            }
+
+            .project-header p {
+                font-size: 14px;
+            }
+
+            .gallery-item {
+                min-height: 160px;
+                padding: 12px;
+            }
+
+            .gallery-item.placeholder {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body data-page="fabrication">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header">
+
+        <h1>Fab Project 4</h1>
+        <p>Detailed fabrication work</p>
+    </div>
+
+    <div class="project-gallery">
+        <div class="gallery-item full-width"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/fab%20project%203-indexpage.JPG"><img src="assets/images/fab project 3/fab project 3-indexpage.JPG" alt="Fab Project 3 Main" style="width:100%;height:auto;"></picture></div>
+        <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/CONNORPORTFOLIO-36.JPG"><img src="assets/images/fab project 3/CONNORPORTFOLIO-36.JPG" alt="Fab Project 3 Detail 1" style="width:100%;height:auto;"></picture></div>
+        <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/CONNORPORTFOLIO-37.JPG"><img src="assets/images/fab project 3/CONNORPORTFOLIO-37.JPG" alt="Fab Project 3 Detail 2" style="width:100%;height:auto;"></picture></div>
+        <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/CONNORPORTFOLIO-38.JPG"><img src="assets/images/fab project 3/CONNORPORTFOLIO-38.JPG" alt="Fab Project 3 Detail 3" style="width:100%;height:auto;"></picture></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project D - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        /* Hero Image - Full Width */
+        .project-hero-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 600px;
+            background-image: url('https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number1.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            margin-bottom: 80px;
+        }
+
+        /* Project Title Section */
+        .project-title-block {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 40px;
+        }
+
+        .project-title-block h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .project-title-block p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Content Sections */
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .project-section {
+            margin-bottom: 88px;
+        }
+
+        .project-section:last-child {
+            margin-bottom: 56px;
+        }
+
+        .full-bleed-black {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            background: #000;
+            padding: 80px 40px;
+            margin-bottom: 0;
+        }
+
+        .full-bleed-black img {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: block;
+            height: auto;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .section-header {
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 14px 0;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 19px;
+            font-weight: 500;
+            color: #555;
+            max-width: 800px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Problem Section Layout */
+        .problem-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: stretch;
+            margin-bottom: 80px;
+        }
+
+        .problem-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+        }
+
+        .problem-image {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .problem-image .image-grid {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .problem-image .grid-item {
+            height: 100%;
+        }
+
+        .problem-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Functions Layout */
+        .functions-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .functions-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .functions-image {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .functions-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Image Layouts */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 0;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            border-radius: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 0 0;
+            background: transparent;
+            text-align: left;
+            color: #333;
+            letter-spacing: 0;
+            line-height: 1.5;
+        }
+
+        .grid-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .grid-item.tall {
+            grid-row: span 2;
+        }
+
+        .form-process-grid {
+            gap: 40px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-bottom: 0;
+            align-items: start;
+        }
+
+        .form-process-section .section-header {
+            margin-bottom: 0;
+        }
+
+        .form-process-section .section-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .form-process-grid .grid-item {
+            background: #f9f9f9;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+
+        .form-process-grid .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .form-process-grid .image-caption {
+            margin-top: auto;
+        }
+
+        /* Description/Caption Box */
+        .section-text {
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            max-width: 100%;
+        }
+
+        .section-text p {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 18px 0;
+        }
+
+        .section-text .problem-statement {
+            font-size: 27px;
+            font-weight: 600;
+            margin-top: 24px;
+        }
+
+        .functions-list {
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .functions-list li {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-section .section-text + .image-grid,
+        .project-section .section-header + .image-grid {
+            margin-top: 32px;
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .project-hero-image {
+                height: 450px;
+            }
+
+            .problem-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .problem-content {
+                padding-right: 0;
+            }
+
+            .functions-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-title-block h1 {
+                font-size: 48px;
+            }
+
+            .project-title-block {
+                padding: 0 30px;
+            }
+
+            .project-content {
+                padding: 0 30px;
+            }
+
+            .section-header h2 {
+                font-size: 40px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.span-2 {
+                grid-column: 1;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+
+            .section-text {
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-hero-image {
+                height: 300px;
+                margin-bottom: 60px;
+            }
+
+            .project-title-block {
+                margin-bottom: 80px;
+                padding: 0 20px;
+            }
+
+            .project-title-block h1 {
+                font-size: 36px;
+            }
+
+            .project-title-block p {
+                font-size: 16px;
+            }
+
+            .project-content {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+
+            .section-header p {
+                font-size: 17px;
+                line-height: 1.55;
+            }
+
+            .section-text {
+                padding: 0;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .full-bleed-black {
+                padding: 40px 20px;
+                margin-bottom: 0;
+            }
+
+            .form-process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-section .section-text + .image-grid,
+            .project-section .section-header + .image-grid {
+                margin-top: 24px;
+            }
+
+            .section-text p,
+            .functions-list li {
+                line-height: 1.58;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-hero-image {
+                height: 240px;
+                margin-bottom: 40px;
+            }
+
+            .project-title-block {
+                margin-bottom: 48px;
+                padding: 0 16px;
+            }
+
+            .project-title-block h1 {
+                font-size: 24px;
+                margin: 0 0 12px 0;
+                letter-spacing: -1px;
+            }
+
+            .project-title-block p {
+                font-size: 14px;
+            }
+
+            .project-content {
+                padding: 0 16px;
+            }
+
+            .project-section {
+                margin-bottom: 60px;
+            }
+
+            .section-header h2 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .section-header p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            .project-section .section-text + .image-grid,
+            .project-section .section-header + .image-grid {
+                margin-top: 18px;
+            }
+
+            .section-text {
+                padding: 0;
+                margin-bottom: 0;
+            }
+
+            .section-text p,
+            .functions-list li {
+                font-size: 17px;
+                line-height: 1.55;
+            }
+
+            .image-caption {
+                font-size: 16px;
+                padding: 10px 0 0;
+            }
+
+            .full-bleed-black {
+                padding: 30px 16px;
+                margin-bottom: 0;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="project-hero-image"></div>
+
+    <!-- Project Title -->
+    <div class="project-title-block">
+        <h1>Brij</h1>
+        <p>bridging the gap between senior citizens and technology</p>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+        <section class="project-section problem-layout">
+            <div class="problem-content">
+                <div class="section-header">
+                    <h2>Problem</h2>
+                </div>
+                <div class="section-text">
+                    <p>Technology evolves faster than people. Often when someone reaches a certain age they no longer feel a need to learn or understand the current trending tech. In some cases they would loss of functionality in order to preserve the user experience of a familiar format.</p>
+                    <p class="problem-statement"><strong>Brij's aim is to aid users who fall into this catagory an ability to connect with friends and family.</strong></p>
+                </div>
+            </div>
+            <div class="problem-image">
+                <div class="image-grid grid-1">
+                    <div class="grid-item">
+                        <picture>
+                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/keys.jpg">
+                            <img src="assets/images/project%20D/keys.jpg" alt="Project D problem board">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section form-process-section">
+            <div class="section-header">
+                <h2>Form Development</h2>
+            </div>
+            <div class="image-grid grid-2 form-process-grid">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-d/concept%20sketch%20%231.jpg"><img src="assets/images/processed/project-d/concept%20sketch%20%231.jpg" alt="Concept sketch 1"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-d/concept%20sketch%20%232.jpg"><img src="assets/images/processed/project-d/concept%20sketch%20%232.jpg" alt="Concept sketch 2"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section functions-layout">
+            <div class="functions-content">
+                <div class="section-header">
+                    <h2>Functions</h2>
+                    <p>the essential functions of a phone with the form factor of a typewriter.</p>
+                </div>
+                <div class="section-text">
+                    <ul class="functions-list">
+                        <li>Make calls</li>
+                        <li>Read and send emails and texts</li>
+                        <li>Print any message correspondence</li>
+                        <li>Active typing through a heads-up display</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="functions-image">
+                <picture>
+                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/topview%202.jpg">
+                    <img src="assets/images/project%20D/topview%202.jpg" alt="Functions overview graphic">
+                </picture>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>User Interface</h2>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/menu.png"><img src="assets/images/project%20D/menu.png" alt="UI and UX interface image"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Heads-Up Display</h2>
+            </div>
+            <div class="section-text">
+                <p>The heads-up display allows users to print out any email or text message correspondence. Users can also see the email they are drafting in real-time through the heads-up display, making it easy to compose messages on the familiar typewriter form factor.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><img src="assets/images/project%20D/message.jpg" alt="Heads-up display message view"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Hand-Held Selector</h2>
+                <p>speaker and microphone for making phone calls.</p>
+            </div>
+            <div class="image-grid grid-3">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-d/Number11.19.jpg"><img src="assets/images/processed/project-d/Number11.19.jpg" alt="Hand held selector"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number3.11.jpg"><img src="assets/images/project%20D/Number3.11.jpg" alt="Hand held selector detail"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number6.14.jpg"><img src="assets/images/project%20D/Number6.14.jpg" alt="Charging pad"></picture><div class="image-caption">charging pad for selector</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Printer</h2>
+            </div>
+            <div class="section-text">
+                <p>When reading a long email or wanting to view details from a message later, the user can print out whatever they are viewing on the heads-up display. This allows for physical copies of important correspondence that can be saved or shared without requiring a smartphone or computer.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number4.12%202.jpg"><img src="assets/images/project%20D/Number4.12%202.jpg" alt="Printer component"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The final sequence combines hero renders and production-facing views to show form, printability, and the heads-up display behavior in context.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number13.21%202.jpg"><img src="assets/images/project%20D/Number13.21%202.jpg" alt="Final product hero view"></picture></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

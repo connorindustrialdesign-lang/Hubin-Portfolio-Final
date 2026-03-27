@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project D - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        /* Hero Image - Full Width */
+        .project-hero-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 600px;
+            background-image: url('assets/images/project%20D/Number1.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            margin-bottom: 80px;
+        }
+
+        /* Project Title Section */
+        .project-title-block {
+            max-width: 1200px;
+            margin: 0 auto 120px;
+            padding: 0 40px;
+        }
+
+        .project-title-block h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .project-title-block p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Content Sections */
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .project-section {
+            margin-bottom: 140px;
+        }
+
+        .full-bleed-black {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            background: #000;
+            padding: 80px 40px;
+            margin-bottom: 120px;
+        }
+
+        .full-bleed-black img {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: block;
+            height: auto;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Image Layouts */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            border-radius: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 8px 12px;
+            background: #e8e8e8;
+            text-align: center;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .grid-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .grid-item.tall {
+            grid-row: span 2;
+        }
+
+        /* Description/Caption Box */
+        .section-text {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 0;
+            margin-bottom: 80px;
+            max-width: 900px;
+        }
+
+        .section-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 16px 0;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .project-hero-image {
+                height: 450px;
+            }
+
+            .project-title-block h1 {
+                font-size: 48px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.span-2 {
+                grid-column: 1;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-hero-image {
+                height: 300px;
+                margin-bottom: 60px;
+            }
+
+            .project-title-block {
+                margin-bottom: 80px;
+                padding: 0 20px;
+            }
+
+            .project-title-block h1 {
+                font-size: 36px;
+            }
+
+            .project-content {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .section-text {
+                padding: 30px;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .full-bleed-black {
+                padding: 40px 20px;
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html" class="category-logo">Connor Hubin</a>
+        <a href="index.html#industrial-design">Industrial Design</a>
+        <a href="index.html#engineering">Engineering</a>
+        <a href="index.html#fabrication">Fabrication</a>
+        <a href="index.html#fine-arts">Fine Arts</a>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="project-hero-image"></div>
+
+    <!-- Project Title -->
+    <div class="project-title-block">
+        <h1>Project D</h1>
+        <p>A design-focused exploration of form and function</p>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+        <section class="project-section">
+            <div class="section-header">
+                <h2>The Problem</h2>
+            </div>
+            <div class="section-text">
+                <p>OCR extraction indicates this project statement centers on bridging technology and senior citizens through an interface that feels approachable and familiar.</p>
+                <p>Source text captured from the board has been pulled into layout text while the image itself is now a cleaned processed version.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item">
+                    <img src="assets/images/processed/project-d/Number5.13.jpg" alt="Project D problem board">
+                    <div class="image-caption">IMAGE 1</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Design Iterations</h2>
+            </div>
+            <div class="section-text">
+                <p>Concept sketching and iterative modeling established the physical language, interaction zones, and component hierarchy for the product direction.</p>
+            </div>
+            <div class="image-grid grid-3">
+                <div class="grid-item"><img src="assets/images/processed/project-d/concept%20sketch%20%231.jpg" alt="Concept sketch 1"><div class="image-caption">IMAGE 2</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/concept%20sketch%20%232.jpg" alt="Concept sketch 2"><div class="image-caption">IMAGE 3</div></div>
+                    <div class="grid-item"><img src="assets/images/processed/project-d/Number3.11.jpg" alt="Iteration 3"><div class="image-caption">IMAGE 4</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number4.12%202.jpg" alt="Iteration 4"><div class="image-caption">IMAGE 5</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number5.13.jpg" alt="Iteration 5"><div class="image-caption">IMAGE 6</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number6.14.jpg" alt="Iteration 6"><div class="image-caption">IMAGE 7</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number7.15.jpg" alt="Iteration 7"><div class="image-caption">IMAGE 8</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number8.16.jpg" alt="Iteration 8"><div class="image-caption">IMAGE 9</div></div>
+                 <div class="grid-item"><img src="assets/images/processed/project-d/topview.jpg" alt="Top view study"><div class="image-caption">IMAGE 10</div></div>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number5.13.jpg" alt="Heads up display concept"><div class="image-caption">IMAGE 11</div></div>
+            </div>
+            <div class="section-text">
+                <p>Extracted notes referenced controls like backspace, tab, shift, and enter, guiding tactile button mapping and interaction consistency.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Interface</h2>
+            </div>
+            <div class="section-text">
+                <p>UI/UX artifacts were extracted and normalized into text-driven content blocks to separate storytelling from visual boards.</p>
+                <p>Key extracted items include main menu actions, SMS/email navigation, and modular remote interaction behavior.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div class="grid-item"><img src="assets/images/processed/project-d/2.jpg" alt="Problem and insight interface board"><div class="image-caption">IMAGE 12</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/modular%20remote.jpg" alt="Modular remote feature board"><div class="image-caption">IMAGE 13</div></div>
+            </div>
+            <div class="full-bleed-black">
+                <img src="assets/images/processed/project-d/menu.png" alt="UI menu interface">
+                <div class="image-caption">IMAGE 14</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The final sequence combines hero renders and production-facing views to show form, printability, and the heads-up display behavior in context.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number11.19.jpg" alt="Final product view 1"><div class="image-caption">IMAGE 15</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number12.20.jpg" alt="Final product view 2"><div class="image-caption">IMAGE 16</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number13.21.jpg" alt="Final product view 3"><div class="image-caption">IMAGE 17</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number2.10%202.jpg" alt="Printability view"><div class="image-caption">IMAGE 18</div></div>
+                <div class="grid-item"><img src="assets/images/processed/project-d/Number2.jpg" alt="Final render money shot"><div class="image-caption">IMAGE 19</div></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

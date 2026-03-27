@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connor Hubin – Curriculum Vitae</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-iphone.css">
+  <style>
+    /* ...existing code... */
+  </style>
+ </head>
+ <body>
+   <button id="download-pdf-btn" style="position:fixed;top:24px;right:24px;z-index:999;background:#0b6b97;color:#fff;border:none;padding:12px 22px;border-radius:8px;font-size:1.1em;box-shadow:0 2px 8px rgba(0,0,0,0.12);cursor:pointer;transition:background 0.2s;">Download PDF</button>
+   <script>
+     // ...existing code...
+   </script>
+   <style>
+     /* ...existing code... */
+   </style>
+   <div class="cv-container">
+     <!-- ...existing CV content... -->
+   </div>
+ </body>
+ </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connor Hubin – Curriculum Vitae</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-iphone.css">
+  <style>
+        @media print {
+          .section, .project-title, .job-title, .job-meta, ul, .skills-list, .job-entry, h2, h1, .cv-header {
+            page-break-inside: avoid !important;
+            page-break-after: avoid !important;
+            page-break-before: avoid !important;
+          }
+          body {
+            background: #fff !important;
+            color: #222 !important;
+          }
+          .cv-container {
+            box-shadow: none !important;
+            background: #fff !important;
+            border-radius: 0 !important;
+            max-width: 100% !important;
+            padding: 32px 48px !important;
+            margin: 0 !important;
+          }
+          h1, h2 {
+            color: #111 !important;
+          }
+          a {
+            color: #0b6b97 !important;
+            text-decoration: underline !important;
+            word-break: break-all;
+          }
+          .cv-header .links {
+            word-break: break-all;
+          }
+          @page {
+            margin: 32mm 18mm 32mm 18mm;
+          }
+        }
+    body {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .cv-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px 24px;
+      background: #fafaf8;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 24px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.7em;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .cv-header {
+      margin-bottom: 24px;
+    }
+    .cv-header .name {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    .cv-header .info {
+      margin-top: 6px;
+      font-size: 1em;
+      color: #444;
+    }
+    .cv-header .links {
+      margin-top: 8px;
+      font-size: 1em;
+    }
+    ul {
+      margin: 8px 0 0 24px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 6px;
+      font-size: 1em;
+    }
+    .job-title {
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    .job-meta {
+      color: #555;
+      font-size: 1.05em;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 8px;
+    }
+    .skills-list ul {
+      margin-left: 0;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1.05em;
+    }
+    @media (max-width: 600px) {
+      .cv-container {
+        padding: 12px 6px;
+      }
+      h1 {
+        font-size: 1.3em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+  <body>
+    <button id="download-pdf-btn" style="position:fixed;top:24px;right:24px;z-index:999;background:#0b6b97;color:#fff;border:none;padding:12px 22px;border-radius:8px;font-size:1.1em;box-shadow:0 2px 8px rgba(0,0,0,0.12);cursor:pointer;transition:background 0.2s;">Download PDF</button>
+    <script>
+            // Force spacing between job entries
+            document.addEventListener('DOMContentLoaded', function() {
+              var jobs = document.querySelectorAll('.job-entry');
+              jobs.forEach(function(job) {
+                job.style.marginBottom = '64px';
+              });
+            });
+      document.getElementById('download-pdf-btn').onclick = function() {
+        window.print();
+      };
+    </script>
+    <style>
+      @media print {
+        #download-pdf-btn { display: none !important; }
+      }
+      #download-pdf-btn:hover {
+        background: #095a7c;
+      }
+    </style>
+<body>
+  <div class="cv-container">
+    <div class="cv-header section">
+      <div class="name">Connor Hubin</div>
+      <div class="info">Walla Walla, Washington, USA<br>253-709-2221<br>connor.industrialdesign@gmail.com</div>
+      <div class="links">
+        <a href="https://connorhubin.com" target="_blank">connorhubin.com</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div><strong>Walla Walla University</strong><br>Bachelor of Science – Product Design<br>2016–2020</div>
+    </div>
+
+    <div class="section">
+      <h2>Professional Experience</h2>
+      <div class="job-entry" style="margin-top: 48px;">
+        <div class="job-title">CTE Construction and Engineering Teacher</div>
+        <div class="job-meta">Walla Walla High School, Walla Walla, WA | 2023–2026</div>
+        <ul>
+          <li>Developed and taught curriculum in engineering, fabrication, and design</li>
+          <li>Guided students through hands-on projects using CNC, CAD, and digital fabrication tools</li>
+          <li>Managed classroom and lab safety, equipment maintenance, and student mentorship</li>
+          <li>Taught Engineering Design 1 & 2, guiding students through engineering fundamentals, structured design process, and project-based technical problem solving</li>
+          <li>Emphasized real-world application, documentation quality, and iterative design thinking</li>
+          <li>Led hands-on team and individual projects connecting engineering principles to practical classroom outcomes</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Freelance Design and Fabrication</div>
+        <div class="job-meta">Peak Studios | 2022–2023</div>
+        <ul>
+          <li>Custom signage for local businesses</li>
+          <li>Sculpture fabrication</li>
+          <li>Part design for wine-making equipment</li>
+          <li>Interior design</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">CNC Programmer and Operator</div>
+        <div class="job-meta">Walla Walla Foundry | 2021–2022</div>
+        <ul>
+          <li>Programmed G-code and operated CNC routers and waterjet cutting machines</li>
+          <li>Managed waterjet department operations and produced fabrication parts for company projects</li>
+          <li>Collaborated with fabrication teams to manufacture components for large-scale sculptures</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Product Engineer</div>
+        <div class="job-meta">Shope Concrete Products, Puyallup, WA | 2021</div>
+        <ul>
+          <li>Oversaw development and refinement of detailed shop drawings for concrete infrastructure solutions</li>
+          <li>Collaborated with production and design teams to optimize drawings for manufacturability</li>
+          <li>Managed technical communication between design and fabrication teams, ensuring precision from concept through production</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Industrial Designer</div>
+        <div class="job-meta">Valeo Cases, Portland, OR | 2019–2021</div>
+        <ul>
+          <li>Advanced prototyping.</li>
+          <li>Performed extensive design research.</li>
+          <li>Contacted and worked with manufacturers to order materials.</li>
+          <li>Complete product assembly.</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Product Designer</div>
+        <div class="job-meta">The Cyrkus, Portland, OR | 2018–2020</div>
+        <ul>
+          <li>App and website development.</li>
+          <li>UI/UX design for IOS and Android platforms.</li>
+          <li>Graphic and logo design.</li>
+          <li>Physical marketing design.</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Building Design Consultant</div>
+        <div class="job-meta">Young and Associates, Seattle, WA | 2020</div>
+        <ul>
+          <li>Surveyed structures to produce complete CAD drawings.</li>
+          <li>Detailed photography.</li>
+          <li>Inspected and estimated damage.</li>
+          <li>Calculated material and building costs.</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+
+      <div class="job-entry">
+        <div class="job-title">Engineering Intern</div>
+        <div class="job-meta">Shope Concrete Products, Puyallup, WA | 2018</div>
+        <ul>
+          <li>Developed technical drawings and CAD models for precast concrete infrastructure components</li>
+          <li>Translated engineering specifications into manufacturing drawings for municipal and commercial construction projects</li>
+        </ul>
+      </div>
+      <div class="job-entry">
+        <div class="job-title">Lab Technician – Technology Department</div>
+        <div class="job-meta">Walla Walla University | 2016–2019</div>
+        <ul>
+          <li>Operated digital fabrication equipment including CNC routers, 3D printers, and laser cutters</li>
+          <li>Assisted students with prototyping and fabrication projects</li>
+          <li>Provided technical instruction for lab equipment and software</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills USA</h2>
+      <ul>
+        <li>Led students to compete in SkillsUSA competitions, advancing to State in both 2025 and 2026</li>
+        <li>2025: Coached Carpentry and 3D Modeling teams</li>
+        <li>2026: Coached Engineering Technology and Architectural Drafting teams</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills-list">
+        <ul>
+          <li style="list-style-type:none;"><strong>Proficient in:</strong></li>
+          <li>Rhino</li>
+          <li>AutoCAD</li>
+          <li>SolidWorks</li>
+          <li>PowerMill</li>
+          <li>KeyShot</li>
+          <li>Vectric Aspire</li>
+          <li>Adobe Creative Suite</li>
+        </ul>
+        <ul>
+          <li style="list-style-type:none;"><strong>Fabrication Experience with:</strong></li>
+          <li>CNC machining</li>
+          <li>Waterjet cutting</li>
+          <li>Laser cutting</li>
+          <li>Woodworking</li>
+          <li>Welding</li>
+          <li>Silicone mold making</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Selected Design Projects</h2>
+      <div class="project-title">CTE Pack – Industrial Design (2025)</div>
+      <div style="font-size:0.98em; margin-bottom:4px;">
+        <a href="project-a-detail.html" target="_blank">View project page</a>
+      </div>
+      <div style="margin-bottom:10px;">Short curriculum and project pack for CTE students.</div>
+      <div class="project-title">Carte Interior Design & Signage Project – Fabrication (2022)</div>
+      <div style="font-size:0.98em; margin-bottom:4px;">
+        <a href="file:///Users/connor/Desktop/untitled%20folder%202/carte-detail.html" target="_blank">View project page</a>
+      </div>
+      <div style="margin-bottom:10px;">Interior design and custom signage for Carte Coffee.</div>
+    </div>
+
+    <div class="section">
+      <h2>Certifications & Additional Skills</h2>
+      <ul>
+        <li>CTE Teaching Endorsement</li>
+        <li>First Aid Certification</li>
+        <li>OSHA Certified</li>
+        <li>CNC Programming Certifications</li>
+        <li>Forklift Certified</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Languages</h2>
+      <ul>
+        <li>English – Native</li>
+        <li>Spanish – Basic</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

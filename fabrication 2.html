@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fabrication — Connor Hubin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .category-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 20px 60px; }
+      .category-wrap h2 { margin: 0 0 8px; position: absolute; left: -9999px; }
+      .category-wrap p { margin: 0 0 28px; color: var(--muted); position: absolute; left: -9999px; }
+      .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .cat-card { display: block; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; background: #f2f2f2; position: relative; }
+      .cat-card:first-child { grid-column: 1 / -1; }
+      .cat-card img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+      .cat-card:first-child img { aspect-ratio: 16 / 9; }
+      .cat-card .placeholder-img { width: 100%; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 18px; }
+      .cat-card.grad1 .placeholder-img { background: linear-gradient(135deg, #C97171 0%, #d98989 100%); }
+      .cat-card.grad2 .placeholder-img { background: linear-gradient(135deg, #d98989 0%, #e5a1a1 100%); }
+      .cat-card.grad3 .placeholder-img { background: linear-gradient(135deg, #e5a1a1 0%, #f0b8b8 100%); }
+      .cat-label { padding: 12px 10px; font-weight: 700; }
+      @media (max-width: 768px) {
+        .cat-grid { grid-template-columns: 1fr; }
+        .cat-card:first-child { grid-column: 1; }
+      }
+    </style>
+  </head>
+  <body data-page="fabrication">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10.5"/>
+              <circle cx="12" cy="8" r="1.5"/>
+              <path d="M12 11v6"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="industrial-design.html">Industrial Design</a>
+      <a href="engineering.html">Engineering</a>
+      <a href="fabrication.html">Fabrication</a>
+      <a href="fine-arts.html">Fine Arts</a>
+    </nav>
+
+    <main class="category-wrap">
+      <h2>Fabrication</h2>
+      <p>Four fabrication projects.</p>
+
+      <section class="cat-grid">
+        <a class="cat-card" href="project-e-detail.html">
+          <img src="assets/images/project-e.jpeg" alt="Fab Project 1">
+          <div class="cat-label">Fab Project 1</div>
+        </a>
+        <a class="cat-card grad1" href="fabrication-1-detail.html">
+          <div class="placeholder-img"></div>
+          <div class="cat-label">Fab Project 2</div>
+        </a>
+        <a class="cat-card grad2" href="fabrication-2-detail.html">
+          <div class="placeholder-img"></div>
+          <div class="cat-label">Fab Project 3</div>
+        </a>
+        <a class="cat-card grad3" href="fabrication-3-detail.html">
+          <div class="placeholder-img"></div>
+          <div class="cat-label">Fab Project 4</div>
+        </a>
+      </section>
+
+      <section class="category-flow">
+        <a href="fine-arts.html" class="flow-link">Next: Fine Arts →</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

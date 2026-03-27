@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project B - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: auto;
+            overflow: visible;
+            border-radius: 8px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .gallery-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.single {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.highlight {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 30px;
+            }
+
+            .gallery-item.highlight {
+                grid-column: span 2;
+            }
+            
+            .project-header {
+                padding: 50px 30px 30px;
+            }
+
+            .project-header h1 {
+                font-size: 40px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .gallery-item.full-width,
+            .gallery-item.single,
+            .gallery-item.highlight {
+                grid-column: 1;
+            }
+
+            .project-header {
+                padding: 40px 20px 20px;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .project-header {
+                padding: 30px 16px 16px;
+            }
+
+            .project-header h1 {
+                font-size: 24px;
+                margin: 0 0 8px 0;
+            }
+
+            .project-header p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div style="width: 100vw; margin: 0; padding: 0; position: relative; left: 50%; right: 50%; transform: translate(-50%, 0);">
+                <picture>
+                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%201.jpg">
+                    <img src="assets/images/project B - sobri/sobri 1.jpg" alt="Sobri 1" style="width: 100vw; max-width: 100%; border-radius: 0; box-shadow: 0 4px 24px rgba(0,0,0,0.08); display: block;">
+                </picture>
+        <div style="font-size: 1.1em; color: #444; margin-top: 10px; margin-bottom: 40px; text-align: right; padding-right: 32px;">senior project by Connor Hubin and Alejandro Pazco</div>
+        </div>
+
+        <!-- Restored Problem and User Section -->
+        <div class="project-section">
+            <h2 style="margin-left: 32px;">Problem and User</h2>
+            <div class="project-gallery" style="display: flex; flex-wrap: wrap; gap: 24px; margin-left: 32px; margin-right: 32px;">
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%202.jpg"><img src="assets/images/project B - sobri/sobri 2.jpg" alt="Sobri 2" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%203.jpg"><img src="assets/images/project B - sobri/sobri 3.jpg" alt="Sobri 3" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%204.jpg"><img src="assets/images/project B - sobri/sobri 4.jpg" alt="Sobri 4" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%205.jpg"><img src="assets/images/project B - sobri/sobri 5.jpg" alt="Sobri 5" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%206.jpg"><img src="assets/images/project B - sobri/sobri 6.jpg" alt="Sobri 6" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%207.jpg"><img src="assets/images/project B - sobri/sobri 7.jpg" alt="Sobri 7" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%208.jpg"><img src="assets/images/project B - sobri/sobri 8.jpg" alt="Sobri 8" style="width: 100%;"></picture></div></div>
+                <div style="flex: 1 1 48%; min-width: 320px;"><div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%209.jpg"><img src="assets/images/project B - sobri/sobri 9.jpg" alt="Sobri 9" style="width: 100%;"></picture></div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="project-section">
+        <h2 style="margin-left: 32px;">Form Development and Prototype</h2>
+        <div class="project-gallery" style="display: flex; flex-wrap: wrap; gap: 24px; margin-left: 32px; margin-right: 32px;">
+            <!-- Image 13 full width -->
+            <div style="flex-basis: 100%; margin-bottom: 24px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2013.jpg"><img src="assets/images/project B - sobri/sobri 13.jpg" alt="Sobri 13" style="width: 100vw; max-width: 100%;"></picture></div>
+            </div>
+            <!-- Images 14 and 15 split width -->
+            <div style="flex: 1 1 48%; min-width: 320px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2014.jpg"><img src="assets/images/project B - sobri/sobri 14.jpg" alt="Sobri 14" style="width: 100%;"></picture></div>
+            </div>
+            <div style="flex: 1 1 48%; min-width: 320px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2015.jpg"><img src="assets/images/project B - sobri/sobri 15.jpg" alt="Sobri 15" style="width: 100%;"></picture></div>
+            </div>
+            <!-- Image 10 only -->
+            <div style="flex: 2 1 66%; min-width: 320px; margin-top: 24px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2010.jpg"><img src="assets/images/project B - sobri/sobri 10.jpg" alt="Sobri 10" style="width: 100%;"></picture></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <h2 style="margin-left: 32px;">Final Product</h2>
+        <div class="project-gallery" style="display: flex; flex-wrap: wrap; gap: 24px; margin-left: 32px; margin-right: 32px;">
+            <!-- Row 1: Image 16a in box 17 full width -->
+            <div style="flex-basis: 100%; margin-bottom: 24px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2016a.jpg"><img src="assets/images/project B - sobri/sobri 16a.jpg" alt="Sobri 16a" style="width: 100vw; max-width: 100%;"></picture></div>
+            </div>
+            <!-- Row 2: Image 17 and 16b split width -->
+            <div style="flex: 1 1 48%; min-width: 320px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2017.jpg"><img src="assets/images/project B - sobri/sobri 17.jpg" alt="Sobri 17" style="width: 100%;"></picture></div>
+            </div>
+            <div style="flex: 1 1 48%; min-width: 320px;">
+                <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2016b.jpg"><img src="assets/images/project B - sobri/sobri 16b.jpg" alt="Sobri 16b" style="width: 100%;"></picture></div>
+            </div>
+                <!-- Animation Clip: sobri clip 1 -->
+                <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
+                                        <video autoplay loop muted playsinline>
+                                            <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%201.mov" type="video/quicktime">
+                                            <source src="assets/images/project B - sobri/sobri clip 1.mov" type="video/quicktime">
+                                        </video>
+                </div>
+                <!-- Animation Clip: sobri clip 2 -->
+                <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
+                                        <video autoplay loop muted playsinline style="width:100%;max-width:100vw;">
+                                            <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%202.mov" type="video/quicktime">
+                                            <source src="assets/images/project B - sobri/sobri clip 2.mov" type="video/quicktime">
+                                        </video>
+                </div>
+                <!-- Animation Clip: sobri clip 3 -->
+                <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
+                                        <video autoplay loop muted playsinline>
+                                            <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%203.mov" type="video/quicktime">
+                                            <source src="assets/images/project B - sobri/sobri clip 3.mov" type="video/quicktime">
+                                        </video>
+                </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <h2 style="margin-left: 32px;">Packaging</h2>
+        <div class="project-gallery" style="display: block; margin-left: 32px; margin-right: 32px;">
+            <!-- Image 18 full width -->
+            <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2018.jpg"><img src="assets/images/project B - sobri/sobri 18.jpg" alt="Sobri 18" style="width: 100vw; max-width: 100%;"></picture>
+            </div>
+            <!-- Images 19 and 20 split row -->
+            <div style="display: flex; gap: 24px; margin-bottom: 24px;">
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2019.jpg"><img src="assets/images/project B - sobri/sobri 19.jpg" alt="Sobri 19" style="width: 100%;"></picture>
+                </div>
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2020.jpg"><img src="assets/images/project B - sobri/sobri 20.jpg" alt="Sobri 20" style="width: 100%;"></picture>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sobri Companion App Section (restored) -->
+    <div class="project-section">
+        <h2 style="margin-left: 32px;">Sobri Companion App</h2>
+        <div class="project-gallery" style="display: block; margin-left: 32px; margin-right: 32px;">
+            <!-- Image 22 full width -->
+            <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2022.jpg"><img src="assets/images/project B - sobri/sobri 22.jpg" alt="Sobri 22" style="width: 100vw; max-width: 100%;"></picture>
+            </div>
+            <!-- Images 23 & 24 -->
+            <div style="display: flex; gap: 24px; margin-bottom: 24px;">
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2023.jpg"><img src="assets/images/project B - sobri/sobri 23.jpg" alt="Sobri 23" style="width: 100%;"></picture>
+                </div>
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2024.jpg"><img src="assets/images/project B - sobri/sobri 24.jpg" alt="Sobri 24" style="width: 100%;"></picture>
+                </div>
+            </div>
+            <!-- Images 25 & 26 -->
+            <div style="display: flex; gap: 24px; margin-bottom: 48px;">
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2025.jpg"><img src="assets/images/project B - sobri/sobri 25.jpg" alt="Sobri 25" style="width: 100%;"></picture>
+                </div>
+                <div class="gallery-item" style="flex: 1 1 48%; min-width: 320px;">
+                    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2026.jpg"><img src="assets/images/project B - sobri/sobri 26.jpg" alt="Sobri 26" style="width: 100%;"></picture>
+                </div>
+            </div>
+            <!-- Image 27 full width at the bottom -->
+            <div class="gallery-item" style="width: 100vw; max-width: 100%; margin: 48px 0 0 0;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2027.jpg"><img src="assets/images/project B - sobri/sobri 27.jpg" alt="Sobri 27" style="width: 100vw; max-width: 100%;"></picture>
+            </div>
+            <!-- Image 28 small below -->
+            <div class="gallery-item" style="width: 420px; max-width: 45vw; margin: 32px auto 56px auto; display: block;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%2028.jpg"><img src="assets/images/project B - sobri/sobri 28.jpg" alt="Sobri 28" style="width: 100%; display: block; margin: 0 auto;"></picture>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

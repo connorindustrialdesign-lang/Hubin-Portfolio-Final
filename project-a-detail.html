@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTE pack - Connor's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-shell { max-width: 1240px; margin: 0 auto; padding: 0 40px 88px; }
+    .project-header { padding: 64px 0 56px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: end; }
+    .project-header h1 { font-size: 72px; margin: 0; line-height: 1; letter-spacing: -2px; }
+    .project-header p { font-size: 20px; color: #444; margin: 0; max-width: 560px; line-height: 1.6; }
+
+    .phase-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+    .phase-card { background: #f4f4f4; padding: 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: space-between; }
+    .phase-card span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #666; font-weight: 600; }
+    .phase-card strong { font-size: 24px; font-weight: 700; line-height: 1.2; }
+
+    .layout-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
+    .column-stack { display: grid; gap: 20px; }
+    .frame { background: #f6f6f6; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; }
+    .frame.hero { min-height: 520px; }
+    .frame.wide { grid-column: 1 / -1; min-height: 300px; }
+    .frame.tall { min-height: 360px; }
+
+    .frame img { width: 100%; height: 100%; object-fit: contain; display: block; background: #fafafa; }
+    .frame-label { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.9); color: #111; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; padding: 8px 10px; }
+    
+    @media (max-width:1024px) {
+      .project-shell { padding: 0 30px 72px; }
+      .project-header { grid-template-columns: 1fr; gap: 20px; padding: 52px 0 40px; }
+      .project-header h1 { font-size: 54px; letter-spacing: -1px; }
+      .project-header p { font-size: 18px; }
+      .phase-strip { grid-template-columns: repeat(2, 1fr); }
+      .layout-grid { grid-template-columns: 1fr; }
+      .frame.hero { min-height: 420px; }
+    }
+    
+    @media (max-width:768px) {
+      .project-shell { padding: 0 20px 60px; }
+      .project-header { padding: 44px 0 32px; }
+      .project-header h1 { font-size: 40px; }
+      .project-header p { font-size: 17px; }
+      .phase-strip { grid-template-columns: 1fr; gap: 12px; }
+      .frame.hero { min-height: 320px; }
+      .frame, .frame.tall, .frame.wide { min-height: 240px; }
+    }
+    
+    @media (max-width:480px) {
+      .project-shell { padding: 0 16px 52px; }
+      .project-header { padding: 34px 0 22px; }
+      .project-header h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .project-header p { font-size: 15px; }
+      .phase-card strong { font-size: 20px; }
+      .frame.hero { min-height: 260px; }
+      .frame, .frame.tall, .frame.wide { min-height: 190px; }
+    }
+  </style>
+</head>
+<body data-page="industrial-design">
+  <div class="frame hero" style="margin-bottom:48px;">
+    <picture>
+      <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-37.JPG">
+      <img src="assets/images/id-project-a/cte-37.jpg" alt="Hero image" style="width:100%;height:100%;object-fit:cover;">
+    </picture>
+    <span class="img-num">0</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner container">
+      <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+      <nav class="header-nav">
+        <a href="about.html" class="nav-about" title="Details">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10.5"/>
+            <circle cx="12" cy="8" r="1.5"/>
+            <path d="M12 11v6"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="category-bar" aria-label="Top categories">
+    <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+    <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+    <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+    <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+  </nav>
+
+  <main class="project-shell">
+    <div class="project-header">
+      <div>
+        <h1>CTE Pack</h1>
+      </div>
+      <p>A modular project framework for concept, pack architecture, user interaction, and final validation.</p>
+    </div>
+
+    <!-- SECTION 1: Problem & Context -->
+    <section>
+      <h2>Problem & Context</h2>
+      <p class="group-caption">The initial challenge, context, and project goals.</p>
+      <p class="group-caption">The initial challenge, context, and project goals.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.</p>
+
+      <h2 style="margin-top:48px;">Concept Development</h2>
+      <div class="layout-grid" style="gap: 32px;">
+        <div class="frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-1.JPG"><img src="assets/images/id-project-a/cte-1.jpg" alt="" style="width:100%;height:auto;object-fit:contain;display:block;"></picture><span class="img-num">2</span></div>
+        <div class="frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-2.JPG"><img src="assets/images/id-project-a/cte-2.jpg" alt="" style="width:100%;height:auto;object-fit:contain;display:block;"></picture><span class="img-num">3</span></div>
+      </div>
+      <div class="three-image-row">
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-3.JPG"><img src="assets/images/id-project-a/cte-3.jpg" alt=""></picture><span class="img-num">5</span></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-4.JPG"><img src="assets/images/id-project-a/cte-4.jpg" alt=""></picture><span class="img-num">6</span></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-5.JPG"><img src="assets/images/id-project-a/cte-5.jpg" alt=""></picture><span class="img-num">7</span></div>
+      </div>
+      <div class="layout-grid" style="gap: 32px;">
+        <div class="frame"><img src="assets/images/id-project-a/cte-6.jpg" alt=""><span class="img-num">8</span></div>
+        <div class="frame"><img src="assets/images/id-project-a/cte-7.jpg" alt=""><span class="img-num">9</span></div>
+      </div>
+    </section>
+    <!-- SECTION: Prototype and fabrication -->
+    <section>
+      <h2>Prototype and fabrication</h2>
+      <div class="layout-grid" style="gap: 32px; grid-template-columns: 1fr 1.1fr; align-items: stretch;">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a placeholder for your prototype and fabrication process description.</p>
+          <div class="frame img-13-small" style="margin-top:32px;"><img src="assets/images/id-project-a/cte-11.jpg" alt="" /><span class="img-num">13</span></div>
+        </div>
+        <div class="frame hero"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9.PNG"><img src="assets/images/id-project-a/cte-9.png" alt="" /></picture><span class="img-num">11</span></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Form & Layout -->
+    <section>
+      <p class="group-caption">Exploration of form, layout, and early sketches.</p>
+      <div class="four-image-row">
+        <div class="frame">
+          <img src="assets/images/id-project-a/cte-14.JPG" alt=""><span class="img-num">16</span>
+          <div class="img-caption">ver. no. 1</div>
+        </div>
+        <div class="frame">
+          <img src="assets/images/id-project-a/cte-15.JPG" alt=""><span class="img-num">17</span>
+          <div class="img-caption">ver. no. 2</div>
+        </div>
+        <div class="frame">
+          <img src="assets/images/id-project-a/cte-16.JPG" alt=""><span class="img-num">18</span>
+          <div class="img-caption">ver. no. 3</div>
+        </div>
+        <div class="frame">
+          <img src="assets/images/id-project-a/cte-17.JPG" alt=""><span class="img-num">19</span>
+          <div class="img-caption">ver. no. 4</div>
+        </div>
+      </div>
+
+      <div class="frame wide box-20-full">
+        <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-18.JPG"><img src="assets/images/id-project-a/cte-18.JPG" alt="" class="img-20-full" /></picture>
+        <span class="img-num">20</span>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Assembly -->
+    <section>
+      <h2>Assembly</h2>
+      <p class="group-caption">System design, features, and user interaction.</p>
+      <div class="side-by-side-row">
+        <div class="side-text">
+          <p>System integration and modularity.</p>
+        </div>
+      </div>
+      <div class="three-image-row">
+        <!-- box 21 and 22 removed from here; 21 will be placed at the end, 22 removed -->
+      </div>
+      <div class="layout-grid" style="gap: 32px;">
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-21.JPG"><img src="assets/images/id-project-a/cte-21.JPG" alt=""></picture><span class="img-num">23</span></div>
+        <div class="frame"><img src="assets/images/id-project-a/cte-23.JPG" alt=""><span class="img-num">25</span></div>
+      </div>
+      <div class="layout-grid" style="gap: 32px;">
+        <div class="frame"><img src="assets/images/id-project-a/cte-22.JPG" alt=""><span class="img-num">24</span></div>
+        <div class="frame"><img src="assets/images/id-project-a/cte-24.JPG" alt=""><span class="img-num">26</span></div>
+      </div>
+
+      <!-- SECTION: Functions -->
+      <section>
+        <h2>Functions</h2>
+        <div class="functions-grid">
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-28.JPG"><img src="assets/images/id-project-a/cte-28.JPG" alt=""></picture>
+            <span class="img-num">30</span>
+            <div class="function-caption">Caption for box 30</div>
+          </div>
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-29.JPG"><img src="assets/images/id-project-a/cte-29.JPG" alt=""></picture>
+            <span class="img-num">31</span>
+            <div class="function-caption">Caption for box 31</div>
+          </div>
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-30.JPG"><img src="assets/images/id-project-a/cte-30.JPG" alt=""></picture>
+            <span class="img-num">32</span>
+            <div class="function-caption">Caption for box 32</div>
+          </div>
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-31.JPG"><img src="assets/images/id-project-a/cte-31.JPG" alt=""></picture>
+            <span class="img-num">33</span>
+            <div class="function-caption">Caption for box 33</div>
+          </div>
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-32.JPG"><img src="assets/images/id-project-a/cte-32.JPG" alt=""></picture>
+            <span class="img-num">34</span>
+            <div class="function-caption">Caption for box 34</div>
+          </div>
+          <div class="function-frame">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-33.JPG"><img src="assets/images/id-project-a/cte-33.JPG" alt=""></picture>
+            <span class="img-num">35</span>
+            <div class="function-caption">Caption for box 35</div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SECTION: Final Product -->
+    <section>
+      <h2>Final Product</h2>
+      <div class="final-product-row">
+        <div class="final-frame">
+          <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-26.JPG"><img src="assets/images/id-project-a/cte-26.JPG" alt=""></picture>
+          <span class="img-num">40</span>
+          <div class="final-caption">Final product view 2</div>
+        </div>
+        <div class="final-frame">
+          <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-25.JPG"><img src="assets/images/id-project-a/cte-25.JPG" alt=""></picture>
+          <span class="img-num">39</span>
+          <div class="final-caption">Final product view 1</div>
+        </div>
+        <div class="final-frame">
+          <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-27.JPG"><img src="assets/images/id-project-a/cte-27.JPG" alt=""></picture>
+          <span class="img-num">41</span>
+          <div class="final-caption">Final product view 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Prototype & Outcome -->
+    <section>
+      <h2>Prototype & Outcome</h2>
+      <p class="group-caption">Prototyping, testing, and final results.</p>
+      <!-- ...existing code... -->
+      <!-- box 36 and 37 removed as requested -->
+      <div class="full-bleed-bottom-image" style="background:#fff;">
+        <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/CONNORPORTFOLIO-46.JPG"><img src="assets/images/id-project-a/CONNORPORTFOLIO-46.JPG" alt="" class="full-bleed-img" style="object-fit:contain;background:#fff;" /></picture>
+        <span class="img-num">38</span>
+      </div>
+    </section>
+    <!-- ...existing code... -->
+  </main>
+
+  <!-- Full-bleed box 21 at page bottom -->
+  <div class="full-bleed-bottom-image">
+    <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-19.JPG"><img src="assets/images/id-project-a/cte-19.JPG" alt="" class="full-bleed-img" /></picture>
+    <span class="img-num">21</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

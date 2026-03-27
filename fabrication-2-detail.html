@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fab Project 3 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: auto;
+            overflow: visible;
+            border-radius: 8px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .gallery-item.placeholder {
+            background: linear-gradient(135deg, #C97171 0%, #d98989 100%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 30px;
+            }
+
+            .project-header {
+                padding: 50px 30px 30px;
+            }
+
+            .project-header h1 {
+                font-size: 40px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .gallery-item.full-width {
+                grid-column: 1;
+            }
+
+            .project-header {
+                padding: 40px 20px 20px;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+
+            .gallery-item {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .project-header {
+                padding: 30px 16px 16px;
+            }
+
+            .project-header h1 {
+                font-size: 24px;
+                margin: 0 0 8px 0;
+            }
+
+            .project-header p {
+                font-size: 14px;
+            }
+
+            .gallery-item {
+                min-height: 160px;
+                padding: 12px;
+            }
+
+            .gallery-item.placeholder {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body data-page="fabrication">
+
+    <!-- Autoplaying video at the very top -->
+    <div style="width:100vw;max-width:100vw;overflow:hidden;margin-bottom:48px;">
+        <video src="assets/images/fab project 2/MERO-1.mov" autoplay loop muted playsinline style="width:100vw;max-width:100vw;display:block;"></video>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:60px 40px 40px;max-width:1400px;margin:0 auto;">
+        <div style="text-align:left;font-size:14px;color:#555;line-height:1.8;">
+            Walla Walla hair salon<br>
+            Storefront sign fabrication &amp; installation<br>
+            0.75" sandblast plywood, enamel paint, 3.5" mortar anchors, CNC router<br>
+            2023
+        </div>
+        <h1 style="font-size:96px;margin:0;font-weight:700;line-height:1;">MERO</h1>
+    </div>
+
+
+    <!-- Process Section: Row of boxes 1, 2, 3 -->
+    <div class="project-section">
+        <div style="display:flex;gap:32px;justify-content:center;align-items:stretch;margin-bottom:64px;padding:0 40px;">
+            <div class="gallery-item" style="flex:1 1 0;max-width:33%;position:relative;overflow:hidden;"><span style='position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 8px;border-radius:12px;font-size:18px;z-index:2;'>1</span><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/IMG_2976.jpeg"><img src="assets/images/fab project 2/IMG_2976.jpeg" alt="MERO 1" style="width:100%;height:340px;object-fit:cover;display:block;"></picture></div>
+            <div class="gallery-item" style="flex:1 1 0;max-width:33%;position:relative;overflow:hidden;"><span style='position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 8px;border-radius:12px;font-size:18px;z-index:2;'>2</span><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/IMG_2985.jpeg"><img src="assets/images/fab project 2/IMG_2985.jpeg" alt="MERO 2" style="width:100%;height:340px;object-fit:cover;display:block;"></picture></div>
+            <div class="gallery-item" style="flex:1 1 0;max-width:33%;position:relative;overflow:hidden;"><span style='position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 8px;border-radius:12px;font-size:18px;z-index:2;'>3</span><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/IMG_2987.jpeg"><img src="assets/images/fab project 2/IMG_2987.jpeg" alt="MERO 3" style="width:100%;height:340px;object-fit:cover;display:block;"></picture></div>
+        </div>
+    </div>
+
+    <!-- Gallery Section: Remaining images -->
+    <div class="project-section">
+        <!-- Gallery section header removed -->
+        <div class="image-grid grid-1">
+            <div class="gallery-item" style="position:relative;"><span style='position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 8px;border-radius:12px;font-size:18px;z-index:2;'>4</span><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/mero-indexpage.JPG"><img src="assets/images/fab project 2/mero-indexpage.JPG" alt="MERO 4"></picture></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

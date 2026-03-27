@@ -1,0 +1,14 @@
+assets/
+*.psd
+*.pptx
+
+# Ignore local assets folder (images, etc.)
+assets/
+
+# Utility scripts (not part of the site)
+optimize_s3_images.py
+_fix_fab_paths.py
+_fix_s3.py
+_migrate_s3.py
+_migrate_s3_batch2.py
+*.DS_Store

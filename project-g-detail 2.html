@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project G - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        /* Hero Image - Full Width */
+        .project-hero-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 600px;
+            background-image: url('assets/images/processed/project-g/project-g.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            margin-bottom: 80px;
+        }
+
+        /* Project Title Section */
+        .project-title-block {
+            max-width: 1200px;
+            margin: 0 auto 120px;
+            padding: 0 40px;
+        }
+
+        .project-title-block h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .project-title-block p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Content Sections */
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .project-section {
+            margin-bottom: 140px;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Image Layouts */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            border-radius: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .grid-item.tall {
+            grid-row: span 2;
+        }
+
+        /* Description/Caption Box */
+        .section-text {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 0;
+            margin-bottom: 80px;
+            max-width: 900px;
+        }
+
+        .section-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 16px 0;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .project-hero-image {
+                height: 450px;
+            }
+
+            .project-title-block h1 {
+                font-size: 48px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.span-2 {
+                grid-column: 1;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-hero-image {
+                height: 300px;
+                margin-bottom: 60px;
+            }
+
+            .project-title-block {
+                margin-bottom: 80px;
+                padding: 0 20px;
+            }
+
+            .project-title-block h1 {
+                font-size: 36px;
+            }
+
+            .project-content {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .section-text {
+                padding: 30px;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html" class="category-logo">Connor Hubin</a>
+        <a href="index.html#industrial-design">Industrial Design</a>
+        <a href="index.html#engineering">Engineering</a>
+        <a href="index.html#fabrication">Fabrication</a>
+        <a href="index.html#fine-arts">Fine Arts</a>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="project-hero-image"></div>
+
+    <!-- Project Title -->
+    <div class="project-title-block">
+        <h1>Project G</h1>
+        <p>An innovative UV sanitation system designed to address global medical supply sterilization challenges.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+        <section class="project-section">
+            <div class="section-header">
+                <h2>The Problem</h2>
+            </div>
+            <div class="section-text">
+                <p>Extracted research data reveals the global scale of the challenge: 33% of medical clinics worldwide lack access to running water.</p>
+                <p>Without reliable water access, sterilizing medical tools becomes difficult, facilitating disease spread and bacterial contamination in clinical environments.</p>
+                <p><strong>Pura</strong> addresses this challenge through an alternative sterilization approach suitable for resource-constrained regions.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><img src="assets/images/processed/project-g/spread6.png" alt="Problem board"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Research & Insight</h2>
+            </div>
+            <div class="section-text">
+                <p>UV light kills 100% of bacteria—a vastly superior outcome compared to alternative sterilization methods. More critically, UV sterilization takes only 60 seconds and costs just $0.15 per cycle.</p>
+                <p>This combination of efficacy, speed, and affordability makes UV a viable solution for clinics operating under extreme resource constraints.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><img src="assets/images/processed/project-g/spread7.png" alt="Research and insight board"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Design Iterations</h2>
+            </div>
+            <div class="section-text">
+                <p>Development included a proof-of-concept "shoebox" form factor for portability and ease of distribution. Strategic partnerships—especially with Tesla—leveraged expertise in electrical systems and power management.</p>
+                <p>Control interfaces and lighting states were explored to ensure clinicians could reliably operate the system and verify sterilization cycles.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div class="grid-item"><img src="assets/images/processed/project-g/spread8.png" alt="Proof of concept board"></div>
+                <div class="grid-item"><img src="assets/images/processed/project-g/spread9.png" alt="Partnership and controls board"></div>
+            </div>
+            <div class="image-grid grid-3">
+                <div class="grid-item"><img src="assets/images/processed/project-g/plain.16.jpg" alt="Plain view"></div>
+                <div class="grid-item"><img src="assets/images/processed/project-g/controls.18.jpg" alt="Controls detail"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The sterilization system in its final product configurations shows the hinged lid open and closed states, demonstrating the integrated control interface and effective form language for clinical use.</p>
+            </div>
+            <div class="image-grid grid-3">
+                <div class="grid-item"><img src="assets/images/processed/project-g/openlid%232.20.jpg" alt="Open lid view 1"></div>
+                <div class="grid-item"><img src="assets/images/processed/project-g/openlid%233.21.jpg" alt="Open lid view 2"></div>
+                <div class="grid-item"><img src="assets/images/processed/project-g/openlid.19.jpg" alt="Closed view"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

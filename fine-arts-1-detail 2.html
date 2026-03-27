@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts Project 1 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            overflow: visible;
+            border-radius: 8px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item.placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body data-page="fine-arts">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html#industrial-design">Industrial Design</a>
+        <a href="index.html#engineering">Engineering</a>
+        <a href="index.html#fabrication">Fabrication</a>
+        <a href="index.html#fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header">
+        <a href="index.html#fine-arts" class="back-link">← Back to Fine Arts</a>
+        <h1>Fine Arts Project 1</h1>
+        <p>Artistic exploration</p>
+    </div>
+
+    <div class="project-gallery">
+        <div class="gallery-item placeholder"><div>Image 1</div></div>
+        <div class="gallery-item placeholder"><div>Image 2</div></div>
+        <div class="gallery-item placeholder"><div>Image 3</div></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

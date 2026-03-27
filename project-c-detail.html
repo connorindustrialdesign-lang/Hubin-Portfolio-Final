@@ -1,0 +1,403 @@
+</html>
+<!-- Force rebuild: March 11, 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mill creek house - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-shell {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 40px 88px;
+        }
+
+        .project-header {
+            padding: 64px 0 48px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 36px;
+        }
+
+        .project-header h1 {
+            font-size: 68px;
+            margin: 0 0 14px 0;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .project-header p {
+            font-size: 20px;
+            color: #555;
+            margin: 0;
+            max-width: 760px;
+            line-height: 1.6;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 24px;
+        }
+
+        .story-rail {
+            display: grid;
+            gap: 18px;
+            align-content: start;
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .rail-card {
+            border: 1px solid #e2e2e2;
+            padding: 18px;
+            background: #fafafa;
+        }
+
+        .rail-card span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .rail-card p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .story-content {
+            display: grid;
+            gap: 24px;
+        }
+
+        .frame {
+            background: #f4f4f4;
+            min-height: 220px;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            color: #666;
+            font-weight: 600;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .frame.hero {
+            min-height: 420px;
+        }
+
+        .frame-pair {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .frame-stack {
+            display: grid;
+            gap: 24px;
+        }
+
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fafafa;
+            display: block;
+        }
+
+        .frame-label {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            font-size: 12px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 8px 10px;
+        }
+
+        .hidden-link {
+            display: none;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-shell {
+                padding: 0 30px 72px;
+            }
+
+            .project-header {
+                padding: 52px 0 38px;
+            }
+
+            .project-header h1 {
+                font-size: 50px;
+                letter-spacing: -1px;
+            }
+
+            .project-header p {
+                font-size: 18px;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-rail {
+                position: static;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-shell {
+                padding: 0 20px 60px;
+            }
+
+            .project-header {
+                padding: 44px 0 28px;
+                margin-bottom: 26px;
+            }
+
+            .project-header h1 {
+                font-size: 38px;
+                margin-bottom: 10px;
+            }
+
+            .project-header p {
+                font-size: 17px;
+            }
+
+            .story-rail {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .rail-card p {
+                font-size: 16px;
+            }
+
+            .frame,
+            .frame.hero {
+                min-height: 220px;
+            }
+
+            .frame-pair {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .frame-stack {
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-shell {
+                padding: 0 16px 52px;
+            }
+
+            .project-header {
+                padding: 34px 0 22px;
+            }
+
+            .project-header h1 {
+                font-size: 30px;
+                margin: 0 0 8px 0;
+                letter-spacing: -0.5px;
+            }
+
+            .project-header p {
+                font-size: 15px;
+            }
+
+            .frame,
+            .frame.hero {
+                min-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <main class="project-shell">
+
+        <!-- HERO IMAGE -->
+        <div class="frame hero" style="margin-bottom: 32px;">
+                        <picture>
+                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-24.JPG">
+                            <img src="assets/images/id-project-c/CONNORPORTFOLIO-24.JPG" alt="Hero Image" style="width:100%;height:auto;object-fit:contain;">
+                        </picture>
+        </div>
+
+        <div class="project-header">
+            <h1>house on mill creek</h1>
+            <p>a residential project framework focused on site response, spatial sequence, structural strategy, and final architectural expression</p>
+        </div>
+
+        <!-- SECTION: Concept Sketches (was Site Photos) -->
+        <section>
+            <h2>Concept Sketches</h2>
+            <div style="display: flex; align-items: flex-start; gap: 32px; margin-bottom: 24px;">
+                <!-- Text paragraph left, box 1 right -->
+                <div style="flex: 1 1 auto; display: flex; align-items: center; height: 420px;">
+                    <p style="margin: 0;">Placeholder text for concept sketches section.</p>
+                </div>
+                <div class="frame" style="flex: 0 0 320px; max-width: 320px; aspect-ratio: auto; padding: 0; margin-bottom: 0; margin-left: 48px; height: 420px; display: flex; align-items: stretch; justify-content: stretch;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/form-sketch-01.jpg">
+                                            <img src="assets/images/id-project-c/form-sketch-01.jpg" alt="Sketch 1" style="width: 100%; height: 100%; object-fit: contain; background: #fff;">
+                                        </picture>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0; margin-bottom: 24px; align-items: stretch;">
+                <!-- Left column: NEW above 4 -->
+                <div style="width: 50%; display: flex; flex-direction: column; gap: 0; align-items: stretch;">
+                    <div class="frame" style="aspect-ratio: auto; padding: 0; margin-bottom: 0; display: flex; align-items: stretch; justify-content: stretch; height: 180px; min-height: 0;">
+                        <picture>
+                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/form-sketch-06.jpg">
+                            <img src="assets/images/id-project-c/form-sketch-06.jpg" alt="Sketch New" style="width: 100%; height: 100%; object-fit: contain; background: #fff;">
+                        </picture>
+                    </div>
+                    <div class="frame" style="aspect-ratio: auto; padding: 0; margin-top: 0; display: flex; align-items: flex-end; justify-content: stretch; height: auto; min-height: 0;">
+                        <picture>
+                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/form-sketch-05.jpg">
+                            <img src="assets/images/id-project-c/form-sketch-05.jpg" alt="Sketch 4" style="width: 100%; height: 100%; object-fit: contain; background: #fff;">
+                        </picture>
+                    </div>
+                </div>
+                <!-- Right column: 3 above 2 -->
+                <div style="width: 50%; display: flex; flex-direction: column; gap: 0; align-items: stretch;">
+                    <div class="frame" style="aspect-ratio: auto; padding: 0; margin-bottom: 0; display: flex; align-items: stretch; justify-content: stretch; height: auto; min-height: 0;">
+                        <img src="assets/images/id-project-c/form-sketch-04.jpg" alt="Sketch 3" style="width: 100%; height: auto; object-fit: contain; background: #fff;">
+                                                                <picture>
+                                                                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/form-sketch-04.jpg">
+                                                                    <img src="assets/images/id-project-c/form-sketch-04.jpg" alt="Sketch 3" style="width: 100%; height: auto; object-fit: contain; background: #fff;">
+                                                                </picture>
+                    </div>
+                    <div class="frame" style="aspect-ratio: auto; padding: 0; margin-top: 0; display: flex; align-items: stretch; justify-content: stretch; height: auto; min-height: 0;">
+                        <img src="assets/images/id-project-c/form-sketch-03.jpg" alt="Sketch 2" style="width: 100%; height: auto; object-fit: contain; background: #fff;">
+                                                                <picture>
+                                                                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/form-sketch-03.jpg">
+                                                                    <img src="assets/images/id-project-c/form-sketch-03.jpg" alt="Sketch 2" style="width: 100%; height: auto; object-fit: contain; background: #fff;">
+                                                                </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION: Model Construction -->
+        <section>
+            <h2>Model Construction</h2>
+            <div class="frame-pair">
+                <div class="frame" style="aspect-ratio: auto; padding: 0; height: 340px;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/1000009732.jpg">
+                                            <img src="assets/images/id-project-c/1000009732.jpg" alt="Model Construction 1" style="width: 100%; height: 100%; object-fit: cover;">
+                                        </picture>
+                </div>
+                <div class="frame" style="aspect-ratio: auto; padding: 0; height: 340px;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/1000009692.jpg">
+                                            <img src="assets/images/id-project-c/1000009692.jpg" alt="Model Construction 2" style="width: 100%; height: 100%; object-fit: cover;">
+                                        </picture>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION: Process + Final Renders -->
+        <section>
+            <!-- Header moved below image row -->
+            <div style="display: flex; gap: 32px; align-items: flex-end; margin-bottom: 48px; margin-top: 48px;">
+                <div style="flex: 1 1 0; max-width: 54%; display: flex; flex-direction: column; justify-content: flex-start; height: 480px;">
+                    <h2 style="margin: 0 0 32px 0; align-self: flex-start;">Final Model</h2>
+                    <p style="font-size: 18px; line-height: 1.7; margin: 0 0 0 0; align-self: flex-end;">The final model for this project demonstrates the culmination of site analysis, conceptual development, and iterative design. The physical form reflects both the constraints and opportunities of the site, with careful attention to massing, light, and spatial sequence. The result is a resolved architectural expression that balances innovation with buildability, and provides a unique response to its context.</p>
+                </div>
+                                <div class="frame" style="flex: 1 1 0; max-width: 50vw; width: 100%; min-width: 320px; height: auto; padding: 0; margin-right: 0; margin-left: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-25.JPG">
+                                            <img src="assets/images/id-project-c/CONNORPORTFOLIO-25.JPG" alt="Render 2" style="width: 100%; height: auto; object-fit: contain; margin-right: 0; border-radius: 12px; background: #fff; display: block;">
+                                        </picture>
+                                </div>
+            </div>
+            <div style="display: flex; gap: 24px; margin-bottom: 32px;">
+                <div class="frame" style="flex: 1 1 0; width: 50%; aspect-ratio: auto; padding: 0;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-27.JPG">
+                                            <img src="assets/images/id-project-c/CONNORPORTFOLIO-27.JPG" alt="Render 4" style="width: 100%; height: auto; object-fit: contain;">
+                                        </picture>
+                </div>
+                <div class="frame" style="flex: 1 1 0; width: 50%; aspect-ratio: auto; padding: 0;">
+                                        <picture>
+                                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-29.JPG">
+                                            <img src="assets/images/id-project-c/CONNORPORTFOLIO-29.JPG" alt="Render 6" style="width: 100%; height: auto; object-fit: contain;">
+                                        </picture>
+                </div>
+            </div>
+            <div class="frame-pair">
+            </div>
+            <div class="frame" style="width: 100%; aspect-ratio: 4/3; padding: 0; margin-top: 32px;">
+                <picture>
+                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-28.JPG">
+                    <img src="assets/images/id-project-c/CONNORPORTFOLIO-28.JPG" alt="Render 5" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; display: block;">
+                </picture>
+            </div>
+            <div class="frame" style="width: 100%; aspect-ratio: auto; padding: 0; margin-top: 24px;">
+                                <picture>
+                                    <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-c/CONNORPORTFOLIO-26.JPG">
+                                    <img src="assets/images/id-project-c/CONNORPORTFOLIO-26.JPG" alt="Render 3" style="width: 100%; height: auto; object-fit: contain;">
+                                </picture>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+<!-- Deployment trigger: March 11, 2026 -->

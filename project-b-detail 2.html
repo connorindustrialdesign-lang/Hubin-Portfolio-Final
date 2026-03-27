@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project B - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: auto;
+            overflow: visible;
+            border-radius: 8px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .gallery-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.single {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.highlight {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 30px;
+            }
+
+            .gallery-item.highlight {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+
+            .gallery-item.full-width,
+            .gallery-item.single,
+            .gallery-item.highlight {
+                grid-column: 1;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html#industrial-design">Industrial Design</a>
+        <a href="index.html#engineering">Engineering</a>
+        <a href="index.html#fabrication">Fabrication</a>
+        <a href="index.html#fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <h1>Project B: Sobri</h1>
+        <p>A comprehensive exploration of form and function</p>
+    </div>
+
+    <div class="project-gallery">
+        <!-- Full-width image -->
+        <div class="gallery-item full-width">
+            <img src="assets/images/project B/sobri 2.jpg?v=20260227-1" alt="Sobri 2">
+        </div>
+
+        <!-- 2 images -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 3.jpg?v=20260227-1" alt="Sobri 3">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 4.jpg?v=20260227-1" alt="Sobri 4">
+        </div>
+
+        <!-- 2 images -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 5.jpg?v=20260227-1" alt="Sobri 5">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 6.jpg?v=20260227-1" alt="Sobri 6">
+        </div>
+
+        <!-- 3 images -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 7.jpg?v=20260227-1" alt="Sobri 7">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 8.jpg?v=20260227-1" alt="Sobri 8">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 9.jpg?v=20260227-1" alt="Sobri 9">
+        </div>
+
+        <!-- 1 single image -->
+        <div class="gallery-item single">
+            <img src="assets/images/project B/sobri 10.jpg?v=20260227-1" alt="Sobri 10">
+        </div>
+
+        <!-- Shrunk image (was full-width) -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 12.jpg?v=20260227-1" alt="Sobri 12">
+        </div>
+
+        <!-- 2 images -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 15.jpg?v=20260227-1" alt="Sobri 15">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 16.jpg?v=20260227-1" alt="Sobri 16">
+        </div>
+
+        <!-- Full-width Concept Sketches -->
+        <div class="gallery-item full-width highlight">
+            <img src="assets/images/project B/sobri 14.jpg?v=20260227-1" alt="Sobri 14 - Concept Sketches">
+        </div>
+
+        <!-- Featured render - spans 2 columns -->
+        <div class="gallery-item span-2">
+            <img src="assets/images/project B/sobri 18.jpg?v=20260227-1" alt="Sobri 18">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 19.jpg?v=20260227-1" alt="Sobri 19">
+        </div>
+
+        <!-- 3-image rhythm row -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 20.jpg?v=20260227-1" alt="Sobri 20">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 21.jpg?v=20260227-1" alt="Sobri 21">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 22.jpg?v=20260227-1" alt="Sobri 22">
+        </div>
+
+        <!-- Featured accent - spans 2 columns -->
+        <div class="gallery-item span-2">
+            <img src="assets/images/project B/sobri 23.jpg?v=20260227-1" alt="Sobri 23">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 24.jpg?v=20260227-1" alt="Sobri 24">
+        </div>
+
+        <!-- 3-image rhythm row -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 25.jpg?v=20260227-1" alt="Sobri 25">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 26.jpg?v=20260227-1" alt="Sobri 26">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 27.jpg?v=20260227-1" alt="Sobri 27">
+        </div>
+
+        <!-- Closing images -->
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 28.jpg?v=20260227-1" alt="Sobri 28">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/project B/sobri 29.jpg?v=20260227-1" alt="Sobri 29">
+        </div>
+
+        <!-- Full-width image -->
+        <div class="gallery-item full-width">
+            <img src="assets/images/project B/sobri 30.jpg?v=20260227-1" alt="Sobri 30">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

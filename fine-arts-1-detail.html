@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts Project 1 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body[data-page="fine-arts"] {
+            padding-top: 64px;
+            background: #fafaf8;
+        }
+
+        body[data-page="fine-arts"] .site-header {
+            display: none !important;
+        }
+
+        body[data-page="fine-arts"] .category-bar {
+            top: 0 !important;
+            position: fixed !important;
+            z-index: 1002 !important;
+        }
+
+        .painting-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 80px 40px;
+            background: #fafaf8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .gallery-item-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-image {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item-label {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .gallery-item-label h3 {
+            font-size: 18px;
+            margin: 0 0 6px 0;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .gallery-item-label p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .project-gallery {
+            display: none;
+        }
+
+        .project-header p {
+            display: none;
+        }
+
+        /* Gallery Modal */
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-modal.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .gallery-modal-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            cursor: pointer;
+        }
+
+        .gallery-modal-content {
+            position: relative;
+            z-index: 2001;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            max-height: 90vh;
+            background: none;
+        }
+
+        .gallery-modal-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 0;
+        }
+
+        .gallery-modal-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            z-index: 2002;
+        }
+
+        .gallery-modal-back:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .gallery-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 32px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 2002;
+        }
+
+        .gallery-modal-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .painting-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+                padding: 60px 30px;
+            }
+
+            .gallery-item-label h3 {
+                font-size: 16px;
+            }
+
+            .gallery-item-label p {
+                font-size: 13px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .painting-gallery {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 60px 20px;
+            }
+
+            .gallery-modal-back {
+                top: 16px;
+                left: 16px;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            .gallery-modal-close {
+                top: 16px;
+                right: 16px;
+            }
+
+            .gallery-item-label h3 {
+                font-size: 16px;
+            }
+
+            .gallery-item-label p {
+                font-size: 12px;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 480px) {
+            .painting-gallery {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 60px 16px;
+            }
+
+            .gallery-modal-back {
+                top: 12px;
+                left: 12px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .gallery-modal-close {
+                top: 12px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 28px;
+            }
+
+            .gallery-item-label h3 {
+                font-size: 14px;
+            }
+
+            .gallery-item-label p {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body data-page="fine-arts">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header" style="padding-left: 40px;">
+        <h1>Sculpture</h1>
+        <p>Three-dimensional sculptural works</p>
+    </div>
+
+    <div class="painting-gallery" id="painting-gallery">
+        <!-- Gallery items will be generated by JavaScript -->
+    </div>
+
+    <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+        <div class="gallery-modal-backdrop" id="gallery-modal-backdrop"></div>
+        <div class="gallery-modal-content" role="dialog" aria-modal="true" aria-label="Sculpture Viewer">
+            <button class="gallery-modal-back" id="back-gallery-modal" aria-label="Back to Gallery">
+                <span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;">
+                        <path d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </span>
+                Back
+            </button>
+            <button class="gallery-modal-close" id="close-gallery-modal" aria-label="Close gallery">×</button>
+            <img id="modal-image" src="" alt="Full size sculpture view">
+        </div>
+    </div>
+
+    <div class="project-gallery">
+        <div class="gallery-item placeholder"><div>Image 1</div></div>
+        <div class="gallery-item placeholder"><div>Image 2</div></div>
+        <div class="gallery-item placeholder"><div>Image 3</div></div>
+    </div>
+
+    <script>
+        const galleryData = [
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/1.png', fallback: 'assets/images/sculptures/1.png', title: 'Sculpture 1', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/2.png', fallback: 'assets/images/sculptures/2.png', title: 'Sculpture 2', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/3.JPG', fallback: 'assets/images/sculptures/3.JPG', title: 'Sculpture 3', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/4.JPG', fallback: 'assets/images/sculptures/4.JPG', title: 'Sculpture 4', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/5.JPG', fallback: 'assets/images/sculptures/5.JPG', title: 'Sculpture 5', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/6.JPG', fallback: 'assets/images/sculptures/6.JPG', title: 'Sculpture 6', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/7.png', fallback: 'assets/images/sculptures/7.png', title: 'Sculpture 7', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/8.png', fallback: 'assets/images/sculptures/8.png', title: 'Sculpture 8', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/9.png', fallback: 'assets/images/sculptures/9.png', title: 'Sculpture 9', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/10.JPG', fallback: 'assets/images/sculptures/10.JPG', title: 'Sculpture 10', description: '' },
+         { image: 'https://deovv8pnl76k0.cloudfront.net/images/sculptures/sculptures-indexpage.JPEG', fallback: 'assets/images/sculptures/sculptures-indexpage.JPEG', title: 'Sculptures Index', description: '' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('painting-gallery');
+            const modal = document.getElementById('gallery-modal');
+            const modalImage = document.getElementById('modal-image');
+            const backdrop = document.getElementById('gallery-modal-backdrop');
+            const backButton = document.getElementById('back-gallery-modal');
+            const closeButton = document.getElementById('close-gallery-modal');
+
+            // Generate gallery items
+            galleryData.forEach((item, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img class="gallery-item-image" src="${item.image}" alt="${item.title}">
+                    <div class="gallery-item-label">
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                `;
+
+                galleryItem.addEventListener('click', () => {
+                    modalImage.src = item.image;
+                    modalImage.alt = item.title;
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                gallery.appendChild(galleryItem);
+            });
+
+            // Modal controls
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            backButton.addEventListener('click', closeModal);
+            closeButton.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+            // Escape key to close
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js?v=20260308b"></script>
+
+</body>
+</html>

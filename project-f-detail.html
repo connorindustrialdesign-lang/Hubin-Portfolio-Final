@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project F - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        /* Hero Image - Full Width */
+        .project-hero-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 600px;
+            background-image: url('https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/project-f.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            margin-bottom: 80px;
+        }
+
+        /* Project Title Section */
+        .project-title-block {
+            max-width: 1200px;
+            margin: 0 auto 120px;
+            padding: 0 40px;
+        }
+
+        .project-title-block h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .project-title-block p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        /* Content Sections */
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .project-section {
+            margin-bottom: 140px;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #666;
+            max-width: 800px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Image Layouts */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            border-radius: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-item.span-2 {
+            grid-column: span 2;
+        }
+
+        .grid-item.tall {
+            grid-row: span 2;
+        }
+
+        /* Description/Caption Box */
+        .section-text {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 0;
+            margin-bottom: 80px;
+            max-width: 900px;
+        }
+
+        .section-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 16px 0;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .project-hero-image {
+                height: 450px;
+            }
+
+            .project-title-block {
+                padding: 0 30px;
+            }
+
+            .project-title-block h1 {
+                font-size: 48px;
+            }
+
+            .project-content {
+                padding: 0 30px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.span-2 {
+                grid-column: 1;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+
+            .section-text {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-hero-image {
+                height: 300px;
+                margin-bottom: 60px;
+            }
+
+            .project-title-block {
+                margin-bottom: 80px;
+                padding: 0 20px;
+            }
+
+            .project-title-block h1 {
+                font-size: 36px;
+            }
+
+            .project-content {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .section-text {
+                padding: 30px;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-hero-image {
+                height: 240px;
+                margin-bottom: 40px;
+            }
+
+            .project-title-block {
+                margin-bottom: 60px;
+                padding: 0 16px;
+            }
+
+            .project-title-block h1 {
+                font-size: 24px;
+                margin: 0 0 12px 0;
+                letter-spacing: -1px;
+            }
+
+            .project-title-block p {
+                font-size: 14px;
+            }
+
+            .project-content {
+                padding: 0 16px;
+            }
+
+            .project-section {
+                margin-bottom: 80px;
+            }
+
+            .section-header h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .section-header p {
+                font-size: 14px;
+            }
+
+            .section-text {
+                padding: 20px;
+                margin-bottom: 60px;
+            }
+
+            .grid-item.tall {
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html" class="category-logo">Connor Hubin</a>
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="project-hero-image"></div>
+
+    <!-- Project Title -->
+    <div class="project-title-block">
+        <h1>Project F</h1>
+        <p>A redesigned nightstand that combines organization with integrated lighting and charging.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+        <section class="project-section">
+            <div class="section-header">
+                <h2>The Problem</h2>
+            </div>
+            <div class="section-text">
+                <p>OCR text from research boards reveals the core insight: nightstands become cluttered and unorganized spaces, yet they're frequently accessed for essential items at bedtime.</p>
+                <p>The goal was to create a bedside platform that transforms this chaos into a thoughtfully organized, integrated solution.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25202.jpg"><img src="assets/images/processed/project-f/nightstand%202.jpg" alt="Problem board 1"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/spread13.png"><img src="assets/images/processed/project-f/spread13.png" alt="Problem board 2"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Research & Insight</h2>
+            </div>
+            <div class="section-text">
+                <p>Research emphasized that everyday objects—phone, wallet, keys, pen—clutter the bedside. A designed solution must accommodate all of these while remaining beautiful and intentional.</p>
+                <p>The insight is that this frequently-used furnishing needs careful consideration of both spatial organization and material finishes.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25203.jpg"><img src="assets/images/processed/project-f/nightstand%203.jpg" alt="Research and insight board"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Design Iterations</h2>
+            </div>
+            <div class="section-text">
+                <p>Formal exploration covered structural approaches, leg details, platform proportions, lighting positioning, and electrical integration into the bedside form.</p>
+                <p>Each iteration refined the relationship between storage zones, device charging, and integrated illumination.</p>
+            </div>
+            <div class="image-grid grid-3">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25201.jpg"><img src="assets/images/processed/project-f/nightstand%201.jpg" alt="Iteration 1"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25204.jpg"><img src="assets/images/processed/project-f/nightstand%204.jpg" alt="Iteration 2"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25207.jpg"><img src="assets/images/processed/project-f/nightstand%207.jpg" alt="Iteration 3"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/nightstand%25209.jpg"><img src="assets/images/processed/project-f/nightstand%209.jpg" alt="Iteration 4"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/legshot.26.jpg"><img src="assets/images/processed/project-f/legshot.26.jpg" alt="Leg detail study"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/sidet.27.jpg"><img src="assets/images/processed/project-f/sidet.27.jpg" alt="Side profile study"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/PLATEFORM.28.jpg"><img src="assets/images/processed/project-f/PLATEFORM.28.jpg" alt="Platform study"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/TOPVIEW.29.jpg"><img src="assets/images/processed/project-f/TOPVIEW.29.jpg" alt="Top view study"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/CUPVIEW.30.jpg"><img src="assets/images/processed/project-f/CUPVIEW.30.jpg" alt="Cup view study"></picture></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The resolved design shows the nightstand in use contexts: lights out mode for bedtime, and lights on mode for functionality and wayfinding during the night.</p>
+            </div>
+            <div class="image-grid grid-2">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/LIGHTSOUT.31.jpg"><img src="assets/images/processed/project-f/LIGHTSOUT.31.jpg" alt="Lights out view"></picture></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/processed/project-f/LIGHTSHINNING.32.jpg"><img src="assets/images/processed/project-f/LIGHTSHINNING.32.jpg" alt="Lights shining view"></picture></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

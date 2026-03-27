@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts Project 2 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body[data-page="fine-arts"] {
+            padding-top: 64px;
+            background: #fafaf8;
+        }
+
+        body[data-page="fine-arts"] .site-header {
+            display: none !important;
+        }
+
+        body[data-page="fine-arts"] .category-bar {
+            top: 0 !important;
+            position: fixed !important;
+            z-index: 1002 !important;
+        }
+
+        .painting-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 80px 40px;
+            background: #fafaf8;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item.full-row {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item.full-row .gallery-item-image {
+            aspect-ratio: unset;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .gallery-item-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-image {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item-label {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .gallery-item-label h3 {
+            font-size: 18px;
+            margin: 0 0 6px 0;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .gallery-item-label p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .project-gallery {
+            display: none;
+        }
+
+        .project-header p {
+            display: none;
+        }
+
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-modal.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .gallery-modal-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+        }
+
+        .gallery-modal-content {
+            position: relative;
+            width: min(92vw, 1400px);
+            max-height: 92vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-modal-content img {
+            width: auto;
+            max-width: 100%;
+            max-height: 88vh;
+            object-fit: contain;
+            display: block;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .gallery-modal-back,
+        .gallery-modal-close {
+            position: absolute;
+            top: 20px;
+            z-index: 5;
+            border: none;
+            background: rgba(10, 10, 10, 0.75);
+            color: #fff;
+            cursor: pointer;
+            border-radius: 999px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .gallery-modal-back {
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .gallery-modal-back svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .gallery-modal-close {
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            font-size: 28px;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .gallery-modal-back:hover,
+        .gallery-modal-close:hover {
+            transform: translateY(-2px);
+            background: rgba(30, 30, 30, 0.92);
+        }
+
+        @media (max-width: 1024px) {
+            .painting-gallery {
+                gap: 28px;
+                padding: 56px 24px;
+            }
+
+            .gallery-item-label h3 {
+                font-size: 17px;
+            }
+
+            .gallery-item-label p {
+                font-size: 13px;
+            }
+
+            .gallery-modal-content {
+                width: min(94vw, 1200px);
+            }
+
+            .gallery-modal-back {
+                left: 16px;
+                top: 16px;
+                padding: 9px 14px;
+                font-size: 12px;
+            }
+
+            .gallery-modal-close {
+                right: 16px;
+                top: 16px;
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .painting-gallery {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                padding: 32px 16px 44px;
+            }
+
+            .gallery-item-image {
+                border-radius: 6px;
+            }
+
+            .gallery-item-label {
+                margin-top: 14px;
+            }
+
+            .gallery-modal-content {
+                width: min(96vw, 900px);
+                max-height: 88vh;
+            }
+
+            .gallery-modal-content img {
+                max-height: 82vh;
+            }
+        }
+    </style>
+</head>
+<body data-page="fine-arts">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header">
+        <h1>Mountain Project</h1>
+        <p>Landscape and natural forms</p>
+    </div>
+
+    <div class="painting-gallery" id="painting-gallery"></div>
+
+    <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog">
+        <div class="gallery-modal-backdrop" id="gallery-modal-backdrop"></div>
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-back" id="back-gallery-modal" aria-label="Back">
+                <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </span>
+                Back
+            </button>
+            <button class="gallery-modal-close" id="close-gallery-modal" aria-label="Close gallery">×</button>
+            <img id="modal-image" src="" alt="Full size mountain view">
+        </div>
+    </div>
+
+
+
+    <script>
+        const galleryData = [
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/CONNORPORTFOLIO-4.JPG', fallback: 'assets/images/mountain/CONNORPORTFOLIO-4.JPG', title: 'Mountain 2', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/CONNORPORTFOLIO-5.JPG', fallback: 'assets/images/mountain/CONNORPORTFOLIO-5.JPG', title: 'Mountain 3', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/CONNORPORTFOLIO-8.JPG', fallback: 'assets/images/mountain/CONNORPORTFOLIO-8.JPG', title: 'Mountain 4', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/group1-b.jpeg', fallback: 'assets/images/mountain/group1-b.jpeg', title: 'Mountain 26', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/group1-c.jpeg', fallback: 'assets/images/mountain/group1-c.jpeg', title: 'Mountain 27', description: '' },
+                        // ...existing code...
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_4640.jpeg', fallback: 'assets/images/mountain/IMG_4640.jpeg', title: 'Mountain 10', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_4642.jpeg', fallback: 'assets/images/mountain/IMG_4642.jpeg', title: 'Mountain 11', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_5009.jpeg', fallback: 'assets/images/mountain/IMG_5009.jpeg', title: 'Mountain 13', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_5010.jpeg', fallback: 'assets/images/mountain/IMG_5010.jpeg', title: 'Mountain 14', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_5012.jpeg', fallback: 'assets/images/mountain/IMG_5012.jpeg', title: 'Mountain 15', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_5057.jpeg', fallback: 'assets/images/mountain/IMG_5057.jpeg', title: 'Mountain 16', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_7039.jpeg', fallback: 'assets/images/mountain/IMG_7039.jpeg', title: 'Mountain 17', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_7040.jpeg', fallback: 'assets/images/mountain/IMG_7040.jpeg', title: 'Mountain 18', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/Screen%20Shot%202026-03-04%20at%2011.33.10%20PM.png', fallback: 'assets/images/mountain/Screen Shot 2026-03-04 at 11.33.10 PM.png', title: 'Mountain 19', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/Screen%20Shot%202026-03-04%20at%2011.33.35%20PM.png', fallback: 'assets/images/mountain/Screen Shot 2026-03-04 at 11.33.35 PM.png', title: 'Mountain 20', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/Screen%20Shot%202026-03-04%20at%2011.33.57%20PM.png', fallback: 'assets/images/mountain/Screen Shot 2026-03-04 at 11.33.57 PM.png', title: 'Mountain 21', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/Screen%20Shot%202026-03-04%20at%2011.34.51%20PM.png', fallback: 'assets/images/mountain/Screen Shot 2026-03-04 at 11.34.51 PM.png', title: 'Mountain 22', description: '' },
+            { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/Screen%20Shot%202026-03-04%20at%2011.42.26%20PM.png', fallback: 'assets/images/mountain/Screen Shot 2026-03-04 at 11.42.26 PM.png', title: 'Mountain 23', description: '' },
+                { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_1807.jpeg', fallback: 'assets/images/mountain/IMG_1807.jpeg', title: 'Mountain 5', description: '' },
+                { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_1823.jpeg', fallback: 'assets/images/mountain/IMG_1823.jpeg', title: 'Mountain 6', description: '' },
+                { image: 'https://deovv8pnl76k0.cloudfront.net/images/mountain/IMG_1853.jpeg', fallback: 'assets/images/mountain/IMG_1853.jpeg', title: 'Mountain 7', description: '' },
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('painting-gallery');
+            const modal = document.getElementById('gallery-modal');
+            const modalImage = document.getElementById('modal-image');
+            const backdrop = document.getElementById('gallery-modal-backdrop');
+            const backButton = document.getElementById('back-gallery-modal');
+            const closeButton = document.getElementById('close-gallery-modal');
+
+
+            galleryData.forEach((item, idx) => {
+                const galleryItem = document.createElement('div');
+                // Make Mountain 2 (index 0), Mountain 3 (index 1), and Mountain 4 (index 2) full row
+                if (idx === 0 || idx === 1 || idx === 2) {
+                    galleryItem.className = 'gallery-item full-row';
+                } else {
+                    galleryItem.className = 'gallery-item';
+                }
+                galleryItem.innerHTML = `
+                    <img class="gallery-item-image" src="${item.image}" alt="${item.title}">
+                    <div class="gallery-item-label">
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                `;
+
+                galleryItem.addEventListener('click', () => {
+                    modalImage.src = item.image;
+                    modalImage.alt = item.title;
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                gallery.appendChild(galleryItem);
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            backButton.addEventListener('click', closeModal);
+            closeButton.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js?v=20260308b"></script>
+</body>
+</html>

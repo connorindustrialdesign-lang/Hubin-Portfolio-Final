@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project E - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .project-hero-image {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 600px;
+            background-image: url('https://deovv8pnl76k0.cloudfront.net/images/project%20E/blackcup.30.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            margin-bottom: 80px;
+        }
+
+        .project-title-block {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 40px;
+        }
+
+        .project-title-block h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .project-title-block p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            max-width: 700px;
+        }
+
+        .project-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .project-section {
+            margin-bottom: 88px;
+        }
+
+        .project-section:last-child {
+            margin-bottom: 56px;
+        }
+
+        .section-header {
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 14px 0;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 19px;
+            font-weight: 500;
+            color: #555;
+            max-width: 820px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .problem-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        .problem-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+        }
+
+        .problem-image .image-grid,
+        .problem-image .grid-item {
+            height: 100%;
+        }
+
+        .problem-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .functions-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .functions-image-stack {
+            display: grid;
+            gap: 22px;
+        }
+
+        .functions-image-stack .grid-item {
+            background: transparent;
+        }
+
+        .functions-image-stack .grid-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            background: #f9f9f9;
+        }
+
+        .functions-content .section-text {
+            margin-top: 24px;
+        }
+
+        .functions-extra {
+            margin-top: 340px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .functions-extra p {
+            font-size: 19px;
+            line-height: 1.5;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 12px 0;
+        }
+
+        .functions-extra ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .functions-extra li {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .final-product-hero {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .final-product-hero .grid-item {
+            width: 100%;
+        }
+
+        .final-product-hero .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .final-product-row .grid-item img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: contain;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .material-lighting-grid .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            background: transparent;
+        }
+
+        .image-8-fit img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            background: transparent;
+        }
+
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 0;
+        }
+
+        .grid-1 { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .grid-item {
+            border-radius: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .grid-item.square {
+            aspect-ratio: 1 / 1;
+        }
+
+        .grid-item.square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .grid-item.square {
+            aspect-ratio: 1 / 1;
+        }
+
+        .grid-item.square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .section-text {
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            max-width: 100%;
+        }
+
+        .section-text p {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 18px 0;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-section .section-text + .image-grid,
+        .project-section .section-text + .final-product-hero,
+        .project-section .section-header + .image-grid {
+            margin-top: 32px;
+        }
+
+        .functions-list {
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .functions-list li {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .section-showcase {
+            display: grid;
+            gap: 0;
+            margin-bottom: 88px;
+        }
+
+        .section-showcase .grid-row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .section-showcase .grid-item {
+            margin-bottom: 0;
+        }
+
+        .image-caption {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 0 0;
+            background: transparent;
+            text-align: left;
+            color: #333;
+            letter-spacing: 0;
+            line-height: 1.5;
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .project-hero-image { height: 450px; }
+            .problem-layout,
+            .functions-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .problem-content { padding-right: 0; }
+            .project-title-block h1 { font-size: 48px; }
+            .project-title-block,
+            .project-content { padding: 0 30px; }
+            .section-header h2 { font-size: 40px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .project-hero-image {
+                height: 300px;
+                margin-bottom: 60px;
+            }
+            .project-title-block {
+                margin-bottom: 80px;
+                padding: 0 20px;
+            }
+            .project-title-block h1 { font-size: 36px; }
+            .project-title-block p { font-size: 16px; }
+            .project-content { padding: 0 20px; }
+            .section-header h2 {
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+            .section-header p {
+                font-size: 17px;
+                line-height: 1.55;
+            }
+            .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+            .project-section .section-text + .image-grid,
+            .project-section .section-text + .final-product-hero,
+            .project-section .section-header + .image-grid {
+                margin-top: 24px;
+            }
+
+            .prototype-section .section-text + .image-grid,
+            .final-product-section .section-text + .final-product-hero,
+            .final-product-section .final-product-hero + .image-grid {
+                margin-top: 20px !important;
+            }
+
+            .prototype-section .image-grid,
+            .final-product-section .image-grid {
+                gap: 24px;
+            }
+
+            .section-text p,
+            .functions-list li {
+                line-height: 1.58;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-hero-image {
+                height: 240px;
+                margin-bottom: 40px;
+            }
+            .project-title-block {
+                margin-bottom: 48px;
+                padding: 0 16px;
+            }
+            .project-title-block h1 {
+                font-size: 24px;
+                margin: 0 0 12px 0;
+                letter-spacing: -1px;
+            }
+            .project-title-block p { font-size: 14px; }
+            .project-content { padding: 0 16px; }
+            .project-section { margin-bottom: 60px; }
+            .section-header h2 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .section-header p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            .project-section .section-text + .image-grid,
+            .project-section .section-text + .final-product-hero,
+            .project-section .section-header + .image-grid {
+                margin-top: 18px;
+            }
+
+            .prototype-section .section-text + .image-grid,
+            .final-product-section .section-text + .final-product-hero,
+            .final-product-section .final-product-hero + .image-grid {
+                margin-top: 16px !important;
+            }
+
+            .prototype-section .image-grid,
+            .final-product-section .image-grid {
+                gap: 20px;
+            }
+
+            .section-text p,
+            .functions-list li {
+                font-size: 17px;
+                line-height: 1.55;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-hero-image"></div>
+
+    <div class="project-title-block">
+        <h1>Nightstand</h1>
+        <p>a bedside organizing product</p>
+    </div>
+
+    <div class="project-content">
+        <section class="project-section problem-layout">
+            <div class="problem-content">
+                <div class="section-header">
+                    <h2>Problem</h2>
+                </div>
+                <div class="section-text">
+                    <p>Night routines often involve switching between lighting, charging devices, and keeping small objects organized in low-light environments. Nightstand investigates how one form can simplify that interaction while maintaining a calm visual presence in a bedroom space.</p>
+                </div>
+            </div>
+            <div class="problem-image">
+                <div class="image-grid grid-1">
+                    <div class="grid-item">
+                        <picture>
+                            <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/nightstand%201.jpg">
+                            <img src="assets/images/project%20E/nightstand%201.jpg" alt="Nightstand context view">
+                        </picture>
+                        <div class="image-caption">IMAGE 1</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section prototype-section">
+            <div class="image-grid grid-1">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/process.png"><img src="assets/images/project%20E/process.png" alt="Nightstand form process"></picture><div class="image-caption">PROCESS</div></div>
+            </div>
+        </section>
+
+        <section class="project-section functions-layout">
+            <div class="functions-content">
+                <div class="section-header">
+                    <h2>Functions</h2>
+                    <p>the essential bedside functions integrated into a single object</p>
+                </div>
+                <div class="section-text">
+                    <ul class="functions-list">
+                        <li>Ambient lighting for night use</li>
+                        <li>Inductive charger for wireless phone charging</li>
+                        <li>Stable top surface for daily items</li>
+                        <li>Compact footprint with clear access</li>
+                        <li>Readable form language in low light</li>
+                    </ul>
+                    <div class="functions-extra">
+                        <p>Organization features include:</p>
+                        <ul>
+                            <li>Phone</li>
+                            <li>Wallet</li>
+                            <li>Keys</li>
+                            <li>Cup holder</li>
+                            <li>Pen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="functions-image-stack">
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/TOPVIEW.29%202.jpg">
+                        <img src="assets/images/project%20E/TOPVIEW.29%202.jpg" alt="Top view of Nightstand">
+                    </picture>
+                    <div class="image-caption">TOPVIEW.29</div>
+                </div>
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/organize.jpg">
+                        <img src="assets/images/project%20E/organize.jpg" alt="Nightstand organization layout">
+                    </picture>
+                    <div class="image-caption">ORGANIZE</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section final-product-section">
+            <div class="section-header">
+                <h2>Material and Lighting</h2>
+            </div>
+            <div class="section-text">
+                <p>concrete, walnut, 1" steel tubing, and arcylic</p>
+                <p>The lighting is built into the surface of the nightstand to provide ambient lighting to the room as well as highlight the items on your nightstand. The contrast between lights-on and lights-off states helps communicate control, clarity, and mood.</p>
+            </div>
+            <div class="image-grid grid-2 material-lighting-grid">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/LIGHTSOUT.31.jpg"><img src="assets/images/project%20E/LIGHTSOUT.31.jpg" alt="Nightstand lights off"></picture><div class="image-caption">IMAGE 5</div></div>
+                <div class="grid-item image-8-fit"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/CUPVIEW.30.jpg"><img src="assets/images/project%20E/CUPVIEW.30.jpg" alt="Cup view detail"></picture><div class="image-caption">IMAGE 8</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Prototype</h2>
+            </div>
+            <div class="section-text">
+                <p>The prototyping process utilized multiple fabrication methods including mold making, 3D printing, CNC machining, welding, and wiring of electric elements such as integrated lighting and an inductive charger.</p>
+            </div>
+            <div class="image-grid grid-4">
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto1.jpg"><img src="assets/images/project%20E/proto1.jpg" alt="Prototype 1"></picture><div class="image-caption">PROTO 1</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto2.jpg"><img src="assets/images/project%20E/proto2.jpg" alt="Prototype 2"></picture><div class="image-caption">PROTO 2</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto3.jpg"><img src="assets/images/project%20E/proto3.jpg" alt="Prototype 3"></picture><div class="image-caption">PROTO 3</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto4.jpg"><img src="assets/images/project%20E/proto4.jpg" alt="Prototype 4"></picture><div class="image-caption">PROTO 4</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto5.jpg"><img src="assets/images/project%20E/proto5.jpg" alt="Prototype 5"></picture><div class="image-caption">PROTO 5</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto6.jpg"><img src="assets/images/project%20E/proto6.jpg" alt="Prototype 6"></picture><div class="image-caption">PROTO 6</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto7.jpg"><img src="assets/images/project%20E/proto7.jpg" alt="Prototype 7"></picture><div class="image-caption">PROTO 7</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto8.jpg"><img src="assets/images/project%20E/proto8.jpg" alt="Prototype 8"></picture><div class="image-caption">PROTO 8</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto9.jpg"><img src="assets/images/project%20E/proto9.jpg" alt="Prototype 9"></picture><div class="image-caption">PROTO 9</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto10.jpg"><img src="assets/images/project%20E/proto10.jpg" alt="Prototype 10"></picture><div class="image-caption">PROTO 10</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto11.jpg"><img src="assets/images/project%20E/proto11.jpg" alt="Prototype 11"></picture><div class="image-caption">PROTO 11</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto16.jpg"><img src="assets/images/project%20E/proto16.jpg" alt="Prototype 16"></picture><div class="image-caption">PROTO 16</div></div>
+            </div>
+            <div class="image-grid grid-3" style="margin-top: 30px;">
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto12.jpg"><img src="assets/images/project%20E/proto12.jpg" alt="Prototype 12"></picture><div class="image-caption">PROTO 12</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto13.jpg"><img src="assets/images/project%20E/proto13.jpg" alt="Prototype 13"></picture><div class="image-caption">PROTO 13</div></div>
+                <div class="grid-item square"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto14.jpg"><img src="assets/images/project%20E/proto14.jpg" alt="Prototype 14"></picture><div class="image-caption">PROTO 14</div></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The final composition balances utility and atmosphere, showing how the object performs as both practical furniture and a focused lighting element.</p>
+            </div>
+            <div class="final-product-hero" style="margin-top: 40px;">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto17.jpg"><img src="assets/images/project%20E/proto17.jpg" alt="Final product hero"></picture><div class="image-caption">IMAGE 17</div></div>
+            </div>
+            <div class="image-grid grid-3 final-product-row" style="margin-top: 30px;">
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto19.jpg"><img src="assets/images/project%20E/proto19.jpg" alt="Final product view 2"></picture><div class="image-caption">IMAGE 19</div></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto18.jpg"><img src="assets/images/project%20E/proto18.jpg" alt="Final product view 1"></picture><div class="image-caption">IMAGE 18</div></div>
+                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/proto15.jpg"><img src="assets/images/project%20E/proto15.jpg" alt="Final product detail"></picture><div class="image-caption">IMAGE 15</div></div>
+            </div>
+        </section>
+
+        <div class="image-grid grid-1" style="margin-top: 120px;">
+            <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/section1c.jpg"><img src="assets/images/project%20E/section1c.jpg" alt="Section C"></picture><div class="image-caption">IMAGE 11</div></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

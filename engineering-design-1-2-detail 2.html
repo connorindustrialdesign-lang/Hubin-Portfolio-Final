@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineering Design 1 & 2 — Connor Hubin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .project-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 20px; }
+      .project-hero { margin-bottom: 32px; }
+      .project-hero h1 { font-size: 46px; margin: 0 0 10px 0; font-weight: 700; }
+      .project-hero .company { font-size: 20px; color: var(--muted); margin: 0 0 14px 0; }
+      .project-hero .role { font-size: 16px; color: var(--text); font-weight: 600; margin: 0; }
+
+      .project-section { margin-bottom: 28px; padding: 28px; background: rgba(0,0,0,0.02); border-radius: 12px; }
+      .project-section h2 { margin: 0 0 14px 0; font-size: 26px; font-weight: 700; }
+      .project-section p { margin: 0 0 12px 0; line-height: 1.8; }
+
+      .content-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px; }
+      .content-item { background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; padding: 18px; }
+      .content-item h3 { margin: 0 0 8px 0; font-size: 18px; }
+      .content-item p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+      .project-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 26px; }
+      .project-link-box { padding: 24px; background: #000; color: #fff; text-align: center; border-radius: 12px; text-decoration: none; display: block; transition: background 0.3s; }
+      .project-link-box:hover { background: #333; }
+      .project-link-box h3 { margin: 0 0 8px 0; font-size: 20px; font-weight: 700; }
+      .project-link-box p { margin: 0; font-size: 14px; opacity: 0.8; }
+
+      .certificate-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 2000; }
+      .certificate-modal.is-open { display: flex; }
+      .certificate-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.70); }
+      .certificate-modal-content { position: relative; width: min(900px, calc(100vw - 40px)); max-height: calc(100vh - 40px); background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.25); }
+      .certificate-modal-back { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 8px; border: none; background: rgba(255,255,255,0.92); color: #2b4f7d; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; cursor: pointer; z-index: 2; }
+      .certificate-modal-back:hover { background: #fff; }
+      .certificate-modal-back .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(91, 143, 212, 0.12); }
+      .certificate-modal-back svg { width: 14px; height: 14px; }
+      .certificate-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border: none; border-radius: 999px; background: rgba(0,0,0,0.08); color: #333; font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; }
+      .certificate-modal-close:hover { background: rgba(0,0,0,0.14); }
+      .certificate-modal img { width: 100%; height: auto; max-height: calc(100vh - 80px); display: block; object-fit: contain; background: #fff; }
+
+      @media (max-width: 900px) {
+        .project-hero h1 { font-size: 36px; }
+        .content-grid { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 768px) {
+        .project-wrap { padding: 38px 16px; }
+        .project-hero h1 { font-size: 32px; }
+        .project-links { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body data-page="engineering-design-1-2">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10.5"/>
+              <circle cx="12" cy="8" r="1.5"/>
+              <path d="M12 11v6"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="index.html#industrial-design">Industrial Design</a>
+      <a href="index.html#engineering">Engineering</a>
+      <a href="index.html#fabrication">Fabrication</a>
+      <a href="index.html#fine-arts">Fine Arts</a>
+    </nav>
+
+    <main class="project-wrap">
+      <section class="project-hero">
+        <h1>Engineering Design 1 &amp; 2</h1>
+        <p class="company">High School Engineering Instruction</p>
+        <p class="role">Instructor · Two Academic Years</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Class Overview</h2>
+        <p>
+          I taught Engineering Design 1 & 2 at the high school level over the past two years, guiding students through engineering fundamentals, structured design process, and project-based technical problem solving.
+        </p>
+        <p>
+          Coursework emphasized real-world application, documentation quality, and iterative design thinking. Students developed concept sketches, technical communication skills, and presentation confidence through progressive design challenges.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Class Content</h2>
+        <div class="content-grid">
+          <article class="content-item">
+            <h3>Engineering Process</h3>
+            <p>Problem framing, research, ideation, prototyping, testing, and refinement through documented design iterations.</p>
+          </article>
+          <article class="content-item">
+            <h3>Technical Communication</h3>
+            <p>Design briefs, annotated sketches, dimensioned drawings, and formal project presentations with peer critique.</p>
+          </article>
+          <article class="content-item">
+            <h3>CAD & Design Tools</h3>
+            <p>Digital modeling workflows and production-ready drawing conventions used to communicate intent and manufacturability.</p>
+          </article>
+          <article class="content-item">
+            <h3>Project-Based Learning</h3>
+            <p>Hands-on team and individual projects connecting engineering principles to practical classroom outcomes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-links">
+        <a href="#" class="project-link-box" id="open-certificate-modal">
+          <h3>CTE Teaching Certificate</h3>
+          <p>View certification</p>
+        </a>
+        <a href="#" class="project-link-box">
+          <h3>Class Slide Deck Samples</h3>
+          <p>Add exported Canva slides here</p>
+        </a>
+      </section>
+
+      <div class="certificate-modal" id="certificate-modal" aria-hidden="true">
+        <div class="certificate-modal-backdrop" id="certificate-modal-backdrop"></div>
+        <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-label="CTE Teaching Certificate">
+          <button class="certificate-modal-back" id="back-certificate-modal" aria-label="Back to Project">
+            <span class="back-arrow">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </span>
+            Back to Project
+          </button>
+          <button class="certificate-modal-close" id="close-certificate-modal" aria-label="Close certificate">×</button>
+          <img src="assets/images/engineering 1 & 2/hubin-teaching-certificate-display.png" alt="CTE Teaching Certificate">
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const openButton = document.getElementById('open-certificate-modal');
+        const backButton = document.getElementById('back-certificate-modal');
+        const closeButton = document.getElementById('close-certificate-modal');
+        const modal = document.getElementById('certificate-modal');
+        const backdrop = document.getElementById('certificate-modal-backdrop');
+        const modalContent = document.querySelector('.certificate-modal-content');
+
+        if (!openButton || !backButton || !closeButton || !modal || !backdrop || !modalContent) return;
+
+        const openModal = () => {
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+          modal.classList.remove('is-open');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        };
+
+        openButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          openModal();
+        });
+
+        backButton.addEventListener('click', closeModal);
+        closeButton.addEventListener('click', closeModal);
+        backdrop.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+          if (!event.target.closest('.certificate-modal-content')) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+          }
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

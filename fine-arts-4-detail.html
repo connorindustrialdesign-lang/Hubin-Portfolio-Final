@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts Project 4 - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body[data-page="fine-arts"] {
+            padding-top: 64px;
+            background: #fafaf8;
+        }
+
+        body[data-page="fine-arts"] .site-header {
+            display: none !important;
+        }
+        
+        body[data-page="fine-arts"] .category-bar {
+            top: 0 !important;
+            position: fixed !important;
+            z-index: 1002 !important;
+        }
+
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fafaf8;
+        }
+
+        .gallery-hero {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            background: #fafaf8;
+        }
+
+        .gallery-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+            background: #fafaf8;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            display: block;
+        }
+
+        .project-gallery img {
+            cursor: zoom-in;
+        }
+
+        .painting-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 5000;
+        }
+
+        .painting-modal.is-open {
+            display: block;
+        }
+
+        .painting-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+        }
+
+        .painting-modal-back {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            background: rgba(255, 255, 255, 0.94);
+            color: #222;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .painting-modal-back:hover {
+            background: #fff;
+        }
+
+        .painting-modal-back .back-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .painting-modal-back svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .painting-modal-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 84px 20px 20px;
+            box-sizing: border-box;
+        }
+
+        .painting-modal-content img {
+            max-width: calc(100vw - 40px);
+            max-height: calc(100vh - 120px);
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+            background: #fafaf8;
+        }
+
+        /* Tablet breakpoint */
+        @media (max-width: 1024px) {
+            .project-header {
+                padding: 50px 30px 30px;
+            }
+
+            .project-header h1 {
+                font-size: 40px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+
+            .project-gallery {
+                padding: 30px;
+                gap: 20px;
+            }
+        }
+
+        /* Mobile: single column stack */
+        @media (max-width: 768px) {
+            body[data-page="fine-arts"] {
+                padding-top: 56px;
+            }
+
+            .project-header {
+                padding: 40px 20px 20px;
+            }
+
+            .project-header h1 {
+                font-size: 32px;
+            }
+
+            .project-header p {
+                font-size: 16px;
+            }
+
+            .project-gallery {
+                padding: 20px;
+            }
+
+            .gallery-hero {
+                aspect-ratio: 1;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .painting-modal-back {
+                top: 12px;
+                left: 12px;
+                font-size: 13px;
+                padding: 9px 12px;
+            }
+
+            .painting-modal-content {
+                padding: 72px 14px 14px;
+            }
+
+            .painting-modal-content img {
+                max-width: calc(100vw - 28px);
+                max-height: calc(100vh - 98px);
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 480px) {
+            body[data-page="fine-arts"] {
+                padding-top: 48px;
+            }
+
+            .project-header {
+                padding: 30px 16px 16px;
+            }
+
+            .project-header h1 {
+                font-size: 24px;
+                margin: 0 0 8px 0;
+            }
+
+            .project-header p {
+                font-size: 14px;
+            }
+
+            .project-gallery {
+                padding: 16px;
+                gap: 14px;
+            }
+
+            .gallery-hero {
+                aspect-ratio: 1;
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    </style>
+</head>
+<body data-page="fine-arts">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <div class="project-header">
+        <h1>Paintings</h1>
+        <p>Acrylic and mixed media compositions</p>
+    </div>
+
+    <div class="project-gallery">
+        <div class="gallery-hero">
+            <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/paintings/1000016900.jpg"><img src="assets/images/paintings/1000016900.jpg" alt="Painting hero"></picture>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/paintings/1000016904.jpg"><img src="assets/images/paintings/1000016904.jpg" alt="Painting 2"></picture></div>
+            <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/paintings/1000016907.jpg"><img src="assets/images/paintings/1000016907.jpg" alt="Painting 3"></picture></div>
+            <div class="gallery-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/paintings/1000016913.jpg"><img src="assets/images/paintings/1000016913.jpg" alt="Painting 4"></picture></div>
+        </div>
+    </div>
+
+    <div class="painting-modal" id="painting-modal" aria-hidden="true">
+        <div class="painting-modal-backdrop" id="painting-modal-backdrop"></div>
+        <button class="painting-modal-back" id="painting-modal-back" aria-label="Back to Paintings">
+            <span class="back-arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </span>
+            Back
+        </button>
+        <div class="painting-modal-content" role="dialog" aria-modal="true" aria-label="Painting full screen view">
+            <img id="painting-modal-image" src="" alt="Painting full screen">
+        </div>
+    </div>
+
+    <script src="script.js?v=20260308b"></script>
+    <script>
+        (function () {
+            const modal = document.getElementById('painting-modal');
+            const modalImage = document.getElementById('painting-modal-image');
+            const backButton = document.getElementById('painting-modal-back');
+            const backdrop = document.getElementById('painting-modal-backdrop');
+            const paintingImages = document.querySelectorAll('.project-gallery img');
+
+            if (!modal || !modalImage || !backButton || !backdrop || !paintingImages.length) return;
+
+            const openModal = (img) => {
+                modalImage.src = img.currentSrc || img.src;
+                modalImage.alt = img.alt || 'Painting full screen';
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                modalImage.src = '';
+                document.body.style.overflow = '';
+            };
+
+            paintingImages.forEach((img) => {
+                img.addEventListener('click', () => openModal(img));
+            });
+
+            backButton.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

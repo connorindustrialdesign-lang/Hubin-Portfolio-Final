@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fine Arts — Connor Hubin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .category-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 20px 60px; }
+      .category-wrap h2 { margin: 0 0 8px; position: absolute; left: -9999px; }
+      .category-wrap p { margin: 0 0 28px; color: var(--muted); position: absolute; left: -9999px; }
+      .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .cat-card { border-radius: 12px; min-height: 260px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; }
+      .g1 { background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%); }
+      .g2 { background: linear-gradient(135deg, #0093e9 0%, #80d0c7 100%); }
+      .g3 { background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%); }
+      .g4 { background: linear-gradient(135deg, #4568dc 0%, #b06ab3 100%); }
+      @media (max-width: 760px) { .cat-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body data-page="fine-arts">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10.5"/>
+              <circle cx="12" cy="8" r="1.5"/>
+              <path d="M12 11v6"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="industrial-design.html" data-category="industrial-design">Industrial Design</a>
+      <a href="engineering.html" data-category="engineering">Engineering</a>
+      <a href="fabrication.html" data-category="fabrication">Fabrication</a>
+      <a href="fine-arts.html" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <main class="category-wrap">
+      <h2>Fine Arts</h2>
+      <p>Four fine arts projects.</p>
+
+      <section class="cat-grid">
+        <a href="fine-arts-1-detail.html" class="cat-card g1">Fine Arts Project 1</a>
+        <a href="fine-arts-2-detail.html" class="cat-card g2">Fine Arts Project 2</a>
+        <a href="fine-arts-3-detail.html" class="cat-card g3">Fine Arts Project 3</a>
+        <a href="fine-arts-4-detail.html" class="cat-card g4">Fine Arts Project 4</a>
+      </section>
+
+      <section class="category-flow">
+        <a href="industrial-design.html" class="flow-link">Next: Industrial Design →</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

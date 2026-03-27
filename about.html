@@ -1,0 +1,133 @@
+</html>
+<!-- Force rebuild: Shope drawings row CSS, March 11, 2026 -->
+</html>
+<!-- Force rebuild: March 11, 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Connor Hubin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body[data-page="about"] {
+        padding-top: calc(88px + 64px);
+        background: #fafaf8;
+      }
+      
+      body[data-page="about"] .category-bar {
+        top: 88px !important;
+        position: fixed !important;
+        z-index: 1002 !important;
+      }
+      
+      .about-wrap { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+      .about-header { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 60px; }
+      .about-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; }
+      .about-intro h1 { font-size: 48px; margin: 0 0 20px 0; font-weight: 700; }
+      .about-intro p { font-size: 18px; line-height: 1.6; color: var(--muted); margin: 0 0 30px 0; }
+      .about-intro a { display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; margin-right: 12px; margin-bottom: 12px; transition: background 0.3s; }
+      .about-intro a:hover { background: #333; }
+      .about-bio { font-size: 16px; line-height: 1.8; color: var(--text); margin-bottom: 40px; }
+      .header-nav { display: flex; gap: 20px; align-items: center; }
+      .nav-about { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: var(--text); transition: opacity 0.2s ease; }
+      .nav-about:hover { opacity: 0.6; }
+      .nav-about svg { width: 24px; height: 24px; stroke: var(--text); fill: none; stroke-width: 1.5; }
+      .about-quote {
+        max-width: 700px;
+        margin: 80px auto 60px;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .about-quote blockquote {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+      .about-quote cite {
+        display: block;
+        font-size: 16px;
+        font-style: normal;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      @media (max-width: 768px) {
+        .about-header { grid-template-columns: 1fr; gap: 30px; }
+        .about-intro h1 { font-size: 36px; }
+        .about-quote blockquote { font-size: 20px; }
+        .about-quote cite { font-size: 14px; }
+      }
+    </style>
+  </head>
+  <body data-page="about">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10.5"/>
+              <circle cx="12" cy="8" r="1.5"/>
+              <path d="M12 11v6"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+      <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+      <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+      <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <main class="about-wrap">
+      <section class="about-header">
+        <div class="about-photo">
+          <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/about/about-picture.jpeg"><img src="assets/images/about/about-picture.jpeg" alt="Connor Hubin"></picture>
+        </div>
+        <div class="about-intro">
+          <h1>About Me</h1>
+          <p>Industrial designer and maker passionate about creating thoughtful, functional objects that solve real problems.</p>
+          <div class="about-links" style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start; margin-top: 24px;">
+            <a href="cv.html" target="_blank" style="font-size: 1.25em; padding: 18px 36px; min-width: 180px; text-align: center;">CV</a>
+            <a href="assets/Letters-of-Recommendation.pdf" target="_blank" style="font-size: 1.25em; padding: 18px 36px; min-width: 180px; text-align: center;">Letters</a>
+          </div>
+        </div>
+      </section>
+
+      <article class="about-bio">
+        <p>
+          With a background in industrial design and engineering, I combine technical problem-solving with user-centered design thinking. My work spans from concept sketches and 3D modeling to fabrication and final prototyping, ensuring every project is grounded in both aesthetics and functionality.
+        </p>
+        <p>
+          I'm driven by the challenge of simplifying complex problems through design, whether creating tools for professionals, consumer products, or art installations. I believe great design is invisible—it works so well that users never think about how it was made.
+        </p>
+        <p>
+          When I'm not designing, you can find me in the shop building prototypes, exploring new fabrication techniques, or drawing inspiration from everyday objects.
+        </p>
+        <p style="margin-top: 40px; font-size: 14px; color: #999;">
+          <a href="archive/project-g-detail.html" style="color: #999; text-decoration: none; border-bottom: 1px solid #ccc;">View archived projects</a>
+        </p>
+      </article>
+    </main>
+
+    <div class="about-quote">
+      <blockquote>"Realize everything connects to everything else."</blockquote>
+      <cite>— Leonardo da Vinci</cite>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

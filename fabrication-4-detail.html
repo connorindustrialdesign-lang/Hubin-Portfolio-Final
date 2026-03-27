@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundry - Fabrication Project 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                        .gallery-grid-1-6 {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: repeat(2, 220px);
+                            gap: 28px;
+                            width: 100%;
+                            margin-bottom: 32px;
+                        }
+                        .gallery-grid-1-6 .img1 { grid-column: 1; grid-row: 1; }
+                        .gallery-grid-1-6 .img2 { grid-column: 2 / span 2; grid-row: 1 / span 2; }
+                        .gallery-grid-1-6 .img4 { grid-column: 1; grid-row: 2; }
+                        .gallery-grid-1-6 .img5 { grid-column: 3; grid-row: 2; }
+                        .gallery-grid-1-6 .img6 { grid-column: 4; grid-row: 2; }
+                        .gallery-grid-1-6 .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+                            .gallery-grid-1-6 {
+                                display: grid;
+                                grid-template-columns: 1fr 1.5fr 1fr 1fr;
+                                grid-template-rows: 220px 220px;
+                                gap: 28px;
+                                width: 100%;
+                                margin-bottom: 32px;
+                            }
+                            .gallery-grid-1-6 .img1 { grid-column: 1; grid-row: 1; }
+                            .gallery-grid-1-6 .img2 { grid-column: 2; grid-row: 1 / span 2; }
+                            .gallery-grid-1-6 .img5 { grid-column: 3; grid-row: 1; }
+                                        .gallery-grid-1-6 {
+                                            display: grid;
+                                            grid-template-columns: repeat(4, 1fr);
+                                            grid-template-rows: repeat(2, 220px);
+                                            gap: 28px;
+                                            width: 100%;
+                                            margin-bottom: 32px;
+                                        }
+                                        .gallery-grid-1-6 .img1 { grid-column: 1; grid-row: 1; }
+                                        .gallery-grid-1-6 .img2 { grid-column: 2 / span 2; grid-row: 1 / span 2; }
+                                        .gallery-grid-1-6 .img4 { grid-column: 1; grid-row: 2; }
+                                        .gallery-grid-1-6 .img5 { grid-column: 3; grid-row: 2; }
+                                        .gallery-grid-1-6 .img6 { grid-column: 4; grid-row: 2; }
+                                        .gallery-grid-1-6 .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+                                        .top-section {
+                                            display: flex;
+                                            align-items: flex-start;
+                                            gap: 40px;
+                                            margin-bottom: 48px;
+                                        }
+                                        .top-image {
+                                            flex: 1.5;
+                                            max-width: 700px;
+                                            border-radius: 8px;
+                                            overflow: hidden;
+                                            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+                                        }
+                                        .top-content {
+                                            flex: 2;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                        }
+                                        .project-title {
+                                            font-size: 28px;
+                                            font-weight: 700;
+                                            margin-bottom: 12px;
+                                            color: #222;
+                                        }
+                                        .gallery-row.same-size {
+                                            gap: 28px;
+                                        }
+                                        .gallery-row.same-size .gallery-item.large,
+                                        .gallery-row.same-size .gallery-item.small {
+                                            flex: 1;
+                                            max-width: 320px;
+                                        }
+                                        .gallery-row.same-height {
+                                            align-items: stretch;
+                                        }
+                                        .gallery-row.same-height .gallery-item.large,
+                                        .gallery-row.same-height .gallery-item.small {
+                                            height: 320px;
+                                            max-width: 320px;
+                                        }
+                            .gallery-grid-1-6 .img6 { grid-column: 3 / span 2; grid-row: 2; }
+                            .gallery-grid-1-6 .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+                .top-section {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 40px;
+                    margin-bottom: 48px;
+                }
+                .top-image {
+                    flex: 1.5;
+                    max-width: 700px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+                }
+                .top-content {
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .project-title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    margin-bottom: 12px;
+                    color: #222;
+                }
+                .gallery-row.same-size {
+                    gap: 28px;
+                }
+                .gallery-row.same-size .gallery-item.large,
+                .gallery-row.same-size .gallery-item.small {
+                    flex: 1;
+                    max-width: 320px;
+                }
+                .gallery-row.same-height {
+                    align-items: stretch;
+                }
+                .gallery-row.same-height .gallery-item.large,
+                .gallery-row.same-height .gallery-item.small {
+                    height: 320px;
+                    max-width: 320px;
+                }
+        body[data-page="fabrication"] {
+            padding-top: calc(88px + 64px);
+            background: #fafaf8;
+        }
+        body[data-page="fabrication"] .category-bar {
+            top: 0 !important;
+            position: fixed !important;
+            left: 0;
+            width: 100vw;
+            z-index: 1002 !important;
+            background: #000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .project-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+        .project-header h1 {
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .project-header p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+        .project-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fafaf8;
+        }
+        .gallery-row {
+            display: flex;
+            gap: 28px;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .gallery-item.large {
+            flex: 2;
+            max-width: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-item.small {
+            flex: 1;
+            max-width: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-text {
+            font-size: 16px;
+            color: #333;
+            margin: 16px 0 0 0;
+            padding: 0 12px;
+            text-align: left;
+        }
+        .img-number {
+            font-size: 14px;
+            color: #888;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body data-page="fabrication">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="index.html" class="category-logo">Connor Hubin</a>
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+    <div class="project-header">
+        <h1>Foundry</h1>
+        <p>Exploring metal casting, mold making, and the foundry process through hands-on fabrication.</p>
+    </div>
+    <div class="project-gallery">
+        <div class="top-section">
+            <div class="top-image">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/top%20image.jpeg"><img src="assets/images/foundry/top image.jpeg" alt="top image" style="width:100%;"></picture>
+            </div>
+            <div class="top-content">
+                <div class="project-title">Foundry Fabrication Overview</div>
+                <p>Exploring metal casting, mold making, and the foundry process through hands-on fabrication. This project documents the journey from setup to finished metalwork, highlighting key steps and craftsmanship.</p>
+            </div>
+        </div>
+        <div class="project-title">Setup, Workspace & Mold Preparation</div>
+        <div class="gallery-grid-1-6">
+            <div class="gallery-item img1">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe1-a.jpeg"><img src="assets/images/foundry/fe1-a.jpeg" alt="fe1-a"></picture>
+                <div class="img-number">1</div>
+            </div>
+            <div class="gallery-item img2">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe1-b.jpeg"><img src="assets/images/foundry/fe1-b.jpeg" alt="fe1-b"></picture>
+                <div class="img-number">2</div>
+            </div>
+            <div class="gallery-item img5">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe1-e.jpeg"><img src="assets/images/foundry/fe1-e.jpeg" alt="fe1-e"></picture>
+                <div class="img-number">5</div>
+            </div>
+            <div class="gallery-item img4">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe1-d.jpeg"><img src="assets/images/foundry/fe1-d.jpeg" alt="fe1-d"></picture>
+                <div class="img-number">4</div>
+            </div>
+            <div class="gallery-item img6">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe1-f.JPG"><img src="assets/images/foundry/fe1-f.JPG" alt="fe1-f"></picture>
+                <div class="img-number">6</div>
+            </div>
+        </div>
+        <div class="gallery-text">
+            Images 1-6 show the initial foundry setup, workspace organization, and mold preparation. Images 2, 4, and 5 are highlighted as dominant steps in the process.
+        </div>
+        <div class="project-title">Casting & Cooling</div>
+        <div class="gallery-row same-size">
+            <div class="gallery-item large" style="height:320px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-a.jpeg"><img src="assets/images/foundry/fe2-a.jpeg" alt="fe2-a" style="height:100%;"></picture>
+                <div class="img-number">7</div>
+            </div>
+            <div class="gallery-item large" style="height:320px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-b.JPG"><img src="assets/images/foundry/fe2-b.JPG" alt="fe2-b" style="height:100%;"></picture>
+                <div class="img-number">8</div>
+            </div>
+        </div>
+        <div class="gallery-text">
+            Images 7 and 8 show the cooling and removal of cast pieces, revealing the results of the foundry process.
+        </div>
+        <div class="project-title">Finishing & Inspection</div>
+        <!-- Finishing & Inspection section removed -->
+        <div class="project-title">Completed Metalwork</div>
+        <div class="gallery-row same-size">
+            <div class="gallery-item large" style="height:320px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-a.JPG"><img src="assets/images/foundry/fe4-a.JPG" alt="fe4-a" style="height:100%;"></picture>
+                <div class="img-number">9</div>
+            </div>
+            <div class="gallery-item large" style="height:320px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-b.jpeg"><img src="assets/images/foundry/fe4-b.jpeg" alt="fe4-b" style="height:100%;"></picture>
+                <div class="img-number">10</div>
+            </div>
+            <div class="gallery-item large" style="height:320px;">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe5-a.jpeg"><img src="assets/images/foundry/fe5-a.jpeg" alt="fe5-a" style="height:100%;"></picture>
+                <div class="img-number">11</div>
+            </div>
+        </div>
+        <div class="gallery-text">
+            Images 11 and 12 show the completed metal pieces, ready for use or display.
+        </div>
+        <div class="project-title">Metalwork Details</div>
+        <div class="gallery-row same-height">
+            </div>
+            <div style="width:100vw; margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%);">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/bottom%20image.jpeg"><img src="assets/images/foundry/bottom image.jpeg" alt="bottom image" style="width:100vw; display:block; border-radius:0; box-shadow:none;"></picture>
+                <div class="img-number">Bottom</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
