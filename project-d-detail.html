@@ -159,6 +159,7 @@
             height: auto;
             object-fit: cover;
             display: block;
+            border-radius: 10px;
         }
 
         /* Image Layouts */
@@ -181,7 +182,7 @@
         }
 
         .grid-item {
-            border-radius: 0;
+            border-radius: 10px;
             overflow: hidden;
             background: #f9f9f9;
         }
@@ -229,7 +230,7 @@
 
         .form-process-grid .grid-item {
             background: #f9f9f9;
-            border-radius: 0;
+            border-radius: 6px;
             display: flex;
             flex-direction: column;
             height: fit-content;
@@ -618,10 +619,12 @@
             <div class="section-text">
                 <p>The final sequence combines hero renders and production-facing views to show form, printability, and the heads-up display behavior in context.</p>
             </div>
-            <div class="image-grid grid-1">
-                <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number13.21%202.jpg"><img src="assets/images/project%20D/Number13.21%202.jpg" alt="Final product hero view"></picture></div>
-            </div>
         </section>
+    </div>
+
+    <!-- Bottom image full-bleed -->
+    <div style="width:100vw;overflow:hidden;">
+        <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20D/Number13.21%202.jpg"><img src="assets/images/project%20D/Number13.21%202.jpg" alt="Final product hero view" style="width:100%;display:block;border-radius:0;"></picture>
     </div>
 
     <script src="script.js"></script>

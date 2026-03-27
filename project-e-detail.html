@@ -173,7 +173,7 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .final-product-row .grid-item img {
@@ -181,7 +181,7 @@
             aspect-ratio: 3 / 4;
             object-fit: contain;
             background: #f9f9f9;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .material-lighting-grid .grid-item img {
@@ -212,7 +212,7 @@
         .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
         .grid-item {
-            border-radius: 0;
+            border-radius: 10px;
             overflow: hidden;
             background: #f9f9f9;
         }
@@ -590,8 +590,12 @@
         </section>
 
         <div class="image-grid grid-1" style="margin-top: 120px;">
-            <div class="grid-item"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/section1c.jpg"><img src="assets/images/project%20E/section1c.jpg" alt="Section C"></picture><div class="image-caption">IMAGE 11</div></div>
         </div>
+    </div>
+
+    <!-- Bottom image full-bleed -->
+    <div style="width:100vw;overflow:hidden;">
+        <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/project%20E/section1c.jpg"><img src="assets/images/project%20E/section1c.jpg" alt="Section C" style="width:100%;display:block;border-radius:0;"></picture>
     </div>
 
     <script src="script.js"></script>

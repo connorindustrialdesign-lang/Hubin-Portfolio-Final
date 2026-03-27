@@ -19,8 +19,11 @@
 
     .layout-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
     .column-stack { display: grid; gap: 20px; }
-    .frame { background: #f6f6f6; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; }
+    .frame { background: #f6f6f6; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; border-radius: 10px; }
     .frame.hero { min-height: 520px; }
+    .frame.hero-top { width: 100vw; margin-left: calc(-50vw + 50%); border-radius: 0; overflow: hidden; }
+    .full-bleed-bottom-image { width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden; position: static; left: auto; right: auto; margin-right: 0; min-height: auto; background: transparent; }
+    .full-bleed-bottom-image img, .full-bleed-img { width: 100%; height: auto; display: block; border-radius: 0; object-fit: cover; background: transparent; }
     .frame.wide { grid-column: 1 / -1; min-height: 300px; }
     .frame.tall { min-height: 360px; }
 
@@ -59,7 +62,7 @@
   </style>
 </head>
 <body data-page="industrial-design">
-  <div class="frame hero" style="margin-bottom:48px;">
+  <div class="frame hero hero-top" style="margin-bottom:48px;">
     <picture>
       <source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-37.JPG">
       <img src="assets/images/id-project-a/cte-37.jpg" alt="Hero image" style="width:100%;height:100%;object-fit:cover;">
@@ -124,9 +127,9 @@
       <div class="layout-grid" style="gap: 32px; grid-template-columns: 1fr 1.1fr; align-items: stretch;">
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a placeholder for your prototype and fabrication process description.</p>
-          <div class="frame img-13-small" style="margin-top:32px;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-11.JPG"><img src="assets/images/id-project-a/cte-11.jpg" alt="" /></picture><span class="img-num">13</span></div>
+          <div class="frame img-13-small" style="margin-top:32px; min-height:unset; background:none; overflow:visible; align-self:flex-end;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-11.JPG"><img src="assets/images/id-project-a/cte-11.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;" /></picture><span class="img-num">13</span></div>
         </div>
-        <div class="frame hero"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9.PNG"><img src="assets/images/id-project-a/cte-9.png" alt="" /></picture><span class="img-num">11</span></div>
+        <div class="frame hero"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9-new.png"><img src="assets/images/id-project-a/cte-9-new.png" alt="" /></picture><span class="img-num">11</span></div>
       </div>
     </section>
 
@@ -186,32 +189,32 @@
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-28.JPG"><img src="assets/images/id-project-a/cte-28.JPG" alt=""></picture>
             <span class="img-num">30</span>
-            <div class="function-caption">Caption for box 30</div>
+            <div class="function-caption">charger and chord spool</div>
           </div>
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-29.JPG"><img src="assets/images/id-project-a/cte-29.JPG" alt=""></picture>
             <span class="img-num">31</span>
-            <div class="function-caption">Caption for box 31</div>
+            <div class="function-caption">writing utensil</div>
           </div>
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-30.JPG"><img src="assets/images/id-project-a/cte-30.JPG" alt=""></picture>
             <span class="img-num">32</span>
-            <div class="function-caption">Caption for box 32</div>
+            <div class="function-caption">16 oz. water bottle</div>
           </div>
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-31.JPG"><img src="assets/images/id-project-a/cte-31.JPG" alt=""></picture>
             <span class="img-num">33</span>
-            <div class="function-caption">Caption for box 33</div>
+            <div class="function-caption">mobile bulletin board (for art)</div>
           </div>
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-32.JPG"><img src="assets/images/id-project-a/cte-32.JPG" alt=""></picture>
             <span class="img-num">34</span>
-            <div class="function-caption">Caption for box 34</div>
+            <div class="function-caption">Chromebook and zipped binder storage</div>
           </div>
           <div class="function-frame">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-33.JPG"><img src="assets/images/id-project-a/cte-33.JPG" alt=""></picture>
             <span class="img-num">35</span>
-            <div class="function-caption">Caption for box 35</div>
+            <div class="function-caption">stand and handle</div>
           </div>
         </div>
       </section>
@@ -223,18 +226,12 @@
       <div class="final-product-row">
         <div class="final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-26.JPG"><img src="assets/images/id-project-a/cte-26.JPG" alt=""></picture>
-          <span class="img-num">40</span>
-          <div class="final-caption">Final product view 2</div>
         </div>
         <div class="final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-25.JPG"><img src="assets/images/id-project-a/cte-25.JPG" alt=""></picture>
-          <span class="img-num">39</span>
-          <div class="final-caption">Final product view 1</div>
         </div>
         <div class="final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-27.JPG"><img src="assets/images/id-project-a/cte-27.JPG" alt=""></picture>
-          <span class="img-num">41</span>
-          <div class="final-caption">Final product view 3</div>
         </div>
       </div>
     </section>
