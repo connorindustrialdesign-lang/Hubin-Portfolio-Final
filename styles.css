@@ -766,3 +766,330 @@ body.project-detail-page .thumb-label{
 /* Rebuild timestamp: 1772782920 */
 
 /* Final review and spacing audit complete: 1772782920 */
+
+/* ==========================================================
+   MOBILE RESPONSIVE — appended 2026-03-27
+   Only activates at ≤768px. Desktop styles are NOT changed.
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  /* --- Global image safety net --- */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* --- Full-bleed patterns: contain to viewport --- */
+  .full-bleed-bottom-image,
+  .frame.hero-top,
+  .form-process-grid,
+  .full-bleed-black {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+  }
+  .full-bleed-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .full-bleed-bottom-image {
+    min-height: auto;
+  }
+
+  /* --- Hero frames: reduce heights --- */
+  .frame.hero {
+    min-height: 260px;
+  }
+  .frame.hero-top {
+    min-height: 220px;
+  }
+
+  /* --- Multi-column layouts → single column --- */
+  .layout-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    row-gap: 24px;
+  }
+  .problem-context-flex,
+  .side-by-side-row,
+  .three-image-row,
+  .four-image-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .side-by-side-row .side-text,
+  .side-by-side-row .side-image {
+    padding: 0;
+  }
+
+  /* --- Image grids: collapse columns --- */
+  .image-grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .grid-item.span-2 {
+    grid-column: span 1;
+  }
+
+  /* --- Functions grid --- */
+  .functions-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* --- Phase strip (detail pages) --- */
+  .phase-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* --- Final product row --- */
+  .final-product-row {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* --- Assembly 2x2 grid --- */
+  .assembly-2x2-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .assembly-2x2-row .gallery-item {
+    aspect-ratio: unset;
+    min-width: 0;
+    height: auto;
+    max-height: none;
+  }
+
+  /* --- Category pages: single column cards --- */
+  .cat-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .cat-card:first-child {
+    grid-column: 1;
+  }
+  .cat-card {
+    min-height: 200px;
+  }
+  .cat-card.shope-project {
+    min-height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .shope-project-content {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .shope-project-logo {
+    max-width: 100%;
+    width: 220px;
+  }
+  .shope-project-icon {
+    width: 120px;
+    height: 140px;
+  }
+  .cat-card.design-project {
+    min-height: 240px;
+  }
+
+  /* --- Portfolio wheel grid: stack tiles --- */
+  .portfolio {
+    height: auto;
+    overflow: visible;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 16px;
+    padding: 16px;
+  }
+  .tile {
+    border-radius: 10px;
+    min-height: 220px;
+  }
+  .tile--left-full,
+  .tile--right-top,
+  .tile--right-bottom-left,
+  .tile--right-bottom-right,
+  .tile--bottom-left,
+  .tile--bottom-mid-left,
+  .tile--bottom-mid-right,
+  .tile--bottom-right {
+    grid-column: 1;
+    grid-row: auto;
+    aspect-ratio: auto;
+    margin-top: 0;
+  }
+  .tile--right-top {
+    min-height: 200px;
+  }
+
+  /* --- Project detail shells: tighter padding --- */
+  .project-shell {
+    padding: 0 16px 48px;
+  }
+  .project-content,
+  .project-title-block {
+    padding: 0 16px;
+  }
+  .project-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 0 24px;
+  }
+
+  /* --- Project hero images --- */
+  .project-hero-image {
+    height: 260px;
+  }
+
+  /* --- Problem / functions layouts --- */
+  .problem-layout,
+  .functions-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* --- About page --- */
+  .about-wrap {
+    padding: 32px 16px;
+  }
+  .about-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-intro h1 {
+    font-size: 32px;
+  }
+  .about-intro p {
+    font-size: 16px;
+  }
+  .about-quote blockquote {
+    font-size: 18px;
+  }
+
+  /* --- Home hero section --- */
+  .hero-project-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-project {
+    padding: 20px 16px 32px;
+    min-height: auto;
+  }
+  .hero-project-image {
+    max-width: 100%;
+  }
+
+  /* --- Gallery pages --- */
+  .project-gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+  .gallery-item {
+    min-height: 180px;
+  }
+
+  /* --- Full-bleed black sections --- */
+  .full-bleed-black {
+    padding: 40px 16px;
+  }
+
+  /* --- Tighten large gaps --- */
+  .frame {
+    margin-bottom: 16px;
+  }
+  .frame-small {
+    max-width: 100%;
+  }
+
+  /* --- Touch-friendly category bar --- */
+  .category-bar {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .category-bar a {
+    padding: 10px 12px;
+    font-size: clamp(13px, 3vw, 16px);
+    line-height: 1.4;
+  }
+
+  /* --- Header --- */
+  .site-header {
+    padding: 12px 0;
+  }
+  .site-name {
+    font-size: clamp(18px, 4vw, 28px);
+  }
+}
+
+/* --- Extra small phones (≤480px) --- */
+@media (max-width: 480px) {
+
+  .category-bar {
+    flex-direction: column;
+  }
+  .category-bar a {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .category-bar a.active {
+    border-bottom: 3px solid currentColor;
+  }
+
+  .tile {
+    min-height: 180px;
+    border-radius: 8px;
+  }
+
+  .frame.hero {
+    min-height: 200px;
+  }
+
+  .project-hero-image {
+    height: 200px;
+  }
+
+  .about-intro h1 {
+    font-size: 26px;
+  }
+
+  .shope-project-logo {
+    width: 160px;
+  }
+  .shope-project-icon {
+    width: 90px;
+    height: 105px;
+  }
+
+  body.project-detail-page .category-bar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  body.project-detail-page .category-bar a {
+    width: auto;
+    flex: 0 0 auto;
+    border-bottom: none;
+    padding: 0 8px;
+    font-size: clamp(11px, 2.5vw, 13px);
+  }
+}
