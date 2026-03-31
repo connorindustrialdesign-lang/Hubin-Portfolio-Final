@@ -18,9 +18,12 @@
       body[data-page="about"]::before {
         content: '';
         position: fixed;
-        inset: 0;
+        top: calc(88px + 64px);
+        left: 0;
+        right: 0;
+        bottom: 0;
         background: url('https://deovv8pnl76k0.cloudfront.net/images/about/cte-8.jpg') center center / contain no-repeat;
-        opacity: 0.2;
+        opacity: 0.9;
         z-index: 0;
         pointer-events: none;
       }
@@ -31,7 +34,7 @@
         z-index: 1002 !important;
       }
       
-      .about-wrap { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+      .about-wrap { max-width: 900px; margin: 0 auto; padding: 60px 20px; position: relative; z-index: 1; }
       .about-header { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 60px; }
       .about-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; }
       .about-intro h1 { font-size: 48px; margin: 0 0 20px 0; font-weight: 700; }
@@ -48,6 +51,8 @@
         margin: 80px auto 60px;
         text-align: center;
         padding: 0 20px;
+        position: relative;
+        z-index: 1;
       }
       .about-quote blockquote {
         margin: 0;
