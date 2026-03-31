@@ -15,7 +15,7 @@
             margin-bottom: 32px;
         }
         .gallery-grid-1-6 .gallery-item { border-radius: 10px; overflow: hidden; }
-        .gallery-grid-1-6 .gallery-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+        .gallery-grid-1-6 .gallery-item img { width: 100%; height: auto; display: block; border-radius: 10px; }
                                         .top-section {
                                             display: flex;
                                             align-items: flex-start;
@@ -47,18 +47,16 @@
                                         .gallery-row.same-size .gallery-item.large,
                                         .gallery-row.same-size .gallery-item.small {
                                             flex: 1;
-                                            max-width: 320px;
                                         }
                                         .gallery-row.same-height {
-                                            align-items: stretch;
+                                            align-items: flex-start;
                                         }
                                         .gallery-row.same-height .gallery-item.large,
                                         .gallery-row.same-height .gallery-item.small {
-                                            height: 320px;
-                                            max-width: 320px;
+                                            flex: 1;
                                         }
                             .gallery-grid-1-6 .img6 { grid-column: 3 / span 2; grid-row: 2; }
-                            .gallery-grid-1-6 .gallery-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+                            .gallery-grid-1-6 .gallery-item img { width: 100%; height: auto; display: block; border-radius: 10px; }
                 .top-section {
                     display: flex;
                     align-items: flex-start;
@@ -90,15 +88,13 @@
                 .gallery-row.same-size .gallery-item.large,
                 .gallery-row.same-size .gallery-item.small {
                     flex: 1;
-                    max-width: 320px;
                 }
                 .gallery-row.same-height {
-                    align-items: stretch;
+                    align-items: flex-start;
                 }
                 .gallery-row.same-height .gallery-item.large,
                 .gallery-row.same-height .gallery-item.small {
-                    height: 320px;
-                    max-width: 320px;
+                    flex: 1;
                 }
         body[data-page="fabrication"] {
             padding-top: calc(88px + 64px);
@@ -243,28 +239,26 @@
 
         <div class="project-title">man in the mirror</div>
         <div class="gallery-row same-size">
-            <div class="gallery-item large" style="height:320px;">
-                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-a-r2.jpeg"><img src="assets/images/foundry/fe2-a-r2.jpeg" alt="fe2-a" style="height:100%;transform:rotate(90deg) scale(1.34);"></picture>
-                <div class="img-number">7</div>
+            <div class="gallery-item large">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-a-r2.jpeg"><img src="assets/images/foundry/fe2-a-r2.jpeg" alt="fe2-a" style="width:100%;height:auto;"></picture>
             </div>
-            <div class="gallery-item large" style="height:320px;">
-                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-b.JPG"><img src="assets/images/foundry/fe2-b.JPG" alt="fe2-b" style="height:100%;"></picture>
-                <div class="img-number">8</div>
+            <div class="gallery-item large">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe2-b.JPG"><img src="assets/images/foundry/fe2-b.JPG" alt="fe2-b" style="width:100%;height:auto;"></picture>
                 <div style="font-size:11px;font-style:italic;color:#999;text-align:center;margin-top:4px;">photographer unknown</div>
             </div>
         </div>
 
         <div class="project-title">frolicking gourd</div>
         <div class="gallery-row same-size">
-            <div class="gallery-item large" style="height:320px;overflow:hidden;">
-                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-a.JPG"><img src="assets/images/foundry/fe4-a.JPG" alt="fe4-a" style="width:100%;height:100%;object-fit:cover;"></picture>
+            <div class="gallery-item large">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-a.JPG"><img src="assets/images/foundry/fe4-a.JPG" alt="fe4-a" style="width:100%;height:auto;"></picture>
                 <div style="font-size:11px;font-style:italic;color:#999;text-align:center;margin-top:4px;">photographer unknown</div>
             </div>
-            <div class="gallery-item large" style="height:320px;overflow:hidden;">
-                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-b-r2.jpeg"><img src="assets/images/foundry/fe4-b-r2.jpeg" alt="fe4-b" style="width:100%;height:100%;object-fit:cover;transform:rotate(90deg) scale(1.34);"></picture>
+            <div class="gallery-item large">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe4-b-r2.jpeg"><img src="assets/images/foundry/fe4-b-r2.jpeg" alt="fe4-b" style="width:100%;height:auto;"></picture>
             </div>
-            <div class="gallery-item large" style="height:320px;overflow:hidden;">
-                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe5-a-r2.jpeg"><img src="assets/images/foundry/fe5-a-r2.jpeg" alt="fe5-a" style="width:100%;height:100%;object-fit:cover;transform:rotate(90deg) scale(1.34);"></picture>
+            <div class="gallery-item large">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/fe5-a-r2.jpeg"><img src="assets/images/foundry/fe5-a-r2.jpeg" alt="fe5-a" style="width:100%;height:auto;"></picture>
             </div>
         </div>
 
