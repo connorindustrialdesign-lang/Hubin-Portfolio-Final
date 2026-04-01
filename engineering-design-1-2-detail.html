@@ -240,6 +240,7 @@
       </div>
     </footer>
 
+    <script src="password-gate.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const openButton = document.getElementById('open-certificate-modal');
@@ -265,7 +266,7 @@
 
         openButton.addEventListener('click', (event) => {
           event.preventDefault();
-          openModal();
+          checkGate().then(function(ok) { if (ok) openModal(); });
         });
 
         backButton.addEventListener('click', closeModal);
@@ -306,7 +307,7 @@
 
           openLetterBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            openLetterModal();
+            checkGate().then(function(ok) { if (ok) openLetterModal(); });
           });
 
           backLetterBtn.addEventListener('click', closeLetterModal);
