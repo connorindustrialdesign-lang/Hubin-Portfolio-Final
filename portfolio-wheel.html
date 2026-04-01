@@ -422,6 +422,51 @@
           grid-column: 1 / -1;
           grid-row: 4;
         }
+
+        /* Category bar: 2x2 grid on mobile */
+        body[data-page="portfolio-wheel"] .category-bar {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        body[data-page="portfolio-wheel"] .category-bar a {
+          padding: 10px 0;
+          font-size: 13px;
+          text-align: center;
+          line-height: 1.3;
+        }
+
+        /* Fine Arts: structured mobile layout */
+        body[data-page="portfolio-wheel"] #fine-arts .grid {
+          grid-template-columns: 1fr 1fr !important;
+          grid-template-rows: auto auto auto !important;
+          gap: 10px;
+          padding: 16px 10px 0 10px;
+        }
+        /* Sculptures - full width row 1 */
+        body[data-page="portfolio-wheel"] #fine-arts .grid .tile:nth-child(1) {
+          grid-column: 1 / -1 !important;
+          grid-row: 1 !important;
+          aspect-ratio: 2 / 1 !important;
+        }
+        /* Wave - left of row 2 */
+        body[data-page="portfolio-wheel"] #fine-arts .grid .tile:nth-child(2) {
+          grid-column: 1 !important;
+          grid-row: 2 !important;
+          aspect-ratio: 1 / 1 !important;
+        }
+        /* Paintings - right of row 2 */
+        body[data-page="portfolio-wheel"] #fine-arts .grid .tile:nth-child(3) {
+          grid-column: 2 !important;
+          grid-row: 2 !important;
+          aspect-ratio: 1 / 1 !important;
+        }
+        /* Mountain - full width row 3 */
+        body[data-page="portfolio-wheel"] #fine-arts .grid .tile:nth-child(4) {
+          grid-column: 1 / -1 !important;
+          grid-row: 3 !important;
+          aspect-ratio: 2 / 1 !important;
+        }
       }
     </style>
   </head>
