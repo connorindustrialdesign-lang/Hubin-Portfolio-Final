@@ -1,5 +1,5 @@
 (function() {
-  var PASSWORD_HASH = '6ee0821eeb27585f2eafc04425c346bca6c96bfd216d87d0d7e0e368d71af587';
+  var PASSWORD_HASH = '9e18cc814f226e782cc96b3dc654fb60a062f661ccd26676d8632d275bdbfd83';
   var STORAGE_KEY = 'ch_portfolio_access';
 
   function sha256(str) {
