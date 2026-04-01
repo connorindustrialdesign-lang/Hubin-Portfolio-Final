@@ -410,7 +410,7 @@
 body[data-page="portfolio-wheel"] #industrial-design .grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   gap: 32px;
 }
 body[data-page="portfolio-wheel"] #industrial-design .tile--left-full {
@@ -428,7 +428,6 @@ body[data-page="portfolio-wheel"] #industrial-design .tile--left-full img {
 body[data-page="portfolio-wheel"] #industrial-design .tile--right-top {
   grid-column: 2 / 4;
   grid-row: 1;
-  aspect-ratio: 16/9;
   height: 100%;
   display: flex;
   align-items: stretch;
@@ -584,8 +583,8 @@ main{width:100%;margin:0;padding:0}
 .tile-label{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,0.9);padding:8px 10px;border-radius:6px;font-weight:700}
 
 .tile--left-full{grid-column:1 / span 2;grid-row:1 / span 2}
-.tile--right-top{grid-column:3 / span 2;grid-row:1;min-height:340px;}
-.tile--right-bottom-left{grid-column:3;grid-row:2;aspect-ratio:1 / 1;height:auto;margin-top:32px;}
+.tile--right-top{grid-column:3 / span 2;grid-row:1;}
+.tile--right-bottom-left{grid-column:3;grid-row:2;aspect-ratio:1 / 1;height:auto;}
 
 /* Side-by-side text and image row */
 .side-by-side-row {
@@ -626,7 +625,7 @@ main{width:100%;margin:0;padding:0}
     padding: 0;
   }
 }
-.tile--right-bottom-right{grid-column:4;grid-row:2;aspect-ratio:1 / 1;height:auto;margin-top:32px;}
+.tile--right-bottom-right{grid-column:4;grid-row:2;aspect-ratio:1 / 1;height:auto;}
 .tile--bottom-left{grid-column:1;grid-row:3}
 .tile--bottom-mid-left{grid-column:2;grid-row:3}
 .tile--bottom-mid-right{grid-column:3;grid-row:3}
