@@ -71,16 +71,23 @@
         margin-bottom: 0 !important;
       }
 
-      /* Prototype and fabrication media (mobile only): break out to full-bleed,
-         perfectly centered on the viewport regardless of which column/grid they
-         sit in - fixes images running off-screen / off-center. */
+      /* Prototype and fabrication media (mobile only): break out to full-bleed by
+         canceling out .project-shell's own side padding (20px at this breakpoint)
+         instead of a 100vw/calc trick - iOS Safari doesn't resolve the vw-based
+         breakout consistently, which left a margin and cropped the images. */
       .cte-proto-media,
       .cte-hero-wrap {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: calc(50% - 50vw) !important;
+        width: calc(100% + 40px) !important;
+        max-width: none !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
         border-radius: 0 !important;
+      }
+      /* Grid items default to min-width:auto, which sizes them to the large
+         intrinsic width of the photo inside instead of the actual grid column -
+         that oversized the column/wrapper and pushed content off-screen. */
+      .layout-grid--wide-right > * {
+        min-width: 0 !important;
       }
       /* Inside a flex .frame, <picture> doesn't grow to fill the row and was
          shrinking to the image's intrinsic ratio, leaving a gap on the right
@@ -97,13 +104,14 @@
 
       /* Final Product (mobile only): the shared flex/stretch row layout was
          cropping these top-to-bottom. Simplify to a plain full-bleed stack so
-         each photo shows completely, at its natural ratio, full screen width. */
+         each photo shows completely, at its natural ratio, full screen width.
+         Same padding-cancelling technique as above instead of 100vw/calc. */
       .cte-final-row {
         display: block !important;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: calc(50% - 50vw) !important;
+        width: calc(100% + 40px) !important;
+        max-width: none !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
       }
       .cte-final-frame {
         display: block !important;
@@ -133,6 +141,15 @@
       .phase-card strong { font-size: 20px; }
       .frame.hero { min-height: 260px; }
       .frame, .frame.tall, .frame.wide { min-height: 190px; }
+
+      /* .project-shell padding drops to 16px at this breakpoint - match it. */
+      .cte-proto-media,
+      .cte-hero-wrap,
+      .cte-final-row {
+        width: calc(100% + 32px) !important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+      }
     }
   </style>
 </head>
