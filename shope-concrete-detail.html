@@ -73,11 +73,7 @@
       .cad-item { aspect-ratio: 3 / 4; background: #f5f5f5; border-radius: 10px; overflow: hidden; }
       .cad-item img { width: 100%; height: 100%; object-fit: cover; }
       .cad-item.placeholder { display: flex; align-items: center; justify-content: center; font-weight: 600; color: #999; background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%); }
-      .cad-gallery .cad-item { position: relative; }
-      .cad-gallery .cad-item::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0) 100%); pointer-events: none; }
-      .shope-photo-caption { position: absolute; margin: 0; font-size: 20px; font-weight: 700; color: #5eccf5; text-align: left; text-shadow: 0 2px 8px rgba(0,0,0,0.75); line-height: 1.3; z-index: 2; }
-      .shope-photo-caption--bottom-left { left: 16px; right: 16px; bottom: 14px; }
-      .shope-photo-caption--side-left { top: 50%; left: 16px; transform: translateY(-50%); max-width: 96px; }
+      .shope-photo-caption { margin: 12px 0 0; font-size: 20px; font-weight: 600; color: #000; text-align: center; }
 
       .project-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
       .project-link-box { padding: 30px; background: #000; color: #fff; text-align: center; border-radius: 12px; text-decoration: none; display: block; transition: background 0.3s; }
@@ -98,11 +94,9 @@
       .letter-modal img { width: 100%; height: auto; max-height: calc(100vh - 80px); display: block; object-fit: contain; background: #fff; }
 
       .reference-blueprint { margin-bottom: 60px; }
-      .reference-item { position: relative; border-radius: 10px; overflow: hidden; }
       .reference-item img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); }
       .reference-item p { margin: 8px 0 0 0; font-size: 12px; color: #888; line-height: 1.4; }
-      .reference-item::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 45%; background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0) 100%); pointer-events: none; }
-      .reference-item .shope-photo-caption { margin: 0; font-size: 20px; color: #5eccf5; }
+      .reference-item .shope-photo-caption { margin: 12px 0 0; font-size: 20px; color: #000; }
       
       @media (max-width: 900px) {
         .project-hero { grid-template-columns: 1fr; gap: 30px; text-align: center; }
@@ -212,7 +206,7 @@
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/blueprint-example.jpg">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/blueprint-example.jpg"><img src="assets/images/shope/blueprint-example.jpg" alt="Example storm and sanitary sewer collection system plan and profile drawing"></picture>
           </picture>
-          <p class="shope-photo-caption shope-photo-caption--side-left">elevation, angle, and pipe diameter; the foundation of the engineers first problems to solve.</p>
+          <p class="shope-photo-caption">elevation, angle, and pipe diameter; the foundation of the engineers first problems to solve.</p>
         </div>
       </section>
 
@@ -223,14 +217,14 @@
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/IMG_5523-v2.jpeg">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/IMG_5523-v2.jpeg"><img src="assets/images/shope/IMG_5523-v2.jpeg" alt="Shope Project Photo 1"></picture>
           </picture>
-          <p class="shope-photo-caption shope-photo-caption--bottom-left">84&quot; grate cover</p>
+          <p class="shope-photo-caption">84&quot; grate cover</p>
         </div>
         <div class="cad-item">
           <picture>
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/IMG_5524-v2.jpeg">
             <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/IMG_5524-v2.jpeg"><img src="assets/images/shope/IMG_5524-v2.jpeg" alt="Shope Project Photo 2"></picture>
           </picture>
-          <p class="shope-photo-caption shope-photo-caption--bottom-left">84&quot; manhole with epoxy tar coating - wide base</p>
+          <p class="shope-photo-caption">84&quot; manhole with epoxy tar coating - wide base</p>
         </div>
       </section>
 
