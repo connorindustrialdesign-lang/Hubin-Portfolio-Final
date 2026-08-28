@@ -125,6 +125,8 @@
             .project-gallery {
                 margin-left: 0 !important;
                 margin-right: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
             }
             .sobri-gallery-row {
                 gap: 0 !important;
@@ -344,6 +346,25 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Reliably autoplay the Sobri gallery videos only while they're actually on screen
+        // (mobile browsers often show a play button instead of honoring autoplay on load).
+        (function () {
+            var videos = document.querySelectorAll('.project-gallery video');
+            if (!('IntersectionObserver' in window) || !videos.length) return;
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var video = entry.target;
+                    if (entry.isIntersecting) {
+                        video.play().catch(function () {});
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.4 });
+            videos.forEach(function (video) { observer.observe(video); });
+        })();
+    </script>
 </body>
 </html>
 
