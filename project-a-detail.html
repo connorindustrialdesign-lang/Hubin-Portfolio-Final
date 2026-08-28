@@ -82,6 +82,18 @@
         margin-right: calc(50% - 50vw) !important;
         border-radius: 0 !important;
       }
+      /* Inside a flex .frame, <picture> doesn't grow to fill the row and was
+         shrinking to the image's intrinsic ratio, leaving a gap on the right
+         instead of spanning the full screen width. Force it to fill. */
+      .cte-proto-media picture,
+      .cte-hero-wrap picture {
+        display: block !important;
+        width: 100% !important;
+      }
+      .cte-proto-media img,
+      .cte-hero-wrap img {
+        width: 100% !important;
+      }
 
       /* Final Product (mobile only): the shared flex/stretch row layout was
          cropping these top-to-bottom. Simplify to a plain full-bleed stack so
