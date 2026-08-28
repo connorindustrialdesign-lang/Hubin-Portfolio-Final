@@ -198,6 +198,29 @@
                 font-size: 15px;
                 line-height: 1.6;
             }
+
+            /* Header (mobile only): title stacked directly above its caption
+               text, both centered and fit within the screen - was a side-by-side
+               row with a fixed 96px title that overflowed the viewport. */
+            .carte-header-row {
+                flex-direction: column-reverse !important;
+                align-items: center !important;
+                justify-content: flex-start !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 32px 20px 24px !important;
+                text-align: center !important;
+            }
+            .carte-header-title {
+                font-size: 56px !important;
+                text-align: center !important;
+            }
+            .carte-header-text {
+                text-align: center !important;
+                font-size: 15px !important;
+                margin-top: 20px !important;
+            }
         }
 
         /* Small phones */
@@ -245,6 +268,13 @@
                 line-height: 1.5;
                 margin-bottom: 12px;
             }
+
+            .carte-header-title {
+                font-size: 38px !important;
+            }
+            .carte-header-text {
+                font-size: 14px !important;
+            }
         }
     </style>
 </head>
@@ -252,7 +282,7 @@
 
     <!-- Autoplaying video at the very top -->
     <div style="width:100vw;max-width:100vw;overflow:hidden;margin-bottom:48px;">
-        <video autoplay loop muted playsinline style="width:100vw;max-width:100vw;display:block;">
+        <video class="carte-hero-video" autoplay loop muted playsinline preload="auto" style="width:100vw;max-width:100vw;display:block;">
             <source src="https://deovv8pnl76k0.cloudfront.net/images/Carte/CARTE-1.mp4" type="video/mp4">
             <source src="https://deovv8pnl76k0.cloudfront.net/images/Carte/CARTE-1.mov" type="video/quicktime">
         </video>
@@ -282,8 +312,8 @@
     </nav>
 
 
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:60px 40px 40px;max-width:1400px;margin:0 auto;">
-        <div style="text-align:left;font-size:18px;color:#555;line-height:1.8;">
+    <div class="carte-header-row" style="display:flex;justify-content:space-between;align-items:flex-start;padding:60px 40px 40px;max-width:1400px;margin:0 auto;">
+        <div class="carte-header-text" style="text-align:left;font-size:18px;color:#555;line-height:1.8;">
             Walla Walla coffee shop<br>
             storefront sign fabrication &amp; installation<br>
             0.75" starboard - marine grade<br>
@@ -291,7 +321,7 @@
             CNC router, 3.5" mortar anchors<br>
             2024
         </div>
-        <h1 style="font-size:96px;margin:0;font-weight:700;line-height:1;">CARTE</h1>
+        <h1 class="carte-header-title" style="font-size:96px;margin:0;font-weight:700;line-height:1;">CARTE</h1>
     </div>
 
     <!-- Content -->
@@ -327,6 +357,34 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Reliably autoplay/loop the Carte hero video (mobile browsers often
+        // show a play button instead of honoring the autoplay attribute alone).
+        (function () {
+            var video = document.querySelector('.carte-hero-video');
+            if (!video) return;
+
+            video.muted = true;
+            video.defaultMuted = true;
+            video.playsInline = true;
+            video.loop = true;
+
+            function tryPlay() {
+                var p = video.play();
+                if (p && typeof p.catch === 'function') {
+                    p.catch(function () {
+                        video.addEventListener('loadeddata', function () {
+                            video.play().catch(function () {});
+                        }, { once: true });
+                    });
+                }
+            }
+            tryPlay();
+            document.addEventListener('visibilitychange', function () {
+                if (!document.hidden && video.paused) tryPlay();
+            });
+        })();
+    </script>
 
 </body>
 </html>
