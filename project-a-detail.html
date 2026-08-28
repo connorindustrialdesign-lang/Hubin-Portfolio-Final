@@ -82,6 +82,35 @@
         margin-right: calc(50% - 50vw) !important;
         border-radius: 0 !important;
       }
+
+      /* Final Product (mobile only): the shared flex/stretch row layout was
+         cropping these top-to-bottom. Simplify to a plain full-bleed stack so
+         each photo shows completely, at its natural ratio, full screen width. */
+      .cte-final-row {
+        display: block !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+      }
+      .cte-final-frame {
+        display: block !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .cte-final-frame picture {
+        display: block !important;
+      }
+      .cte-final-frame img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
     }
     
     @media (max-width: 480px) {
@@ -255,14 +284,14 @@
     <!-- SECTION: Final Product -->
     <section>
       <h2>Final Product</h2>
-      <div class="final-product-row">
-        <div class="final-frame">
+      <div class="final-product-row cte-final-row">
+        <div class="final-frame cte-final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-26.JPG"><img src="assets/images/id-project-a/cte-26.JPG" alt="" width="2000" height="3000"></picture>
         </div>
-        <div class="final-frame">
+        <div class="final-frame cte-final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-25.JPG"><img src="assets/images/id-project-a/cte-25.JPG" alt="" width="2000" height="3000"></picture>
         </div>
-        <div class="final-frame">
+        <div class="final-frame cte-final-frame">
           <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-27.JPG"><img src="assets/images/id-project-a/cte-27.JPG" alt="" width="2000" height="3000"></picture>
         </div>
       </div>
