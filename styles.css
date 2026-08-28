@@ -36,7 +36,7 @@
   border: none;
   border-radius: 0;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1023px) {
   .final-product-row {
     width: 100%;
     max-width: 100%;
@@ -48,7 +48,7 @@
     min-height: 40vh;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .final-product-row {
     flex-direction: column;
     gap: 0;
@@ -63,12 +63,12 @@
     min-height: 30vh;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1023px) {
   .final-product-row {
     gap: 0;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .final-product-row {
     flex-direction: column;
     gap: 0;
@@ -85,13 +85,13 @@
   gap: 32px;
   margin-bottom: 32px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .functions-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .functions-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -171,7 +171,7 @@
   height: 100%;
   object-fit: cover;
 }
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .assembly-2x2-row {
     gap: 12px;
   }
@@ -179,7 +179,7 @@
     gap: 12px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .assembly-2x2-row {
     flex-direction: column;
     gap: 12px;
@@ -234,7 +234,7 @@
   z-index: 2;
   pointer-events: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .full-bleed-img {
     height: 60vh;
   }
@@ -260,7 +260,7 @@
   display: block;
   background: #fafafa;
 }
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .img-20-full {
     height: 240px;
   }
@@ -302,7 +302,7 @@
   font-weight: 500;
   text-align: center;
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .four-image-row {
     flex-direction: column;
     gap: 20px;
@@ -358,7 +358,7 @@
   max-width: 476px; /* 15% smaller than 560px */
   min-width: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .problem-context-flex {
     flex-direction: column;
     gap: 20px;
@@ -620,7 +620,7 @@ main{width:100%;margin:0;padding:0}
   min-width: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .side-by-side-row, .three-image-row {
     flex-direction: column;
     gap: 20px;
@@ -644,7 +644,7 @@ main{width:100%;margin:0;padding:0}
 .thumb-label{padding:10px 6px;font-weight:700;color:var(--text)}
 
 /* Tablet: 2-column layout */
-@media(max-width:1023px) and (min-width:769px){
+@media (max-width: 1023px) and (min-width: 769px) {
   .grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto auto auto auto auto;gap:var(--gap-md)}
   .tile--left-full{grid-column:1 / span 1;grid-row:1 / span 2}
   .tile--right-top{grid-column:2;grid-row:1}
@@ -657,7 +657,7 @@ main{width:100%;margin:0;padding:0}
 }
 
 /* Mobile: single column stack */
-@media(max-width:768px){
+@media (max-width: 768px) {
   .portfolio{height:auto}
   .grid{grid-template-columns:1fr;grid-template-rows:auto;height:auto;gap:var(--gap-sm);padding:var(--pad-sm)}
   .tile--left-full{grid-column:1;grid-row:auto}
@@ -688,7 +688,7 @@ main{width:100%;margin:0;padding:0}
 }
 
 /* Extra small phones */
-@media(max-width:480px){
+@media (max-width: 480px) {
   .portfolio{padding:0}
   .grid{gap:var(--gap-sm);padding:var(--pad-sm)}
   
@@ -745,7 +745,7 @@ body.project-detail-page .thumb-label{
   letter-spacing:0.06em!important;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
   body.project-detail-page .project-header h1,
   body.project-detail-page .project-title-block h1{
     font-size:clamp(36px,9vw,48px)!important;
