@@ -259,7 +259,7 @@
             </div>
                 <!-- Animation Clip: sobri clip 1 -->
                 <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
-                                        <video autoplay loop muted playsinline>
+                                        <video autoplay loop muted playsinline preload="auto">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%201.mp4" type="video/mp4">
                                             <source src="assets/images/project B - sobri/sobri clip 1.mp4" type="video/mp4">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%201.mov" type="video/quicktime">
@@ -268,7 +268,7 @@
                 </div>
                 <!-- Animation Clip: sobri clip 2 -->
                 <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
-                                        <video autoplay loop muted playsinline style="width:100%;max-width:100vw;">
+                                        <video autoplay loop muted playsinline preload="auto" style="width:100%;max-width:100vw;">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%202.mp4" type="video/mp4">
                                             <source src="assets/images/project B - sobri/sobri clip 2.mp4" type="video/mp4">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%202.mov" type="video/quicktime">
@@ -277,7 +277,7 @@
                 </div>
                 <!-- Animation Clip: sobri clip 3 -->
                 <div class="gallery-item" style="width: 100vw; max-width: 100%; margin-bottom: 24px;">
-                                        <video autoplay loop muted playsinline>
+                                        <video autoplay loop muted playsinline preload="auto">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%203.mp4" type="video/mp4">
                                             <source src="assets/images/project B - sobri/sobri clip 3.mp4" type="video/mp4">
                                             <source src="https://deovv8pnl76k0.cloudfront.net/images/project%20B%20-%20sobri/sobri%20clip%203.mov" type="video/quicktime">
@@ -351,17 +351,42 @@
         // (mobile browsers often show a play button instead of honoring autoplay on load).
         (function () {
             var videos = document.querySelectorAll('.project-gallery video');
-            if (!('IntersectionObserver' in window) || !videos.length) return;
+            if (!videos.length) return;
+
+            videos.forEach(function (video) {
+                // Some mobile browsers only honor muted/inline playback set as JS
+                // properties (not just the HTML attributes), so set both.
+                video.muted = true;
+                video.defaultMuted = true;
+                video.playsInline = true;
+            });
+
+            function tryPlay(video) {
+                var p = video.play();
+                if (p && typeof p.catch === 'function') {
+                    p.catch(function () {
+                        // Not ready yet or blocked - retry once data is actually available.
+                        video.addEventListener('loadeddata', function () {
+                            video.play().catch(function () {});
+                        }, { once: true });
+                    });
+                }
+            }
+
+            if (!('IntersectionObserver' in window)) {
+                videos.forEach(tryPlay);
+                return;
+            }
+
             var observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
-                    var video = entry.target;
                     if (entry.isIntersecting) {
-                        video.play().catch(function () {});
+                        tryPlay(entry.target);
                     } else {
-                        video.pause();
+                        entry.target.pause();
                     }
                 });
-            }, { threshold: 0.4 });
+            }, { threshold: 0.15 });
             videos.forEach(function (video) { observer.observe(video); });
         })();
     </script>
