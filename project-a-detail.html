@@ -60,6 +60,28 @@
         height: auto !important;
         object-fit: contain !important;
       }
+
+      /* Concept Development sketches (mobile only): stack with zero gap so the
+         images touch top-to-bottom instead of leaving empty space between them. */
+      .cte-sketch-block {
+        gap: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      .cte-sketch-frame {
+        margin-bottom: 0 !important;
+      }
+
+      /* Prototype and fabrication media (mobile only): break out to full-bleed,
+         perfectly centered on the viewport regardless of which column/grid they
+         sit in - fixes images running off-screen / off-center. */
+      .cte-proto-media,
+      .cte-hero-wrap {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        border-radius: 0 !important;
+      }
     }
     
     @media (max-width: 480px) {
@@ -117,18 +139,18 @@
       <p>I have always been excited for the moment when I would come across a design problem in the wild — outside of a classroom project. The funny part is, the problem did come to me in a classroom, but as the teacher and not the student. I noticed many of my students struggled keeping organized and rarely came to class with the bare essentials they needed to succeed. This brought the insight of realizing they needed a storage pack that would not allow them to be unorganized. It <em>only</em> carries the items they need without any space for clutter or garbage. It must keep all the necessities organized and also have every item visible from the outside — no hiding permitted. Only clean, preparedness.</p>
 
       <h2 style="margin-top:48px;">Concept Development</h2>
-      <div class="layout-grid" style="gap: 32px;">
-        <div class="frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-1.JPG"><img src="assets/images/id-project-a/cte-1.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1971" height="1493"></picture></div>
-        <div class="frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-2.JPG"><img src="assets/images/id-project-a/cte-2.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="2100" height="1527"></picture></div>
+      <div class="layout-grid cte-sketch-block" style="gap: 32px;">
+        <div class="frame cte-sketch-frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-1.JPG"><img src="assets/images/id-project-a/cte-1.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1971" height="1493"></picture></div>
+        <div class="frame cte-sketch-frame" style="align-items:center;justify-content:center;min-height:unset;padding:0;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-2.JPG"><img src="assets/images/id-project-a/cte-2.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="2100" height="1527"></picture></div>
       </div>
-      <div class="three-image-row">
-        <div class="frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-3.JPG"><img src="assets/images/id-project-a/cte-3.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1430" height="1590"></picture></div>
-        <div class="frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-4.JPG"><img src="assets/images/id-project-a/cte-4.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1419" height="960"></picture></div>
-        <div class="frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-5.JPG"><img src="assets/images/id-project-a/cte-5.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1868" height="1623"></picture></div>
+      <div class="three-image-row cte-sketch-block">
+        <div class="frame cte-sketch-frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-3.JPG"><img src="assets/images/id-project-a/cte-3.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1430" height="1590"></picture></div>
+        <div class="frame cte-sketch-frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-4.JPG"><img src="assets/images/id-project-a/cte-4.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1419" height="960"></picture></div>
+        <div class="frame cte-sketch-frame" style="min-height:unset;background:none;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-5.JPG"><img src="assets/images/id-project-a/cte-5.jpg" alt="" style="width:100%;height:auto !important;object-fit:contain;display:block;" width="1868" height="1623"></picture></div>
       </div>
-      <div class="layout-grid" style="gap: 32px;">
-        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-6.JPG"><img src="assets/images/id-project-a/cte-6.jpg" alt="" width="1227" height="1332"></picture></div>
-        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-7.JPG"><img src="assets/images/id-project-a/cte-7.jpg" alt="" width="1146" height="1385"></picture></div>
+      <div class="layout-grid cte-sketch-block" style="gap: 32px;">
+        <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-6.JPG"><img src="assets/images/id-project-a/cte-6.jpg" alt="" width="1227" height="1332"></picture></div>
+        <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-7.JPG"><img src="assets/images/id-project-a/cte-7.jpg" alt="" width="1146" height="1385"></picture></div>
       </div>
     </section>
     <!-- SECTION: Prototype and fabrication -->
@@ -138,8 +160,8 @@
         <div>
           <p>"create objects in your mind and have robots make them"</p>
           <p>the main body of the CTE pack is machined out of a 33"x33"x0.45" sheet of sandblast plywood. The 21st century designer has the manufacturing plant - garage sized.</p>
-          <div class="frame img-13-small" style="margin-top:32px; margin-bottom:32px; min-height:280px; max-height:280px; background:none; overflow:hidden; align-self:flex-start;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-11.JPG"><img src="assets/images/id-project-a/cte-11.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;border-radius:0;" width="2000" height="2666" /></picture></div>
-          <div style="margin-top:32px; border-radius:10px; overflow:hidden;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9-b.png"><img src="assets/images/id-project-a/cte-9-b.png" alt="" style="width:100%;height:auto;display:block;" width="3236" height="1760" /></picture></div>
+          <div class="frame img-13-small cte-proto-media" style="margin-top:32px; margin-bottom:32px; min-height:280px; max-height:280px; background:none; overflow:hidden; align-self:flex-start;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-11.JPG"><img src="assets/images/id-project-a/cte-11.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;border-radius:0;" width="2000" height="2666" /></picture></div>
+          <div class="cte-proto-media" style="margin-top:32px; border-radius:10px; overflow:hidden;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9-b.png"><img src="assets/images/id-project-a/cte-9-b.png" alt="" style="width:100%;height:auto;display:block;" width="3236" height="1760" /></picture></div>
         </div>
         <div class="cte-hero-wrap">
           <div class="frame hero" style="min-height:480px;"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-9-new.png"><img src="assets/images/id-project-a/cte-9-new.png" alt="" style="width:100%;height:100%;object-fit:contain;" width="2838" height="2130" /></picture></div>
