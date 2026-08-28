@@ -48,6 +48,18 @@
       .phase-strip { grid-template-columns: 1fr; gap: 12px; }
       .frame.hero { min-height: 320px; }
       .frame, .frame.tall, .frame.wide { min-height: 240px; }
+
+      /* Hero (mobile only): show the full photo at its natural ratio instead of a
+         fixed-height crop - the crop was cutting off large parts of the shot and
+         looked warped/off on narrow screens. Desktop keeps the cropped banner. */
+      .frame.hero-top {
+        min-height: 0 !important;
+        height: auto !important;
+      }
+      .frame.hero-top img {
+        height: auto !important;
+        object-fit: contain !important;
+      }
     }
     
     @media (max-width: 480px) {
