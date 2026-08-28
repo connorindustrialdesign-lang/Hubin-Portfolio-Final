@@ -1,0 +1,610 @@
+{
+  "folders": {
+    "project D": [
+      {
+        "file": "assets/images/project D/2.jpg",
+        "width": 1600,
+        "height": 900,
+        "mode": "RGB",
+        "size_mb": 0.43,
+        "ocr_count": 19,
+        "ocr_text": [
+          "problem",
+          "senior citizens are excited",
+          "about technology",
+          "insight",
+          "but with age comes",
+          "senior citizens need an",
+          "disabilities like:",
+          "analog interface to more",
+          "effectively interact with",
+          "Unsteady touch",
+          "digital devices:",
+          "Poor eye"
+        ]
+      },
+      {
+        "file": "assets/images/project D/Number1.jpg",
+        "width": 1600,
+        "height": 877,
+        "mode": "RGB",
+        "size_mb": 0.423,
+        "ocr_count": 1,
+        "ocr_text": [
+          "brij"
+        ]
+      },
+      {
+        "file": "assets/images/project D/Number11.19.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.64,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number12.20.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.521,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number13.21.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.16,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number2.10 2.jpg",
+        "width": 1600,
+        "height": 877,
+        "mode": "RGB",
+        "size_mb": 0.322,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number2.jpg",
+        "width": 1600,
+        "height": 1100,
+        "mode": "RGB",
+        "size_mb": 0.584,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number3.11.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.695,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number4.12 2.jpg",
+        "width": 1600,
+        "height": 877,
+        "mode": "RGB",
+        "size_mb": 0.311,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number5.13.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.511,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number6.14.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.621,
+        "ocr_count": 1,
+        "ocr_text": [
+          "3"
+        ]
+      },
+      {
+        "file": "assets/images/project D/Number7.15.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.476,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/Number8.16.jpg",
+        "width": 1600,
+        "height": 1210,
+        "mode": "RGB",
+        "size_mb": 0.67,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project D/concept sketch #1.jpg",
+        "width": 1600,
+        "height": 900,
+        "mode": "RGB",
+        "size_mb": 0.293,
+        "ocr_count": 25,
+        "ocr_text": [
+          "Rcsk'",
+          "Pscc",
+          "5",
+          "Dpay",
+          "Hanon",
+          "Khy 40",
+          "10",
+          "Jzl f",
+          "heb",
+          "Sclectiz",
+          "Y1",
+          "Le"
+        ]
+      },
+      {
+        "file": "assets/images/project D/concept sketch #2.jpg",
+        "width": 1600,
+        "height": 900,
+        "mode": "RGB",
+        "size_mb": 0.21,
+        "ocr_count": 5,
+        "ocr_text": [
+          "27",
+          "Tbo",
+          "Hex,",
+          "didy",
+          "Vg{"
+        ]
+      },
+      {
+        "file": "assets/images/project D/heads up display.jpg",
+        "width": 4000,
+        "height": 2250,
+        "mode": "RGB",
+        "size_mb": 1.406,
+        "ocr_count": 47,
+        "ocr_text": [
+          "heads-up",
+          "display",
+          "dear",
+          "doing?",
+          "hope your",
+          "how",
+          "Is there",
+          "is let",
+          "this allows",
+          "if",
+          "the user to",
+          "bring"
+        ]
+      },
+      {
+        "file": "assets/images/project D/menu.png",
+        "width": 2000,
+        "height": 1294,
+        "mode": "RGBA",
+        "size_mb": 0.231,
+        "ocr_count": 20,
+        "ocr_text": [
+          "main",
+          "SMS",
+          "^",
+          "V",
+          "email",
+          "compose",
+          "inbox",
+          "contacts",
+          "sent",
+          "phone",
+          "dial",
+          "missed calls"
+        ]
+      },
+      {
+        "file": "assets/images/project D/modular remote.jpg",
+        "width": 4000,
+        "height": 2250,
+        "mode": "RGB",
+        "size_mb": 1.426,
+        "ocr_count": 5,
+        "ocr_text": [
+          "modular remote",
+          "make and take calls",
+          "control the interface",
+          "easy to push buttons",
+          "inductive charging dock"
+        ]
+      },
+      {
+        "file": "assets/images/project D/project-d.jpg",
+        "width": 1600,
+        "height": 899,
+        "mode": "RGB",
+        "size_mb": 0.296,
+        "ocr_count": 3,
+        "ocr_text": [
+          "brij",
+          "bridging the gap between",
+          "technology and senior citizens"
+        ]
+      },
+      {
+        "file": "assets/images/project D/topview.jpg",
+        "width": 1600,
+        "height": 1035,
+        "mode": "RGB",
+        "size_mb": 0.373,
+        "ocr_count": 7,
+        "ocr_text": [
+          "backspace",
+          "tab",
+          "caps lock",
+          "enter",
+          "shift",
+          "ctr",
+          "ctrl"
+        ]
+      }
+    ],
+    "project F": [
+      {
+        "file": "assets/images/project F/CUPVIEW.30.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.472,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/LIGHTSHINNING.32.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.088,
+        "ocr_count": 3,
+        "ocr_text": [
+          "2",
+          "~",
+          "72~"
+        ]
+      },
+      {
+        "file": "assets/images/project F/LIGHTSOUT.31.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.253,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/PLATEFORM.28.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.895,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/TOPVIEW.29.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.224,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/legshot.26.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.304,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/nightstand 1.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 0.664,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/nightstand 2.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 0.336,
+        "ocr_count": 12,
+        "ocr_text": [
+          "creating",
+          "belonging:",
+          "designing conformity in a",
+          "space of conflict",
+          "Problem",
+          "Nightstands are a space that",
+          "are left",
+          "cluttered and unorganized. The goal",
+          "of this product was to create a bedside",
+          "platform that can take the busyness",
+          "of our lives and make every element",
+          "belong:"
+        ]
+      },
+      {
+        "file": "assets/images/project F/nightstand 3.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 0.452,
+        "ocr_count": 21,
+        "ocr_text": [
+          "Insight",
+          "Something that we use so constantly needs",
+          "to be designed to incorporate all of the",
+          "elements that we clutter our pockets",
+          "and tables with.",
+          "This nightstand willl",
+          "organize anything that you",
+          "might need to leave by",
+          "the side of your bed: keys,",
+          "phone, wallet; pen, and a",
+          "beverage glass:",
+          "Not only will your phone"
+        ]
+      },
+      {
+        "file": "assets/images/project F/nightstand 4.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 0.629,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/nightstand 7.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 2.512,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project F/nightstand 9.jpg",
+        "width": 2400,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 2.428,
+        "ocr_count": 1,
+        "ocr_text": [
+          "XS"
+        ]
+      },
+      {
+        "file": "assets/images/project F/project-f.jpg",
+        "width": 1200,
+        "height": 675,
+        "mode": "RGB",
+        "size_mb": 0.074,
+        "ocr_count": 1,
+        "ocr_text": [
+          "3"
+        ]
+      },
+      {
+        "file": "assets/images/project F/sidet.27.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.377,
+        "ocr_count": 1,
+        "ocr_text": [
+          "33"
+        ]
+      },
+      {
+        "file": "assets/images/project F/spread13.png",
+        "width": 4800,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 3.219,
+        "ocr_count": 36,
+        "ocr_text": [
+          "Rut",
+          "Your one nightstand",
+          "0i4",
+          "This is not your ordinary nightstand",
+          "No longer will",
+          "you have t0 keep",
+          "lamp next t0 your bed tOr your",
+          "cat t0 knock over",
+          "in the middle of the night. The lamp",
+          "embedded right into Ihe survace of Ihe table. This",
+          "not only saves space, but it helps illuminate all of the",
+          "objects organized on the surlace Ior easy locating in"
+        ]
+      }
+    ],
+    "project - G": [
+      {
+        "file": "assets/images/project - G/controls.18.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.136,
+        "ocr_count": 2,
+        "ocr_text": [
+          "off",
+          "60"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/openlid#2.20.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.308,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project - G/openlid#3.21.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.234,
+        "ocr_count": 1,
+        "ocr_text": [
+          "off"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/openlid.19.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.405,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project - G/plain.16.jpg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB",
+        "size_mb": 0.193,
+        "ocr_count": 0,
+        "ocr_text": []
+      },
+      {
+        "file": "assets/images/project - G/project-g.jpg",
+        "width": 1200,
+        "height": 675,
+        "mode": "RGB",
+        "size_mb": 0.13,
+        "ocr_count": 2,
+        "ocr_text": [
+          "off",
+          "{60"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/spread6.png",
+        "width": 4800,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 9.875,
+        "ocr_count": 14,
+        "ocr_text": [
+          "pura:",
+          "an inovative solution",
+          "for water shortages",
+          "in third-world countries",
+          "Problem",
+          "3396 of medical clinics around",
+          "the world don t have running water:",
+          "Without water, cleaning medical tools",
+          "This causes disease t0 spread",
+          "bacteria to be transterred",
+          "ana",
+          "patients"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/spread7.png",
+        "width": 4800,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 2.526,
+        "ocr_count": 12,
+        "ocr_text": [
+          "Q:",
+          "Insight",
+          "UV rays kill",
+          "100%",
+          "of bacteria (better than any other methods of",
+          "sterilizing medical supplies)",
+          "It only takes",
+          "60",
+          "seconds to UV rays to sterlize tools_",
+          "only costs",
+          "SO.15",
+          "per 240 uses:"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/spread8.png",
+        "width": 4800,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 5.566,
+        "ocr_count": 20,
+        "ocr_text": [
+          "733LR",
+          "Proof of Concept",
+          "This",
+          "shoebox\" will be sent out t0 medica",
+          "clinics",
+          "around the world_",
+          "The cleaning box will come with",
+          "pair of sneakers that doctors can wear. These shoes",
+          "are designed extrememly light; t0 make",
+          "easy",
+          "clean and keep disinfected:",
+          "Once the shoes are removed_"
+        ]
+      },
+      {
+        "file": "assets/images/project - G/spread9.png",
+        "width": 4800,
+        "height": 3000,
+        "mode": "RGB",
+        "size_mb": 1.073,
+        "ocr_count": 28,
+        "ocr_text": [
+          "Partnership",
+          "This product /",
+          "made possible because of",
+          "teamup",
+          "with Tesla",
+          "Their expertise with",
+          "lectrical",
+          "power",
+          "makes them perfect for manufacturing the UV",
+          "sanitation boxes:",
+          "The Tesla company is always",
+          "looking towards the future as well as how"
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "images_total": 45,
+    "images_with_text": 24,
+    "images_without_text": 21,
+    "ocr_reader_error": null
+  }
+}

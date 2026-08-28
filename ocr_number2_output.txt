@@ -1,0 +1,17 @@
+Using CPU. Note: This module is much faster with a GPU.
+VARIANT original: 1 detections
+  0.11	3
+VARIANT up2x: 1 detections
+  0.01	Qmnae _
+VARIANT gray: 1 detections
+  0.05	e
+VARIANT gray_up2x: 1 detections
+  0.02	Qmiae-
+VARIANT contrast2.5: 1 detections
+  0.06	WNmmne
+VARIANT contrast2.5_up2x: 1 detections
+  0.01	~umma
+VARIANT contrast_sharp: 1 detections
+  0.06	Qnmme
+---
+BEST_VARIANT original size=(1600, 1100) detections=1

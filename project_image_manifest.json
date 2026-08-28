@@ -1,0 +1,596 @@
+{
+  "projects": {
+    "project-d": [
+      {
+        "original": "assets/images/project D/Number1.jpg",
+        "processed": "assets/images/processed/project-d/Number1.jpg",
+        "filename": "Number1.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [
+          "brij"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project D/Number11.19.jpg",
+        "processed": "assets/images/processed/project-d/Number11.19.jpg",
+        "filename": "Number11.19.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/Number12.20.jpg",
+        "processed": "assets/images/processed/project-d/Number12.20.jpg",
+        "filename": "Number12.20.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [
+          "C"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project D/Number13.21.jpg",
+        "processed": "assets/images/processed/project-d/Number13.21.jpg",
+        "filename": "Number13.21.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/project-d.jpg",
+        "processed": "assets/images/processed/project-d/project-d.jpg",
+        "filename": "project-d.jpg",
+        "section": "problem",
+        "rank": 10999,
+        "ocr_text": [
+          "bridging the gap between",
+          "technology and senior citizens",
+          "brij"
+        ],
+        "removed_regions": 4
+      },
+      {
+        "original": "assets/images/project D/concept sketch #1.jpg",
+        "processed": "assets/images/processed/project-d/concept sketch #1.jpg",
+        "filename": "concept sketch #1.jpg",
+        "section": "iterations",
+        "rank": 30001,
+        "ocr_text": [
+          "5ttn",
+          "9",
+          "70",
+          "Selectis",
+          "Lul",
+          "Sutn",
+          "52",
+          "ly",
+          "TX",
+          "Micophmne"
+        ],
+        "removed_regions": 14
+      },
+      {
+        "original": "assets/images/project D/concept sketch #2.jpg",
+        "processed": "assets/images/processed/project-d/concept sketch #2.jpg",
+        "filename": "concept sketch #2.jpg",
+        "section": "iterations",
+        "rank": 30002,
+        "ocr_text": [
+          "2h1",
+          "7b"
+        ],
+        "removed_regions": 2
+      },
+      {
+        "original": "assets/images/project D/Number3.11.jpg",
+        "processed": "assets/images/processed/project-d/Number3.11.jpg",
+        "filename": "Number3.11.jpg",
+        "section": "iterations",
+        "rank": 30003,
+        "ocr_text": [
+          "DO",
+          "DOC",
+          "O( )C",
+          "X"
+        ],
+        "removed_regions": 4
+      },
+      {
+        "original": "assets/images/project D/Number4.12 2.jpg",
+        "processed": "assets/images/processed/project-d/Number4.12 2.jpg",
+        "filename": "Number4.12 2.jpg",
+        "section": "iterations",
+        "rank": 30004,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/Number5.13.jpg",
+        "processed": "assets/images/processed/project-d/Number5.13.jpg",
+        "filename": "Number5.13.jpg",
+        "section": "iterations",
+        "rank": 30005,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/Number6.14.jpg",
+        "processed": "assets/images/processed/project-d/Number6.14.jpg",
+        "filename": "Number6.14.jpg",
+        "section": "iterations",
+        "rank": 30006,
+        "ocr_text": [
+          "O"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project D/Number7.15.jpg",
+        "processed": "assets/images/processed/project-d/Number7.15.jpg",
+        "filename": "Number7.15.jpg",
+        "section": "iterations",
+        "rank": 30007,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/Number8.16.jpg",
+        "processed": "assets/images/processed/project-d/Number8.16.jpg",
+        "filename": "Number8.16.jpg",
+        "section": "iterations",
+        "rank": 30008,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/heads up display.jpg",
+        "processed": "assets/images/processed/project-d/heads up display.jpg",
+        "filename": "heads up display.jpg",
+        "section": "iterations",
+        "rank": 30999,
+        "ocr_text": [
+          "heads-up",
+          "display",
+          "dear sue,",
+          "hope",
+          "how",
+          "Is there",
+          "is",
+          "this allows",
+          "if",
+          "the user to"
+        ],
+        "removed_regions": 45
+      },
+      {
+        "original": "assets/images/project D/topview.jpg",
+        "processed": "assets/images/processed/project-d/topview.jpg",
+        "filename": "topview.jpg",
+        "section": "iterations",
+        "rank": 30999,
+        "ocr_text": [
+          "3",
+          "5",
+          "backspace",
+          "tab",
+          "caps lock",
+          "S",
+          "enter",
+          "shift",
+          "ctrl",
+          "fn"
+        ],
+        "removed_regions": 15
+      },
+      {
+        "original": "assets/images/project D/2.jpg",
+        "processed": "assets/images/processed/project-d/2.jpg",
+        "filename": "2.jpg",
+        "section": "interface",
+        "rank": 40002,
+        "ocr_text": [
+          "problem",
+          "Senior citizens are excited",
+          "about technology",
+          "insight",
+          "but with age comes",
+          "senior citizens need an",
+          "disabilities like:",
+          "analog interface to more",
+          "effectively interact with",
+          "Unsteady touch"
+        ],
+        "removed_regions": 18
+      },
+      {
+        "original": "assets/images/project D/menu.png",
+        "processed": "assets/images/processed/project-d/menu.png",
+        "filename": "menu.png",
+        "section": "interface",
+        "rank": 40999,
+        "ocr_text": [
+          "main",
+          "SMS",
+          "V",
+          "email",
+          "compose",
+          "inbox",
+          "contacts",
+          "sent",
+          "phone",
+          "dial"
+        ],
+        "removed_regions": 20
+      },
+      {
+        "original": "assets/images/project D/modular remote.jpg",
+        "processed": "assets/images/processed/project-d/modular remote.jpg",
+        "filename": "modular remote.jpg",
+        "section": "interface",
+        "rank": 40999,
+        "ocr_text": [
+          "modular remote",
+          "make and take calls",
+          "control the interface",
+          "easy to push buttons",
+          "inductive charging dock"
+        ],
+        "removed_regions": 5
+      },
+      {
+        "original": "assets/images/project D/Number2.10 2.jpg",
+        "processed": "assets/images/processed/project-d/Number2.10 2.jpg",
+        "filename": "Number2.10 2.jpg",
+        "section": "final",
+        "rank": 50002,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project D/Number2.jpg",
+        "processed": "assets/images/processed/project-d/Number2.jpg",
+        "filename": "Number2.jpg",
+        "section": "final",
+        "rank": 50002,
+        "ocr_text": [],
+        "removed_regions": 0
+      }
+    ],
+    "project-f": [
+      {
+        "original": "assets/images/project F/project-f.jpg",
+        "processed": "assets/images/processed/project-f/project-f.jpg",
+        "filename": "project-f.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [
+          "3"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/nightstand 2.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 2.jpg",
+        "filename": "nightstand 2.jpg",
+        "section": "problem",
+        "rank": 10002,
+        "ocr_text": [
+          "creating",
+          "belonging:",
+          "designing conformity in a",
+          "space of conflict",
+          "Problem",
+          "Nightstands are a space that",
+          "are left",
+          "cluttered and unorganized. The goal",
+          "of this product was to create a bedside",
+          "platform that can take the busyness"
+        ],
+        "removed_regions": 13
+      },
+      {
+        "original": "assets/images/project F/spread13.png",
+        "processed": "assets/images/processed/project-f/spread13.png",
+        "filename": "spread13.png",
+        "section": "problem",
+        "rank": 10013,
+        "ocr_text": [
+          "Keep",
+          "Your one nightstand",
+          "40",
+          "place",
+          "1^",
+          "This is not your ordinary nightstand. No longer will",
+          "you have to keep a lamp next to your bed",
+          "your",
+          "cat to knock over in the middle of the",
+          "night. The lamp"
+        ],
+        "removed_regions": 31
+      },
+      {
+        "original": "assets/images/project F/nightstand 3.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 3.jpg",
+        "filename": "nightstand 3.jpg",
+        "section": "research",
+        "rank": 20003,
+        "ocr_text": [
+          "Insight",
+          "Something that we use so constantly needs",
+          "to be designed to incorporate all of the",
+          "elements that we clutter our pockets",
+          "and tables with:",
+          "This nightstand willl",
+          "organize anything that you",
+          "might need to leave by",
+          "the side of your bed: keys;",
+          "phone, wallet; pen , and a"
+        ],
+        "removed_regions": 24
+      },
+      {
+        "original": "assets/images/project F/nightstand 1.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 1.jpg",
+        "filename": "nightstand 1.jpg",
+        "section": "iterations",
+        "rank": 30001,
+        "ocr_text": [
+          "L"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/nightstand 4.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 4.jpg",
+        "filename": "nightstand 4.jpg",
+        "section": "iterations",
+        "rank": 30004,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project F/nightstand 7.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 7.jpg",
+        "filename": "nightstand 7.jpg",
+        "section": "iterations",
+        "rank": 30007,
+        "ocr_text": [
+          "1"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/nightstand 9.jpg",
+        "processed": "assets/images/processed/project-f/nightstand 9.jpg",
+        "filename": "nightstand 9.jpg",
+        "section": "iterations",
+        "rank": 30009,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project F/legshot.26.jpg",
+        "processed": "assets/images/processed/project-f/legshot.26.jpg",
+        "filename": "legshot.26.jpg",
+        "section": "iterations",
+        "rank": 30026,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project F/sidet.27.jpg",
+        "processed": "assets/images/processed/project-f/sidet.27.jpg",
+        "filename": "sidet.27.jpg",
+        "section": "iterations",
+        "rank": 30027,
+        "ocr_text": [
+          "72"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/PLATEFORM.28.jpg",
+        "processed": "assets/images/processed/project-f/PLATEFORM.28.jpg",
+        "filename": "PLATEFORM.28.jpg",
+        "section": "iterations",
+        "rank": 30028,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project F/TOPVIEW.29.jpg",
+        "processed": "assets/images/processed/project-f/TOPVIEW.29.jpg",
+        "filename": "TOPVIEW.29.jpg",
+        "section": "iterations",
+        "rank": 30029,
+        "ocr_text": [
+          "U"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/CUPVIEW.30.jpg",
+        "processed": "assets/images/processed/project-f/CUPVIEW.30.jpg",
+        "filename": "CUPVIEW.30.jpg",
+        "section": "iterations",
+        "rank": 30030,
+        "ocr_text": [
+          "8"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project F/LIGHTSOUT.31.jpg",
+        "processed": "assets/images/processed/project-f/LIGHTSOUT.31.jpg",
+        "filename": "LIGHTSOUT.31.jpg",
+        "section": "final",
+        "rank": 50031,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project F/LIGHTSHINNING.32.jpg",
+        "processed": "assets/images/processed/project-f/LIGHTSHINNING.32.jpg",
+        "filename": "LIGHTSHINNING.32.jpg",
+        "section": "final",
+        "rank": 50032,
+        "ocr_text": [],
+        "removed_regions": 0
+      }
+    ],
+    "project-g": [
+      {
+        "original": "assets/images/project - G/project-g.jpg",
+        "processed": "assets/images/processed/project-g/project-g.jpg",
+        "filename": "project-g.jpg",
+        "section": "final",
+        "rank": 0,
+        "ocr_text": [
+          "off",
+          "{60"
+        ],
+        "removed_regions": 2
+      },
+      {
+        "original": "assets/images/project - G/spread6.png",
+        "processed": "assets/images/processed/project-g/spread6.png",
+        "filename": "spread6.png",
+        "section": "problem",
+        "rank": 10006,
+        "ocr_text": [
+          "pura:",
+          "an inovative solution",
+          "for water shortages",
+          "in third-world countries",
+          "Problem",
+          "33% of medical clinics around",
+          "the world dont have running water",
+          "Without water; cleaning medical tools",
+          "This causes disease to spread,",
+          "bacteria to be transferred,"
+        ],
+        "removed_regions": 11
+      },
+      {
+        "original": "assets/images/project - G/spread7.png",
+        "processed": "assets/images/processed/project-g/spread7.png",
+        "filename": "spread7.png",
+        "section": "research",
+        "rank": 20007,
+        "ocr_text": [
+          "Insight",
+          "UV rays kill",
+          "100%",
+          "of bacteria (better than any other methods of",
+          "sterilizing medical supplies).",
+          "It only takes",
+          "60",
+          "seconds to UV rays to sterlize tools.",
+          "It only costs",
+          "S0.15"
+        ],
+        "removed_regions": 11
+      },
+      {
+        "original": "assets/images/project - G/spread8.png",
+        "processed": "assets/images/processed/project-g/spread8.png",
+        "filename": "spread8.png",
+        "section": "iterations",
+        "rank": 30008,
+        "ocr_text": [
+          "+9 (",
+          "TBSLR",
+          "Proof of Concept",
+          "This \"shoebox\"",
+          "will be sent out t0 medical clinics",
+          "around the world. The cleaning box will come with a",
+          "pair of sneakers that doctors can wear: These shoes",
+          "are",
+          "designed extrememly light;, to make it easy to",
+          "clean and keep disinfected:"
+        ],
+        "removed_regions": 18
+      },
+      {
+        "original": "assets/images/project - G/spread9.png",
+        "processed": "assets/images/processed/project-g/spread9.png",
+        "filename": "spread9.png",
+        "section": "iterations",
+        "rank": 30009,
+        "ocr_text": [
+          "Partnership",
+          "This product is made possible because of a teamup",
+          "with Tesla Their expertise with electrical power",
+          "makes them perfect for manufacturing the UV",
+          "sanitation boxes. The Tesla company is always",
+          "looking towards the future as well as how they can",
+          "better the present.",
+          "Controls",
+          "UV rays are powerful enough to efficiently sanitize",
+          "tools in just 60 seconds. This allows the controls to"
+        ],
+        "removed_regions": 16
+      },
+      {
+        "original": "assets/images/project - G/plain.16.jpg",
+        "processed": "assets/images/processed/project-g/plain.16.jpg",
+        "filename": "plain.16.jpg",
+        "section": "iterations",
+        "rank": 30016,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project - G/controls.18.jpg",
+        "processed": "assets/images/processed/project-g/controls.18.jpg",
+        "filename": "controls.18.jpg",
+        "section": "iterations",
+        "rank": 30018,
+        "ocr_text": [
+          "off",
+          "60"
+        ],
+        "removed_regions": 2
+      },
+      {
+        "original": "assets/images/project - G/openlid#2.20.jpg",
+        "processed": "assets/images/processed/project-g/openlid#2.20.jpg",
+        "filename": "openlid#2.20.jpg",
+        "section": "final",
+        "rank": 50002,
+        "ocr_text": [],
+        "removed_regions": 0
+      },
+      {
+        "original": "assets/images/project - G/openlid#3.21.jpg",
+        "processed": "assets/images/processed/project-g/openlid#3.21.jpg",
+        "filename": "openlid#3.21.jpg",
+        "section": "final",
+        "rank": 50003,
+        "ocr_text": [
+          "off"
+        ],
+        "removed_regions": 1
+      },
+      {
+        "original": "assets/images/project - G/openlid.19.jpg",
+        "processed": "assets/images/processed/project-g/openlid.19.jpg",
+        "filename": "openlid.19.jpg",
+        "section": "final",
+        "rank": 50019,
+        "ocr_text": [],
+        "removed_regions": 0
+      }
+    ]
+  },
+  "summary": {
+    "files": 45,
+    "ocr_text_detected": 28,
+    "regions_removed": 265
+  }
+}

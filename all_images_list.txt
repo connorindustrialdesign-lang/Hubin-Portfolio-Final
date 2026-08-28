@@ -1,0 +1,629 @@
+assets/images//project-a.jpg
+assets/images//shope/IMG_5523.jpeg
+assets/images//shope/cad drawings - Shope/thumb-2 2.png
+assets/images//shope/cad drawings - Shope/thumb-17.png
+assets/images//shope/cad drawings - Shope/thumb-16.png
+assets/images//shope/cad drawings - Shope/thumb-14.png
+assets/images//shope/cad drawings - Shope/thumb-21 2.png
+assets/images//shope/cad drawings - Shope/thumb-15.png
+assets/images//shope/cad drawings - Shope/Preview attachment doc03538720260226155626.pdfPreview attachment doc03538720260226155626.pdfdoc03538720260226155626.pdf287 KB.webloc
+assets/images//shope/cad drawings - Shope/letter-original.pdf
+assets/images//shope/cad drawings - Shope/letter-display-sharp@2x 2.png
+assets/images//shope/cad drawings - Shope/thumb-4 2.png
+assets/images//shope/cad drawings - Shope/thumb-11.png
+assets/images//shope/cad drawings - Shope/thumb-10.png
+assets/images//shope/cad drawings - Shope/thumb-18 2.png
+assets/images//shope/cad drawings - Shope/thumb-9.png
+assets/images//shope/cad drawings - Shope/thumb-12.png
+assets/images//shope/cad drawings - Shope/thumb-13.png
+assets/images//shope/cad drawings - Shope/thumb-6 2.png
+assets/images//shope/cad drawings - Shope/thumb-8.png
+assets/images//shope/cad drawings - Shope/thumb-20 2.png
+assets/images//shope/cad drawings - Shope/thumb-1 2.png
+assets/images//shope/cad drawings - Shope/Preview attachment doc03538720260226155626.pdfPreview attachment doc03538720260226155626.pdfdoc03538720260226155626.pdf287 KB 2.webloc
+assets/images//shope/cad drawings - Shope/thumb-3 2.png
+assets/images//shope/cad drawings - Shope/thumb-22 2.png
+assets/images//shope/cad drawings - Shope/thumb-7 2.png
+assets/images//shope/cad drawings - Shope/letter-display@2x.png
+assets/images//shope/cad drawings - Shope/thumb-5 2.png
+assets/images//shope/cad drawings - Shope/thumb-19 2.png
+assets/images//shope/cad drawings - Shope/letter-display.png
+assets/images//shope/cad drawings - Shope/thumb-15 2.png
+assets/images//shope/cad drawings - Shope/letter-display-sharp@2x.png
+assets/images//shope/cad drawings - Shope/thumb-9 2.png
+assets/images//shope/cad drawings - Shope/Preview attachment doc03537120260226154451.pdfPreview attachment doc03537120260226154451.pdfdoc03537120260226154451.pdf425 KB.webloc
+assets/images//shope/cad drawings - Shope/letter-display@2x 2.png
+assets/images//shope/cad drawings - Shope/letter-original 2.pdf
+assets/images//shope/cad drawings - Shope/thumb-17 2.png
+assets/images//shope/cad drawings - Shope/thumb-13 2.png
+assets/images//shope/cad drawings - Shope/small-drawing.png
+assets/images//shope/cad drawings - Shope/Preview attachment doc03537120260226154451.pdfPreview attachment doc03537120260226154451.pdfdoc03537120260226154451.pdf425 KB 2.webloc
+assets/images//shope/cad drawings - Shope/thumb-11 2.png
+assets/images//shope/cad drawings - Shope/letter-display 2.png
+assets/images//shope/cad drawings - Shope/thumb-5.png
+assets/images//shope/cad drawings - Shope/thumb 2.png
+assets/images//shope/cad drawings - Shope/thumb-22.png
+assets/images//shope/cad drawings - Shope/thumb-16 2.png
+assets/images//shope/cad drawings - Shope/thumb-4.png
+assets/images//shope/cad drawings - Shope/thumb-6.png
+assets/images//shope/cad drawings - Shope/thumb-21.png
+assets/images//shope/cad drawings - Shope/thumb-14 2.png
+assets/images//shope/cad drawings - Shope/thumb-20.png
+assets/images//shope/cad drawings - Shope/thumb-8 2.png
+assets/images//shope/cad drawings - Shope/thumb-7.png
+assets/images//shope/cad drawings - Shope/thumb-3.png
+assets/images//shope/cad drawings - Shope/thumb-18.png
+assets/images//shope/cad drawings - Shope/thumb-19.png
+assets/images//shope/cad drawings - Shope/thumb-10 2.png
+assets/images//shope/cad drawings - Shope/thumb-2.png
+assets/images//shope/cad drawings - Shope/thumb-12 2.png
+assets/images//shope/cad drawings - Shope/thumb.png
+assets/images//shope/cad drawings - Shope/thumb-1.png
+assets/images//shope/storm-manhole-diagram 2.svg
+assets/images//shope/blueprint-example-display.jpg
+assets/images//shope/.gitkeep
+assets/images//shope/manhole-sideview-icon.svg
+assets/images//shope/IMG_5524.jpeg
+assets/images//shope/blueprint-example 2.png
+assets/images//shope/.gitkeep 2
+assets/images//shope/blueprint-example-display 2.jpg
+assets/images//shope/small-drawing.png
+assets/images//shope/manhole-sideview-icon 2.svg
+assets/images//shope/storm-manhole-diagram.svg
+assets/images//shope/blueprint-example.png
+assets/images//shope/reference/storm-sewer-plan-profile 2.png
+assets/images//shope/reference/sanitary-plans-profiles-display 2.jpg
+assets/images//shope/reference/sanitary-plans-profiles-display.jpg
+assets/images//shope/reference/storm-sewer-plan-profile.png
+assets/images//shope/company/Header-Logo 2.png
+assets/images//shope/company/Header-Logo-display@2x.png
+assets/images//shope/company/shope-certification 2.png
+assets/images//shope/company/Header-Logo-display 2.png
+assets/images//shope/company/Header-Logo-display@2x 2.png
+assets/images//shope/company/shope-certification.png
+assets/images//shope/company/Header-Logo-display.png
+assets/images//shope/company/Header-Logo.png
+assets/images//README 2.md
+assets/images//Carte/IMG_8848.jpeg
+assets/images//Carte/CARTE-1.mov
+assets/images//Carte/CARTE-2.mov
+assets/images//Carte/IMG_8828.jpeg
+assets/images//Carte/CARTE-3.mov
+assets/images//Carte/project-e.jpeg
+assets/images//Carte/CONNORPORTFOLIO-40.JPG
+assets/images//Carte/CONNORPORTFOLIO-41.JPG
+assets/images//Carte/CONNORPORTFOLIO-42.JPG
+assets/images//Carte/IMG_8837.jpeg
+assets/images//Carte/CONNORPORTFOLIO-2.JPG
+assets/images//Carte/carte-fake-front.jpeg
+assets/images//Carte/CONNORPORTFOLIO-39.JPG
+assets/images//Carte/project-e 2.jpeg
+assets/images//project B - sobri/sobri clip 2.mov
+assets/images//project B - sobri/sobri clip 3.mov
+assets/images//project B - sobri/sobri clip 1.mov
+assets/images//project B - sobri/.DS_Store
+assets/images//project B - sobri/sobri 9.jpg
+assets/images//project B - sobri/sobri 8.jpg
+assets/images//project B - sobri/sobri 18.jpg
+assets/images//project B - sobri/sobri 24.jpg
+assets/images//project B - sobri/sobri 25.jpg
+assets/images//project B - sobri/sobri 19.jpg
+assets/images//project B - sobri/sobri 16b.jpg
+assets/images//project B - sobri/sobri 27.jpg
+assets/images//project B - sobri/sobri 26.jpg
+assets/images//project B - sobri/sobri 16a.jpg
+assets/images//project B - sobri/sobri 22.jpg
+assets/images//project B - sobri/sobri 23.jpg
+assets/images//project B - sobri/project-b-indexpage.jpg
+assets/images//project B - sobri/sobri 20.jpg
+assets/images//project B - sobri/sobri 10.jpg
+assets/images//project B - sobri/sobri 12.jpg
+assets/images//project B - sobri/sobri 13.jpg
+assets/images//project B - sobri/sobri 17.jpg
+assets/images//project B - sobri/sobri 14.jpg
+assets/images//project B - sobri/sobri 28.jpg
+assets/images//project B - sobri/sobri 15.jpg
+assets/images//project B - sobri/sobri 5.jpg
+assets/images//project B - sobri/sobri 4.jpg
+assets/images//project B - sobri/sobri 6.jpg
+assets/images//project B - sobri/sobri 7.jpg
+assets/images//project B - sobri/sobri 3.jpg
+assets/images//project B - sobri/sobri 2.jpg
+assets/images//project B - sobri/sobri 1.jpg
+assets/images//project-b.jpg
+assets/images//project-a-dimmed.jpg
+assets/images//project-c.jpeg
+assets/images//foundry/IMG_7477.jpeg
+assets/images//foundry/IMG_6821.jpeg
+assets/images//foundry/fe4-b.jpeg
+assets/images//foundry/IMG_7601.jpeg
+assets/images//foundry/fe1-a.jpeg
+assets/images//foundry/fe1-f.JPG
+assets/images//foundry/IMG_7396.jpeg
+assets/images//foundry/IMG_6816.jpeg
+assets/images//foundry/IMG_6764.jpeg
+assets/images//foundry/fe4-a.JPG
+assets/images//foundry/IMG_7685.JPG
+assets/images//foundry/IMG_6974.jpeg
+assets/images//foundry/IMG_7332.jpeg
+assets/images//foundry/fe2-b.JPG
+assets/images//foundry/IMG_7489.jpeg
+assets/images//foundry/fe5-a.jpeg
+assets/images//foundry/fe5-b.jpeg
+assets/images//foundry/fe1-e.jpeg
+assets/images//foundry/IMG_6829.JPG
+assets/images//foundry/IMG_7672.jpeg
+assets/images//foundry/IMG_6976.jpeg
+assets/images//foundry/top image.jpeg
+assets/images//foundry/fe1-d.jpeg
+assets/images//foundry/IMG_8226.jpeg
+assets/images//foundry/fe2-a.jpeg
+assets/images//foundry/bottom image.jpeg
+assets/images//foundry/fe1-c.jpeg
+assets/images//foundry/fe1-b.jpeg
+assets/images//foundry/IMG_7842.jpeg
+assets/images//foundry/IMG_7462.jpeg
+assets/images//foundry/foundry-indexpage.jpeg
+assets/images//project-g.jpg
+assets/images//project D/Number3.11 2.jpg
+assets/images//project D/project-d extra.jpg
+assets/images//project D/Number2 2.jpg
+assets/images//project D/heads up display 2.jpg
+assets/images//project D/Number4.12 2.jpg
+assets/images//project D/Number12.20.jpg
+assets/images//project D/keys.jpg
+assets/images//project D/Number4.12 3.jpg
+assets/images//project D/project-d.jpg
+assets/images//project D/concept sketch #2 2.jpg
+assets/images//project D/modular remote 2.jpg
+assets/images//project D/topview.jpg
+assets/images//project D/heads up display.jpg
+assets/images//project D/Number11.19 2.jpg
+assets/images//project D/menu 2.png
+assets/images//project D/Number1 2.jpg
+assets/images//project D/Number2.10 3.jpg
+assets/images//project D/Number6.14.jpg
+assets/images//project D/Number2.10 2.jpg
+assets/images//project D/modular remote.jpg
+assets/images//project D/Number2.jpg
+assets/images//project D/Number8.16 2.jpg
+assets/images//project D/index-page-hero-shot.jpg
+assets/images//project D/topview 2.jpg
+assets/images//project D/Number5.13 2.jpg
+assets/images//project D/concept sketch #1 2.jpg
+assets/images//project D/Number8.16.jpg
+assets/images//project D/Number1.jpg
+assets/images//project D/concept sketch #1.jpg
+assets/images//project D/menu.png
+assets/images//project D/Number3.11.jpg
+assets/images//project D/Number13.21 2.jpg
+assets/images//project D/concept sketch #2.jpg
+assets/images//project D/project-d 2 copy.jpg
+assets/images//project D/project-d copy.jpg
+assets/images//project D/Number13.21.jpg
+assets/images//project D/Number6.14 2.jpg
+assets/images//project D/2 2.jpg
+assets/images//project D/Number11.19.jpg
+assets/images//project D/Number12.20 2.jpg
+assets/images//project D/Number7.15.jpg
+assets/images//project D/Number5.13.jpg
+assets/images//project D/2.jpg
+assets/images//project D/Number7.15 2.jpg
+assets/images//project D/message.jpg
+assets/images//project D/project-d 2.jpg
+assets/images//project-f.jpg
+assets/images//project B/sobri 53.jpg
+assets/images//project B/sobri 47.jpg
+assets/images//project B/sobri 46.jpg
+assets/images//project B/sobri 52.jpg
+assets/images//project B/sobri 44.jpg
+assets/images//project B/sobri 50.jpg
+assets/images//project B/sobri 51.jpg
+assets/images//project B/sobri 45.jpg
+assets/images//project B/sobri 41.jpg
+assets/images//project B/sobri 40.jpg
+assets/images//project B/sobri 9.jpg
+assets/images//project B/sobri 42.jpg
+assets/images//project B/sobri 8.jpg
+assets/images//project B/sobri 43.jpg
+assets/images//project B/sobri 18.jpg
+assets/images//project B/sobri 30.jpg
+assets/images//project B/sobri 24.jpg
+assets/images//project B/sobri 25.jpg
+assets/images//project B/sobri 31.jpg
+assets/images//project B/sobri 19.jpg
+assets/images//project B/sobri 27.jpg
+assets/images//project B/sobri 33.jpg
+assets/images//project B/sobri 32.jpg
+assets/images//project B/sobri 26.jpg
+assets/images//project B/sobri 22.jpg
+assets/images//project B/sobri 36.jpg
+assets/images//project B/sobri 37.jpg
+assets/images//project B/sobri 23.jpg
+assets/images//project B/sobri 35.jpg
+assets/images//project B/sobri 21.jpg
+assets/images//project B/sobri 20.jpg
+assets/images//project B/sobri 34.jpg
+assets/images//project B/sobri 39.jpg
+assets/images//project B/sobri 11.jpg
+assets/images//project B/sobri 10.jpg
+assets/images//project B/sobri 38.jpg
+assets/images//project B/sobri 12.jpg
+assets/images//project B/sobri 13.jpg
+assets/images//project B/sobri 17.jpg
+assets/images//project B/sobri 16.jpg
+assets/images//project B/sobri 14.jpg
+assets/images//project B/sobri 28.jpg
+assets/images//project B/sobri 29.jpg
+assets/images//project B/sobri 15.jpg
+assets/images//project B/sobri 5.jpg
+assets/images//project B/sobri 4.jpg
+assets/images//project B/sobri 6.jpg
+assets/images//project B/sobri 7.jpg
+assets/images//project B/sobri 3.jpg
+assets/images//project B/sobri 48.jpg
+assets/images//project B/sobri 2.jpg
+assets/images//project B/sobri 49.jpg
+assets/images//project-d.jpg
+assets/images//project E/nightstand 3.jpg
+assets/images//project E/LIGHTSOUT.31 2.jpg
+assets/images//project E/LIGHTSHINNING.32 2.jpg
+assets/images//project E/nightstand 1.jpg
+assets/images//project E/project-f.jpg
+assets/images//project E/nightstand 4.jpg
+assets/images//project E/nightstand 6.jpg
+assets/images//project E/LIGHTSOUT.31.jpg
+assets/images//project E/proto19.jpg
+assets/images//project E/proto18.jpg
+assets/images//project E/proto1.jpg
+assets/images//project E/proto3.jpg
+assets/images//project E/proto2.jpg
+assets/images//project E/sidet.27.jpg
+assets/images//project E/legshot.26 2.jpg
+assets/images//project E/proto6.jpg
+assets/images//project E/proto7.jpg
+assets/images//project E/nightstand 1 2.jpg
+assets/images//project E/blackcup.30.jpg
+assets/images//project E/LIGHTSHINNING.32.jpg
+assets/images//project E/proto5.jpg
+assets/images//project E/proto20.jpg
+assets/images//project E/proto4.jpg
+assets/images//project E/spread13 2.png
+assets/images//project E/proto9.jpg
+assets/images//project E/proto10.jpg
+assets/images//project E/section1c.jpg
+assets/images//project E/proto11.jpg
+assets/images//project E/section1b.jpg
+assets/images//project E/proto8.jpg
+assets/images//project E/proto13.jpg
+assets/images//project E/section1A.jpg
+assets/images//project E/proto12.jpg
+assets/images//project E/organize.jpg
+assets/images//project E/proto16.jpg
+assets/images//project E/PLATEFORM.28 2.jpg
+assets/images//project E/proto17.jpg
+assets/images//project E/proto17b.jpg
+assets/images//project E/proto15.jpg
+assets/images//project E/CUPVIEW.30.jpg
+assets/images//project E/project-e 2.jpg
+assets/images//project E/proto14.jpg
+assets/images//project E/nightstand 11.jpg
+assets/images//project E/nightstand 10.jpg
+assets/images//project E/nightstand 9.jpg
+assets/images//project E/TOPVIEW.29 2.jpg
+assets/images//project E/PLATEFORM.28.jpg
+assets/images//project E/nightstand 8.jpg
+assets/images//project E/legshot.26.jpg
+assets/images//project E/sidet.27 2.jpg
+assets/images//project E/CUPVIEW.30 2.jpg
+assets/images//project E/project-f 2.jpg
+assets/images//project E/process.png
+assets/images//project E/TOPVIEW.29.jpg
+assets/images//ID project a/form-sketch-01.jpg
+assets/images//ID project a/form-sketch-02.jpg
+assets/images//ID project a/form-sketch-03.jpg
+assets/images//ID project a/form-sketch-07.jpg
+assets/images//ID project a/form-sketch-06.jpg
+assets/images//ID project a/form-sketch-04.jpg
+assets/images//ID project a/form-sketch-05.jpg
+assets/images//.gitkeep
+assets/images//id-project-a/CONNORPORTFOLIO-31.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-19.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-18.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-32.JPG
+assets/images//id-project-a/form-sketch-01 copy.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-33.JPG
+assets/images//id-project-a/.DS_Store
+assets/images//id-project-a/CONNORPORTFOLIO-22.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-34.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-20.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-21.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-35.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-52.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-46.JPG
+assets/images//id-project-a/form-sketch-08.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-9.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-53.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-45.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-51.JPG
+assets/images//id-project-a/ID project A hero shot (Index page).JPG
+assets/images//id-project-a/CONNORPORTFOLIO-50.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-44.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-54.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-55.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-57.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-43.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-56.JPG
+assets/images//id-project-a/project-a 2.jpg
+assets/images//id-project-a/1000010841.jpg
+assets/images//id-project-a/form-sketch-01.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-58.JPG
+assets/images//id-project-a/form-sketch-02.jpg
+assets/images//id-project-a/form-sketch-03.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-59.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-49.JPG
+assets/images//id-project-a/form-sketch-07.jpg
+assets/images//id-project-a/form-sketch-06.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-48.JPG
+assets/images//id-project-a/form-sketch-04.jpg
+assets/images//id-project-a/form-sketch-05.jpg
+assets/images//id-project-a/ID project A hero shot (homepage).JPG
+assets/images//id-project-a/CONNORPORTFOLIO-10.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-11.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-13.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-12.JPG
+assets/images//id-project-a/1000016919.jpg
+assets/images//id-project-a/CONNORPORTFOLIO-16.JPG
+assets/images//id-project-a/exploded view.png
+assets/images//id-project-a/CONNORPORTFOLIO-17.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-15.JPG
+assets/images//id-project-a/CONNORPORTFOLIO-14.JPG
+assets/images//paintings/1000016900.jpg
+assets/images//paintings/1000000145.jpg
+assets/images//paintings/1000016904.jpg
+assets/images//paintings/1000016907.jpg
+assets/images//paintings/1000016913.jpg
+assets/images//paintings/.gitkeep
+assets/images//paintings/1000009489.jpg
+assets/images//fab project 3/Screen Shot 2026-03-04 at 11.33.35 PM.png
+assets/images//fab project 3/CONNORPORTFOLIO-37.JPG
+assets/images//fab project 3/background image.png
+assets/images//fab project 3/CONNORPORTFOLIO-36.JPG
+assets/images//fab project 3/Screen Shot 2026-03-04 at 11.33.10 PM.png
+assets/images//fab project 3/Screen Shot 2026-03-04 at 11.33.57 PM.png
+assets/images//fab project 3/Screen Shot 2026-03-04 at 11.34.51 PM.png
+assets/images//fab project 3/CONNORPORTFOLIO-38.JPG
+assets/images//.gitkeep 2
+assets/images//about/.DS_Store
+assets/images//about/about-picture 2.jpeg
+assets/images//about/about-picture.jpeg
+assets/images//pura/project-g.jpg
+assets/images//pura/.DS_Store
+assets/images//pura/project-g 2.jpg
+assets/images//fab project 2/.DS_Store
+assets/images//fab project 2/CONNORPORTFOLIO-1.JPG
+assets/images//fab project 2/MERO-1.mov
+assets/images//project-a-nobg.png
+assets/images//project-a 2.jpg
+assets/images//README.md
+assets/images//project-a-dimmed-bg 2.jpg
+assets/images//engineering 1 & 2/hubin-teaching-certificate.pdf
+assets/images//engineering 1 & 2/Hubin teaching certificate .pdf
+assets/images//engineering 1 & 2/.DS_Store
+assets/images//engineering 1 & 2/IMG_5354.jpeg
+assets/images//engineering 1 & 2/IMG_5358.jpeg
+assets/images//engineering 1 & 2/heroselection-background-display.jpg
+assets/images//engineering 1 & 2/hubin-teaching-certificate-display.png
+assets/images//engineering 1 & 2/Hubin teaching certificate  2.pdf
+assets/images//engineering 1 & 2/1000000819.jpeg
+assets/images//engineering 1 & 2/heroselecition-background.pdf
+assets/images//extra (archieve)/lamp/.DS_Store
+assets/images//extra (archieve)/lamp/IMG_0507_Original.JPG
+assets/images//extra (archieve)/lamp/IMG_0509_Original.JPG
+assets/images//extra (archieve)/lamp/IMG_0510_Original.JPG
+assets/images//extra (archieve)/pura/controls.18 2.jpg
+assets/images//extra (archieve)/pura/project-g.jpg
+assets/images//extra (archieve)/pura/.DS_Store
+assets/images//extra (archieve)/pura/openlid#3.21.jpg
+assets/images//extra (archieve)/pura/spread7.png
+assets/images//extra (archieve)/pura/spread6 2.png
+assets/images//extra (archieve)/pura/spread6.png
+assets/images//extra (archieve)/pura/openlid.19 2.jpg
+assets/images//extra (archieve)/pura/plain.16 2.jpg
+assets/images//extra (archieve)/pura/spread7 2.png
+assets/images//extra (archieve)/pura/spread9 2.png
+assets/images//extra (archieve)/pura/openlid#3.21 2.jpg
+assets/images//extra (archieve)/pura/plain.16.jpg
+assets/images//extra (archieve)/pura/project-g 2.jpg
+assets/images//extra (archieve)/pura/openlid#2.20.jpg
+assets/images//extra (archieve)/pura/openlid#2.20 2.jpg
+assets/images//extra (archieve)/pura/spread8.png
+assets/images//extra (archieve)/pura/spread8 2.png
+assets/images//extra (archieve)/pura/spread9.png
+assets/images//extra (archieve)/pura/controls.18.jpg
+assets/images//extra (archieve)/pura/openlid.19.jpg
+assets/images//extra (archieve)/57101376760__A41D14FB-DD91-4071-993F-4FA899AB8833.JPG
+assets/images//extra (archieve)/57101375506__4A2C2097-73B2-4E17-BC95-98C4CC611C52.JPG
+assets/images//environment design/topview.8.jpeg
+assets/images//environment design/benchview.11.jpeg
+assets/images//environment design/otherview.10.jpeg
+assets/images//environment design/IMG_0043.JPG
+assets/images//environment design/benchview.11 (1).jpeg
+assets/images//environment design/untitled.7.jpeg
+assets/images//project-g 2.jpg
+assets/images//project-a-nobg 2.png
+assets/images//project-c 2.jpeg
+assets/images//id-project-c/id-project-C-1.jpg
+assets/images//id-project-c/id-project-C-3.jpg
+assets/images//id-project-c/id-project-C-2.jpg
+assets/images//id-project-c/project-c.jpeg
+assets/images//id-project-c/id-project-C-6.jpg
+assets/images//id-project-c/.DS_Store
+assets/images//id-project-c/id-project-C-7.jpg
+assets/images//id-project-c/id-project-C-5.jpg
+assets/images//id-project-c/id-project-C-4.jpg
+assets/images//id-project-c/ID project C - index page.JPG
+assets/images//id-project-c/form-sketch-01.jpg
+assets/images//id-project-c/form-sketch-02.jpg
+assets/images//id-project-c/form-sketch-03.jpg
+assets/images//id-project-c/project-c-indexpage.jpeg
+assets/images//id-project-c/form-sketch-04.jpg
+assets/images//id-project-c/form-sketch-05.jpg
+assets/images//id-project-c/id-project-C-10.jpg
+assets/images//id-project-c/id-project-C-9.jpg
+assets/images//id-project-c/id-project-C-8.jpg
+assets/images//id-project-c/id-project-C-11.jpg
+assets/images//id-project-c/id-project-C-13.jpg
+assets/images//id-project-c/id-project-C-12.jpg
+assets/images//project-b 2.jpg
+assets/images//wave/wave hero shot placeholder.png
+assets/images//wave/.gitkeep
+assets/images//wave/wave - old.png
+assets/images//wave/wave-indexpage.JPG
+assets/images//wave/CONNORPORTFOLIO-7.JPG
+assets/images//wave/CONNORPORTFOLIO-6.JPG
+assets/images//project-a-dimmed 2.jpg
+assets/images//sculptures/IMG_0340_Original.JPG
+assets/images//sculptures/IMG_0336_Original.JPG
+assets/images//sculptures/IMG_0337_Original.JPG
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.43.50 PM.png
+assets/images//sculptures/8.png
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.31.47 PM.png
+assets/images//sculptures/9.png
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.31.08 PM.png
+assets/images//sculptures/.gitkeep
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.44.15 PM.png
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.32.01 PM.png
+assets/images//sculptures/IMG_0329_Original.JPG
+assets/images//sculptures/10.JPG
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.42.55 PM.png
+assets/images//sculptures/sculptures-indexpage.png
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.44.36 PM.png
+assets/images//sculptures/IMG_0338_Original.JPG
+assets/images//sculptures/4.JPG
+assets/images//sculptures/5.JPG
+assets/images//sculptures/7.png
+assets/images//sculptures/IMG_0332_Original.JPG
+assets/images//sculptures/6.JPG
+assets/images//sculptures/2.png
+assets/images//sculptures/Screen Shot 2026-03-04 at 11.30.54 PM.png
+assets/images//sculptures/3.JPG
+assets/images//sculptures/1.png
+assets/images//mountain/D50C5775-ACC6-4FD3-B789-534F104D084CIMG_8677.jpeg
+assets/images//mountain/group1-a.jpeg
+assets/images//mountain/mountain-indexpage.JPG
+assets/images//mountain/IMG_5057.jpeg
+assets/images//mountain/Screen Shot 2026-03-04 at 11.33.35 PM.png
+assets/images//mountain/background image.png
+assets/images//mountain/IMG_1853.jpeg
+assets/images//mountain/CONNORPORTFOLIO-8.JPG
+assets/images//mountain/IMG_4640.jpeg
+assets/images//mountain/IMG_5010.jpeg
+assets/images//mountain/IMG_7040.jpeg
+assets/images//mountain/.gitkeep
+assets/images//mountain/IMG_1862.jpeg
+assets/images//mountain/IMG_1823.jpeg
+assets/images//mountain/Screen Shot 2026-03-04 at 11.33.10 PM.png
+assets/images//mountain/IMG_5012.jpeg
+assets/images//mountain/IMG_7039.jpeg
+assets/images//mountain/Screen Shot 2026-03-04 at 11.33.57 PM.png
+assets/images//mountain/IMG_4642.jpeg
+assets/images//mountain/IMG_7081.jpeg
+assets/images//mountain/CONNORPORTFOLIO-3.JPG
+assets/images//mountain/IMG_5009.jpeg
+assets/images//mountain/IMG_1861.jpeg
+assets/images//mountain/CONNORPORTFOLIO-4.JPG
+assets/images//mountain/Screen Shot 2026-03-04 at 11.42.26 PM.png
+assets/images//mountain/Screen Shot 2026-03-04 at 11.34.51 PM.png
+assets/images//mountain/CONNORPORTFOLIO-5.JPG
+assets/images//mountain/group1-c.jpeg
+assets/images//mountain/IMG_1807.jpeg
+assets/images//mountain/IMG_4644.jpeg
+assets/images//mountain/24155BFD-CC86-44D7-A432-B0A420AEA040IMG_8675.jpeg
+assets/images//mountain/group1-b.jpeg
+assets/images//mountain/A716B986-9CCA-410C-824E-DF0BDC56C34FIMG_8674.jpeg
+assets/images//ID project c/form-sketch-01.jpg
+assets/images//ID project c/form-sketch-02.jpg
+assets/images//ID project c/form-sketch-03.jpg
+assets/images//ID project c/form-sketch-04.jpg
+assets/images//ID project c/form-sketch-05.jpg
+assets/images//processed/.DS_Store
+assets/images//processed/project-d/Number4.12 2.jpg
+assets/images//processed/project-d/Number12.20.jpg
+assets/images//processed/project-d/project-d.jpg
+assets/images//processed/project-d/modular remote 2.jpg
+assets/images//processed/project-d/topview.jpg
+assets/images//processed/project-d/heads up display.jpg
+assets/images//processed/project-d/menu 2.png
+assets/images//processed/project-d/Number6.14.jpg
+assets/images//processed/project-d/Number2.10 2.jpg
+assets/images//processed/project-d/modular remote.jpg
+assets/images//processed/project-d/Number2.jpg
+assets/images//processed/project-d/topview 2.jpg
+assets/images//processed/project-d/Number8.16.jpg
+assets/images//processed/project-d/Number1.jpg
+assets/images//processed/project-d/concept sketch #1.jpg
+assets/images//processed/project-d/menu.png
+assets/images//processed/project-d/Number3.11.jpg
+assets/images//processed/project-d/concept sketch #2.jpg
+assets/images//processed/project-d/Number13.21.jpg
+assets/images//processed/project-d/2 2.jpg
+assets/images//processed/project-d/Number11.19.jpg
+assets/images//processed/project-d/Number7.15.jpg
+assets/images//processed/project-d/Number5.13.jpg
+assets/images//processed/project-d/2.jpg
+assets/images//processed/project-d/project-d 2.jpg
+assets/images//processed/project-g/controls.18 2.jpg
+assets/images//processed/project-g/project-g.jpg
+assets/images//processed/project-g/openlid#3.21.jpg
+assets/images//processed/project-g/spread7.png
+assets/images//processed/project-g/spread6 2.png
+assets/images//processed/project-g/spread6.png
+assets/images//processed/project-g/openlid.19 2.jpg
+assets/images//processed/project-g/plain.16 2.jpg
+assets/images//processed/project-g/spread7 2.png
+assets/images//processed/project-g/spread9 2.png
+assets/images//processed/project-g/openlid#3.21 2.jpg
+assets/images//processed/project-g/plain.16.jpg
+assets/images//processed/project-g/project-g 2.jpg
+assets/images//processed/project-g/openlid#2.20.jpg
+assets/images//processed/project-g/openlid#2.20 2.jpg
+assets/images//processed/project-g/spread8.png
+assets/images//processed/project-g/spread8 2.png
+assets/images//processed/project-g/spread9.png
+assets/images//processed/project-g/controls.18.jpg
+assets/images//processed/project-g/openlid.19.jpg
+assets/images//processed/project-f/nightstand 3.jpg
+assets/images//processed/project-f/nightstand 2.jpg
+assets/images//processed/project-f/LIGHTSOUT.31 2.jpg
+assets/images//processed/project-f/LIGHTSHINNING.32 2.jpg
+assets/images//processed/project-f/spread13.png
+assets/images//processed/project-f/nightstand 1.jpg
+assets/images//processed/project-f/nightstand 5.jpg
+assets/images//processed/project-f/project-f.jpg
+assets/images//processed/project-f/nightstand 4.jpg
+assets/images//processed/project-f/nightstand 6.jpg
+assets/images//processed/project-f/LIGHTSOUT.31.jpg
+assets/images//processed/project-f/nightstand 7.jpg
+assets/images//processed/project-f/sidet.27.jpg
+assets/images//processed/project-f/legshot.26 2.jpg
+assets/images//processed/project-f/nightstand 1 2.jpg
+assets/images//processed/project-f/LIGHTSHINNING.32.jpg
+assets/images//processed/project-f/spread13 2.png
+assets/images//processed/project-f/PLATEFORM.28 2.jpg
+assets/images//processed/project-f/CUPVIEW.30.jpg
+assets/images//processed/project-f/nightstand 11.jpg
+assets/images//processed/project-f/nightstand 10.jpg
+assets/images//processed/project-f/nightstand 9.jpg
+assets/images//processed/project-f/TOPVIEW.29 2.jpg
+assets/images//processed/project-f/PLATEFORM.28.jpg
+assets/images//processed/project-f/nightstand 8.jpg
+assets/images//processed/project-f/legshot.26.jpg
+assets/images//processed/project-f/sidet.27 2.jpg
+assets/images//processed/project-f/CUPVIEW.30 2.jpg
+assets/images//processed/project-f/project-f 2.jpg
+assets/images//processed/project-f/TOPVIEW.29.jpg
+assets/images//project-a-dimmed-bg.jpg
+assets/images//project-e 2.jpeg
+assets/images//project-d 2.jpg
+assets/images//project-f 2.jpg

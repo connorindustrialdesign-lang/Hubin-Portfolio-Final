@@ -1,0 +1,45 @@
+total 12464
+drwxr-xr-x@ 16 connor  staff   512B Mar 20 11:15 Carte
+drwxr-xr-x   9 connor  staff   288B Mar 20 18:37 ID project a
+drwxr-xr-x   7 connor  staff   224B Mar 20 18:37 ID project c
+-rw-r--r--@  1 connor  staff   563B Mar  2 16:06 README 2.md
+-rw-r--r--   1 connor  staff   563B Mar  2 22:48 README.md
+drwxr-xr-x@  5 connor  staff   160B Mar 20 11:15 about
+drwxr-xr-x@ 12 connor  staff   384B Mar 20 11:15 engineering 1 & 2
+drwxr-xr-x@  8 connor  staff   256B Mar 20 11:15 environment design
+drwxr-xr-x@  6 connor  staff   192B Mar 20 11:15 extra (archieve)
+drwxr-xr-x@  5 connor  staff   160B Mar 20 11:15 fab project 2
+drwxr-xr-x@ 10 connor  staff   320B Mar 20 18:38 fab project 3
+drwxr-xr-x@ 33 connor  staff   1.0K Mar 20 18:38 foundry
+drwxr-xr-x@ 53 connor  staff   1.7K Mar 20 18:38 id-project-a
+drwxr-xr-x@ 24 connor  staff   768B Mar 20 18:38 id-project-c
+drwxr-xr-x@ 35 connor  staff   1.1K Mar 20 18:38 mountain
+drwxr-xr-x@  9 connor  staff   288B Mar 20 18:38 paintings
+drwxr-xr-x@  6 connor  staff   192B Mar 20 11:15 processed
+drwxr-xr-x  54 connor  staff   1.7K Mar 20 18:37 project B
+drwxr-xr-x@ 34 connor  staff   1.1K Mar 20 17:42 project B - sobri
+drwxr-xr-x@ 48 connor  staff   1.5K Mar 20 11:15 project D
+drwxr-xr-x@ 56 connor  staff   1.8K Mar 20 18:38 project E
+-rw-r--r--   1 connor  staff   421K Mar 20 18:37 project-a 2.jpg
+-rw-r--r--   1 connor  staff   484K Mar 20 18:37 project-a-dimmed 2.jpg
+-rw-r--r--   1 connor  staff   481K Mar 20 18:37 project-a-dimmed-bg 2.jpg
+-rw-r--r--   1 connor  staff   481K Mar 20 18:37 project-a-dimmed-bg.jpg
+-rw-r--r--   1 connor  staff   484K Mar 20 18:37 project-a-dimmed.jpg
+-rw-r--r--   1 connor  staff   955K Mar 20 18:37 project-a-nobg 2.png
+-rw-r--r--   1 connor  staff   955K Mar 20 18:37 project-a-nobg.png
+-rw-r--r--   1 connor  staff   421K Mar 20 18:37 project-a.jpg
+-rw-r--r--   1 connor  staff    67K Mar 20 18:37 project-b 2.jpg
+-rw-r--r--   1 connor  staff    67K Mar 20 18:37 project-b.jpg
+-rw-r--r--   1 connor  staff   200K Mar 20 18:37 project-c 2.jpeg
+-rw-r--r--   1 connor  staff   200K Mar 20 18:37 project-c.jpeg
+-rw-r--r--   1 connor  staff   184K Mar 20 18:37 project-d 2.jpg
+-rw-r--r--   1 connor  staff   184K Mar 20 18:37 project-d.jpg
+-rw-r--r--   1 connor  staff   178K Mar 20 18:37 project-e 2.jpeg
+-rw-r--r--   1 connor  staff    76K Mar 20 18:37 project-f 2.jpg
+-rw-r--r--   1 connor  staff    76K Mar 20 18:37 project-f.jpg
+-rw-r--r--   1 connor  staff   134K Mar 20 18:37 project-g 2.jpg
+-rw-r--r--   1 connor  staff   134K Mar 20 18:37 project-g.jpg
+drwxr-xr-x@  5 connor  staff   160B Mar 20 11:15 pura
+drwxr-xr-x@ 28 connor  staff   896B Mar 20 18:38 sculptures
+drwxr-xr-x@ 18 connor  staff   576B Mar 20 18:38 shope
+drwxr-xr-x@  8 connor  staff   256B Mar 20 18:38 wave
