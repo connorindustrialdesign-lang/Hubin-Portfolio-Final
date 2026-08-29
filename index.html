@@ -103,11 +103,12 @@
         /* Fit the whole hero (image + title + caption + button) in the
            viewport with no scrolling and no cropping. The image is shown in
            full (object-fit:contain, scaled down as needed - never cropped)
-           across the full row on top; below it, title+caption stack on the
-           left and the button sits to the right, vertically centered
-           alongside them. display:contents on .hero-project-image lets its
-           children (the picture link, title, caption) become direct grid
-           items of the wrapper instead of being boxed inside it. */
+           across the full row on top; below it, title (left) and caption
+           (right) share a row spanning the same width as the image, and the
+           Portfolio button sits centered in its own full-width row below
+           that. display:contents on .hero-project-image lets its children
+           (the picture link, title, caption) become direct grid items of
+           the wrapper instead of being boxed inside it. */
         .hero-project {
           height: calc(100vh - 140px);
           min-height: calc(100vh - 140px);
@@ -118,12 +119,12 @@
         }
         .hero-project-wrapper {
           display: grid;
-          grid-template-columns: 1fr auto;
+          grid-template-columns: auto 1fr;
           grid-template-rows: minmax(0, 1fr) auto auto;
           grid-template-areas:
             "image image"
-            "title button"
-            "caption button";
+            "title caption"
+            "button button";
           column-gap: 16px;
           row-gap: 6px;
           height: 100%;
@@ -157,20 +158,26 @@
         }
         .hero-project-text {
           grid-area: title;
-          align-self: end;
+          align-self: center;
           margin-top: 0 !important;
           margin-bottom: 0 !important;
         }
         .gallery-caption {
           grid-area: caption;
-          align-self: start;
+          align-self: center;
+          max-width: none !important;
           margin-top: 0 !important;
           margin-bottom: 0 !important;
         }
         .hero-project-button-side {
           grid-area: button;
-          align-self: center;
-          justify-self: end;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        .hero-project-button-side .projects-button {
+          width: 100%;
+          max-width: 320px;
         }
       }
     </style>
