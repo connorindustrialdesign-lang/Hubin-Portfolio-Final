@@ -257,6 +257,57 @@ function initTileHoverTitles() {
   });
 }
 
+// Reliably autoplay/loop any <video autoplay> on the page - mobile browsers
+// often show a play button instead of honoring the bare attribute. Plays
+// while the video is on screen (via IntersectionObserver, pausing off-screen
+// to save battery) and retries on loadeddata plus the first user gesture as
+// a fallback in case autoplay was blocked.
+function initAutoplayVideos() {
+  const videos = document.querySelectorAll('video[autoplay]');
+  if (!videos.length) return;
+
+  videos.forEach((video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+  });
+
+  function tryPlay(video) {
+    const p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => {
+        video.addEventListener('loadeddata', () => {
+          video.play().catch(() => {});
+        }, { once: true });
+      });
+    }
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          tryPlay(entry.target);
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+    videos.forEach((video) => observer.observe(video));
+  } else {
+    videos.forEach(tryPlay);
+  }
+
+  // Fallback: some mobile browsers only unlock autoplay after a genuine
+  // user gesture anywhere on the page - retry any videos still paused.
+  const retryOnInteraction = () => {
+    videos.forEach((video) => { if (video.paused) tryPlay(video); });
+  };
+  ['touchstart', 'click', 'scroll'].forEach((evt) => {
+    document.addEventListener(evt, retryOnInteraction, { once: true, passive: true });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCategoryBarMode();
   initPortfolioWheelVersionQuery();
@@ -267,5 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initYear();
   initTileHoverTitles();
+  initAutoplayVideos();
 });
 

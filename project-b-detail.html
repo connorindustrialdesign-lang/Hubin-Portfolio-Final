@@ -346,50 +346,6 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <script>
-        // Reliably autoplay the Sobri gallery videos only while they're actually on screen
-        // (mobile browsers often show a play button instead of honoring autoplay on load).
-        (function () {
-            var videos = document.querySelectorAll('.project-gallery video');
-            if (!videos.length) return;
-
-            videos.forEach(function (video) {
-                // Some mobile browsers only honor muted/inline playback set as JS
-                // properties (not just the HTML attributes), so set both.
-                video.muted = true;
-                video.defaultMuted = true;
-                video.playsInline = true;
-            });
-
-            function tryPlay(video) {
-                var p = video.play();
-                if (p && typeof p.catch === 'function') {
-                    p.catch(function () {
-                        // Not ready yet or blocked - retry once data is actually available.
-                        video.addEventListener('loadeddata', function () {
-                            video.play().catch(function () {});
-                        }, { once: true });
-                    });
-                }
-            }
-
-            if (!('IntersectionObserver' in window)) {
-                videos.forEach(tryPlay);
-                return;
-            }
-
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        tryPlay(entry.target);
-                    } else {
-                        entry.target.pause();
-                    }
-                });
-            }, { threshold: 0.15 });
-            videos.forEach(function (video) { observer.observe(video); });
-        })();
-    </script>
 </body>
 </html>
 

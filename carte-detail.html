@@ -357,34 +357,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-        // Reliably autoplay/loop the Carte hero video (mobile browsers often
-        // show a play button instead of honoring the autoplay attribute alone).
-        (function () {
-            var video = document.querySelector('.carte-hero-video');
-            if (!video) return;
-
-            video.muted = true;
-            video.defaultMuted = true;
-            video.playsInline = true;
-            video.loop = true;
-
-            function tryPlay() {
-                var p = video.play();
-                if (p && typeof p.catch === 'function') {
-                    p.catch(function () {
-                        video.addEventListener('loadeddata', function () {
-                            video.play().catch(function () {});
-                        }, { once: true });
-                    });
-                }
-            }
-            tryPlay();
-            document.addEventListener('visibilitychange', function () {
-                if (!document.hidden && video.paused) tryPlay();
-            });
-        })();
-    </script>
 
 </body>
 </html>
