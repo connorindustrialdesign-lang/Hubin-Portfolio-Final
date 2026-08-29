@@ -38,19 +38,22 @@
         display: block;
       }
       .hero-project-text {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 700;
         color: #1a1a1a;
+        text-align: left;
+        margin-top: 24px;
         margin-bottom: 12px;
       }
-      .gallery-caption {
-        font-size: 18px;
-        color: #444;
+      .hero-project-caption {
+        font-size: 16px;
+        font-weight: 400;
+        color: #222;
         line-height: 1.6;
-        font-weight: 700;
         letter-spacing: 1.2px;
-        max-width: 500px;
-        margin-bottom: 40px;
+        text-align: left;
+        max-width: 340px;
+        margin: 8px 0 0 0;
       }
       .projects-button {
         display: inline-flex;
@@ -74,41 +77,23 @@
         background: #333;
         transform: translateY(-2px);
       }
+      .hero-project-button-side {
+        align-self: center;
+      }
       @media (max-width: 1024px) {
         .hero-project-wrapper {
           grid-template-columns: 1fr;
           gap: 24px;
         }
-        .hero-project-text {
-          font-size: 28px;
-        }
       }
       @media (max-width: 768px) {
-        .hero-project {
-          padding: 24px 8px 32px;
-        }
-        .hero-project-text {
-          font-size: 22px;
-        }
-        .gallery-caption {
-          font-size: 12px !important;
-          margin-bottom: 24px;
-        }
-        .projects-button {
-          font-size: 18px;
-          padding: 18px 36px;
-          border-radius: 16px;
-        }
-
         /* Fit the whole hero (image + title + caption + button) in the
-           viewport with no scrolling and no cropping. The image is shown in
-           full (object-fit:contain, scaled down as needed - never cropped)
-           across the full row on top; below it, title (left) and caption
-           (right) share a row spanning the same width as the image, and the
-           Portfolio button sits centered in its own full-width row below
-           that. display:contents on .hero-project-image lets its children
-           (the picture link, title, caption) become direct grid items of
-           the wrapper instead of being boxed inside it. */
+           viewport with no scrolling and no cropping. Title (left) and
+           caption (right) share a row spanning the image's width, with the
+           Portfolio button centered in its own full-width row below.
+           display:contents on .hero-project-image lets its children (the
+           picture link, title, caption) become direct grid items of the
+           wrapper instead of being boxed inside it. */
         .hero-project {
           height: calc(100vh - 140px);
           min-height: calc(100vh - 140px);
@@ -159,15 +144,21 @@
         .hero-project-text {
           grid-area: title;
           align-self: center;
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
+          margin-top: 0;
+          margin-bottom: 0;
         }
-        .gallery-caption {
+        .hero-project-caption {
           grid-area: caption;
           align-self: center;
-          max-width: none !important;
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
+          font-size: 12px;
+          max-width: none;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .projects-button {
+          font-size: 18px;
+          padding: 18px 36px;
+          border-radius: 16px;
         }
         .hero-project-button-side {
           grid-area: button;
@@ -205,10 +196,10 @@
             <a href="project-a-detail.html">
               <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/ID%20project%20A%20hero%20shot%20%28homepage%29-v2.JPG"><img src="assets/images/id-project-a/ID project A hero shot (homepage)-v2.JPG" alt="Project A Hero Shot" width="2000" height="2550"></picture>
             </a>
-            <div class="hero-project-text" style="text-align:left; margin-top: 24px; font-size: 2em; font-weight: 700;">CTE Pack</div>
-            <div class="gallery-caption" style="text-align:left; font-size: 1em; color: #222; font-weight: 400; margin: 8px 0 0 0; max-width: 340px;">Sandeblast 0.5&quot; &amp; 0.25&quot; plywood, zinc fasteners, nylon, and 0.125&quot; cork sheet</div>
+            <div class="hero-project-text">CTE Pack</div>
+            <div class="hero-project-caption">Sandeblast 0.5&quot; &amp; 0.25&quot; plywood, zinc fasteners, nylon, and 0.125&quot; cork sheet</div>
           </div>
-          <div class="hero-project-button-side" style="align-self: center;">
+          <div class="hero-project-button-side">
             <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
           </div>
         </div>
