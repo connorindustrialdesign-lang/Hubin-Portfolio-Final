@@ -98,6 +98,57 @@
           font-size: 18px;
           padding: 18px 36px;
         }
+
+        /* Fit the whole hero (image + caption + button) in the viewport with
+           no scrolling needed. The image absorbs all the size adjustment by
+           filling whatever vertical space is left (object-fit:cover crops it
+           rather than shrinking it) - text/caption/button keep their size. */
+        .hero-project {
+          height: calc(100vh - 140px);
+          min-height: calc(100vh - 140px);
+          max-height: calc(100vh - 140px);
+          padding: 16px 8px 12px;
+          align-items: stretch;
+          overflow: hidden;
+        }
+        .hero-project-wrapper {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          min-height: 0;
+          gap: 10px;
+        }
+        .hero-project-image {
+          flex: 1 1 auto;
+          min-height: 0;
+          max-width: none;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .hero-project-image a {
+          flex: 1 1 auto;
+          min-height: 0;
+          display: block;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+        .hero-project-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 15%;
+          border-radius: 8px;
+        }
+        .hero-project-text,
+        .gallery-caption {
+          flex: 0 0 auto;
+          margin-top: 0 !important;
+        }
+        .hero-project-button-side {
+          flex: 0 0 auto;
+          align-self: center;
+        }
       }
     </style>
   </head>
