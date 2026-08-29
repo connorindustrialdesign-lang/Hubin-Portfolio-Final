@@ -180,6 +180,34 @@
             margin-top: 8px;
             font-weight: bold;
         }
+
+        /* Mobile: stack the top photo above its caption, both full width -
+           the side-by-side flex row squeezed the photo down to a tiny thumbnail. */
+        @media (max-width: 768px) {
+            .project-header { padding: 40px 20px 28px; }
+            .project-header h1 { font-size: 36px; }
+            .project-gallery { padding: 28px 20px; gap: 28px; }
+
+            .top-section {
+                flex-direction: column;
+                gap: 0;
+                margin-bottom: 8px;
+            }
+            .top-image {
+                flex: none;
+                max-width: none;
+                width: calc(100% + 40px);
+                margin-left: -20px;
+                margin-right: -20px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .top-content {
+                flex: none;
+                width: 100%;
+                padding-top: 20px;
+            }
+        }
     </style>
 </head>
 <body data-page="fabrication">
