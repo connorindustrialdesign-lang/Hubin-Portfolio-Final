@@ -99,55 +99,70 @@
           padding: 18px 36px;
         }
 
-        /* Fit the whole hero (image + caption + button) in the viewport with
-           no scrolling needed. The image absorbs all the size adjustment by
-           filling whatever vertical space is left (object-fit:cover crops it
-           rather than shrinking it) - text/caption/button keep their size. */
+        /* Fit the whole hero (image + title + caption + button) in the
+           viewport with no scrolling and no cropping. The image is shown in
+           full (object-fit:contain, scaled down as needed - never cropped)
+           across the full row on top; below it, title+caption stack on the
+           left and the button sits to the right, vertically centered
+           alongside them. display:contents on .hero-project-image lets its
+           children (the picture link, title, caption) become direct grid
+           items of the wrapper instead of being boxed inside it. */
         .hero-project {
           height: calc(100vh - 140px);
           min-height: calc(100vh - 140px);
           max-height: calc(100vh - 140px);
-          padding: 16px 8px 12px;
+          padding: 12px 8px 10px;
           align-items: stretch;
           overflow: hidden;
         }
         .hero-project-wrapper {
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-template-rows: minmax(0, 1fr) auto auto;
+          grid-template-areas:
+            "image image"
+            "title button"
+            "caption button";
+          column-gap: 16px;
+          row-gap: 2px;
           height: 100%;
-          min-height: 0;
-          gap: 10px;
+          width: 100%;
         }
         .hero-project-image {
-          flex: 1 1 auto;
-          min-height: 0;
-          max-width: none;
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
+          display: contents;
         }
         .hero-project-image a {
-          flex: 1 1 auto;
+          grid-area: image;
+          height: 100%;
           min-height: 0;
+          min-width: 0;
+          position: relative;
           display: block;
           overflow: hidden;
-          border-radius: 8px;
         }
         .hero-project-image img {
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          object-position: center 15%;
+          object-fit: contain;
           border-radius: 8px;
         }
-        .hero-project-text,
-        .gallery-caption {
-          flex: 0 0 auto;
+        .hero-project-text {
+          grid-area: title;
+          align-self: end;
           margin-top: 0 !important;
         }
+        .gallery-caption {
+          grid-area: caption;
+          align-self: start;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
         .hero-project-button-side {
-          flex: 0 0 auto;
+          grid-area: button;
           align-self: center;
+          justify-self: end;
         }
       }
     </style>
@@ -172,7 +187,7 @@
         <div class="hero-project-wrapper">
           <div class="hero-project-image">
             <a href="project-a-detail.html">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/ID%20project%20A%20hero%20shot%20%28homepage%29.JPG"><img src="assets/images/id-project-a/ID project A hero shot (homepage).JPG" alt="Project A Hero Shot" width="2000" height="3000"></picture>
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/ID%20project%20A%20hero%20shot%20%28homepage%29-v2.JPG"><img src="assets/images/id-project-a/ID project A hero shot (homepage)-v2.JPG" alt="Project A Hero Shot" width="2000" height="2550"></picture>
             </a>
             <div class="hero-project-text" style="text-align:left; margin-top: 24px; font-size: 2em; font-weight: 700;">CTE Pack</div>
             <div class="gallery-caption" style="text-align:left; font-size: 1em; color: #222; font-weight: 400; margin: 8px 0 0 0; max-width: 340px;">Sandeblast 0.5&quot; &amp; 0.25&quot; plywood, zinc fasteners, nylon, and 0.125&quot; cork sheet</div>
