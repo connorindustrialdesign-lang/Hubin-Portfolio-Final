@@ -240,6 +240,21 @@ function initCategoryBarMode() {
 // hover, so briefly reveal the title overlay before navigating on tap.
 // Desktop just uses the CSS :hover rule - no JS needed there.
 function initTileHoverTitles() {
+  // Clear any stuck "tapped" state before anything else - when the browser
+  // restores this page from cache after the user hits Back, the .tile-tapped
+  // class (and the click handler's in-progress navigating flag) come back
+  // frozen exactly as they were at the moment of tapping, leaving that tile's
+  // title stuck visible (and stacking up with more tiles each time Back is
+  // used again).
+  const clearTappedState = () => {
+    document.querySelectorAll('.tile.tile-tapped').forEach((tile) => {
+      tile.classList.remove('tile-tapped');
+      delete tile.dataset.navigating;
+    });
+  };
+  clearTappedState();
+  window.addEventListener('pageshow', clearTappedState);
+
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
   if (!isTouch) return;
 
@@ -256,6 +271,7 @@ function initTileHoverTitles() {
     });
   });
 }
+
 
 // Reliably autoplay/loop any <video autoplay> on the page - mobile browsers
 // often reject the very first play() attempt right after page load (even
