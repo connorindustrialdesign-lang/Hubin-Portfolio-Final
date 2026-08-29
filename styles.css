@@ -673,8 +673,9 @@ main{width:100%;margin:0;padding:0}
   .category-bar{height:auto;flex-wrap:wrap;gap:0;display:grid;grid-template-columns:1fr 1fr;top:56px}
   .category-bar a{padding:10px 0;font-size:13px;line-height:1.3;text-align:center;border-bottom:1px solid rgba(255,255,255,0.1)}
   .category-bar a.active{border-bottom:3px solid currentColor}
-  body.project-detail-page .category-bar{padding:0 4px;top:0}
+  body.project-detail-page .category-bar{padding:8px 4px;top:0;gap:6px 10px}
   body.project-detail-page .category-bar a{font-size:clamp(14px,2.8vw,16px);padding:0 8px}
+  body.project-detail-page{padding-top:84px}
   
   /* Responsive header */
   .site-header{padding:12px 0}
@@ -1115,5 +1116,8 @@ body.project-detail-page .thumb-label{
     border-bottom: none;
     padding: 0 8px;
     font-size: clamp(13px, 2.6vw, 14px);
+  }
+  body.project-detail-page {
+    padding-top: 70px;
   }
 }
