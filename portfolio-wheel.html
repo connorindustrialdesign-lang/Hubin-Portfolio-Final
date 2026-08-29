@@ -202,6 +202,29 @@
         background-size: cover;
         background-position: center;
       }
+
+      .cat-card.design-project::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+      }
+
+      .cat-card.design-project .design-project-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: block;
+        padding: 22px;
+        text-align: center;
+        color: #fff;
+        font-size: clamp(34px, 5vw, 62px);
+        line-height: 1.05;
+        font-weight: 900;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.35);
+      }
       
       @media (max-width: 768px) {
         .shope-project-content {
@@ -260,6 +283,11 @@
           margin-left: 0;
           margin-right: 0;
           width: 100%;
+        }
+
+        .cat-card.design-project .design-project-title {
+          font-size: clamp(20px, 3vw, 32px);
+          padding: 16px;
         }
       }
 
@@ -533,6 +561,7 @@
             </a>
 
             <a class="tile cat-card design-project" href="engineering-design-1-2-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1; background-image: url('https://deovv8pnl76k0.cloudfront.net/images/engineering%201%20%26%202/heroselection-background-display.jpg'); background-size: cover; background-position: center; position: relative;">
+              <div class="design-project-title">Engineering Design 1 &amp; 2</div>
               <span class="tile-hover-title">Engineering Design 1 &amp; 2</span>
             </a>
           </div>
