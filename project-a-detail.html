@@ -101,6 +101,22 @@
       .cte-hero-wrap img {
         width: 100% !important;
       }
+      /* The machining photo had a fixed 280px crop band (object-fit:cover) -
+         now that it's full screen width, that crop hid most of the shot.
+         Show the whole photo at its natural ratio instead. The shared
+         ".layout-grid .frame" rule also forces aspect-ratio:1/1 + height:100%,
+         which squared it off and clipped the bottom via overflow:hidden. */
+      .cte-proto-media {
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .cte-proto-media img {
+        height: auto !important;
+        object-fit: contain !important;
+      }
 
       /* Final Product (mobile only): the shared flex/stretch row layout was
          cropping these top-to-bottom. Simplify to a plain full-bleed stack so
