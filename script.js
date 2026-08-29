@@ -236,6 +236,27 @@ function initCategoryBarMode() {
   }
 }
 
+// Project tiles (portfolio-wheel.html): on touch devices there's no real
+// hover, so briefly reveal the title overlay before navigating on tap.
+// Desktop just uses the CSS :hover rule - no JS needed there.
+function initTileHoverTitles() {
+  const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  if (!isTouch) return;
+
+  document.querySelectorAll('.tile').forEach((tile) => {
+    if (!tile.querySelector('.tile-hover-title')) return;
+
+    tile.addEventListener('click', (e) => {
+      if (tile.dataset.navigating) return;
+      e.preventDefault();
+      tile.classList.add('tile-tapped');
+      tile.dataset.navigating = '1';
+      const href = tile.getAttribute('href');
+      setTimeout(() => { window.location.href = href; }, 450);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCategoryBarMode();
   initPortfolioWheelVersionQuery();
@@ -245,5 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveCategoryLink();
   initContactForm();
   initYear();
+  initTileHoverTitles();
 });
 

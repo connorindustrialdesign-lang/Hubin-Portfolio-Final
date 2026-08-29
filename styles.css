@@ -559,6 +559,12 @@ main{width:100%;margin:0;padding:0}
 .tile{position:relative;display:block;width:100%;height:100%;overflow:hidden;border-radius:16px;background:var(--card);text-decoration:none;color:inherit;box-shadow:0 8px 30px rgba(2,6,23,0.06);transition:transform .18s ease,box-shadow .18s ease}
 .tile img{width:100%;height:100%;object-fit:cover;display:block}
 
+/* Project title overlay: hidden until hover (desktop) or tap (mobile, via JS) */
+.tile-hover-title{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:#fff;font-weight:700;font-size:clamp(18px,3vw,32px);background:rgba(0,0,0,0.38);opacity:0;transition:opacity .2s ease;z-index:5;pointer-events:none}
+.tile:hover .tile-hover-title,
+.tile:focus-visible .tile-hover-title,
+.tile.tile-tapped .tile-hover-title{opacity:1}
+
 /* Image wrapper for rotation control */
 .img-wrapper{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
 .rotate-270{overflow:visible}
