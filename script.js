@@ -258,10 +258,11 @@ function initTileHoverTitles() {
 }
 
 // Reliably autoplay/loop any <video autoplay> on the page - mobile browsers
-// often show a play button instead of honoring the bare attribute. Plays
-// while the video is on screen (via IntersectionObserver, pausing off-screen
-// to save battery) and retries on loadeddata plus the first user gesture as
-// a fallback in case autoplay was blocked.
+// often reject the very first play() attempt right after page load (even
+// muted) but accept a retry moments later, so we retry immediately, at
+// several readiness events/short delays, on scroll into view, and on the
+// first user gesture - whichever succeeds first gets it playing without
+// requiring the user to scroll first.
 function initAutoplayVideos() {
   const videos = document.querySelectorAll('video[autoplay]');
   if (!videos.length) return;
@@ -272,16 +273,29 @@ function initAutoplayVideos() {
     video.playsInline = true;
   });
 
+  function isInViewport(video) {
+    const r = video.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0 && r.left < window.innerWidth && r.right > 0;
+  }
+
   function tryPlay(video) {
     const p = video.play();
     if (p && typeof p.catch === 'function') {
-      p.catch(() => {
-        video.addEventListener('loadeddata', () => {
-          video.play().catch(() => {});
-        }, { once: true });
-      });
+      p.catch(() => {});
     }
   }
+
+  videos.forEach((video) => {
+    tryPlay(video);
+    ['loadedmetadata', 'loadeddata', 'canplay', 'canplaythrough'].forEach((evt) => {
+      video.addEventListener(evt, () => { if (video.paused) tryPlay(video); });
+    });
+    [50, 250, 750, 1500].forEach((delay) => {
+      setTimeout(() => {
+        if (video.paused && isInViewport(video)) tryPlay(video);
+      }, delay);
+    });
+  });
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -294,8 +308,6 @@ function initAutoplayVideos() {
       });
     }, { threshold: 0.1 });
     videos.forEach((video) => observer.observe(video));
-  } else {
-    videos.forEach(tryPlay);
   }
 
   // Fallback: some mobile browsers only unlock autoplay after a genuine
