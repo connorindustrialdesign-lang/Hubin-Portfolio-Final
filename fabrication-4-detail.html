@@ -207,6 +207,23 @@
                 width: 100%;
                 padding-top: 20px;
             }
+
+            /* Galleries below (mobile only): stack to one photo per row, full
+               width - these were still in 2-3 column rows with fixed max-widths
+               (500px/220px), squeezing each photo down far too small. */
+            .gallery-grid-1-6 {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .gallery-row {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .gallery-item.large,
+            .gallery-item.small {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
