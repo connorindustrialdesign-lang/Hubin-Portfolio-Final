@@ -38,6 +38,12 @@
     .sketch-grid .cte-sketch-frame { grid-column: span 3; aspect-ratio: 1; margin-bottom: 0; }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
     .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; aspect-ratio: 16 / 9; }
+    /* Crop to fill instead of letterboxing - a sketch's own aspect ratio rarely
+       matches its box exactly, and gaps expose the frame's background color.
+       <picture> doesn't stretch to fill a flex parent on its own (its auto
+       width falls back to the image's intrinsic size) - force it to. */
+    .sketch-grid .cte-sketch-frame picture { display: block; width: 100%; height: 100%; }
+    .sketch-grid .cte-sketch-frame img { object-fit: cover; }
 
     @media (max-width: 1024px) {
       .project-shell { padding: 0 30px 72px; }
@@ -232,9 +238,9 @@
       <div class="sketch-grid">
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-1.JPG"><img src="assets/images/id-project-a/cte-1.jpg" alt="" width="1971" height="1493"></picture></div>
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-2.JPG"><img src="assets/images/id-project-a/cte-2.jpg" alt="" width="2100" height="1527"></picture></div>
-        <div class="frame cte-sketch-frame sketch-sm"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-3.JPG"><img src="assets/images/id-project-a/cte-3.jpg" alt="" width="1430" height="1590"></picture></div>
-        <div class="frame cte-sketch-frame sketch-sm"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-4.JPG"><img src="assets/images/id-project-a/cte-4.jpg" alt="" width="1419" height="960"></picture></div>
-        <div class="frame cte-sketch-frame sketch-sm"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-5.JPG"><img src="assets/images/id-project-a/cte-5.jpg" alt="" width="1868" height="1623"></picture></div>
+        <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-4.JPG"><img src="assets/images/id-project-a/cte-4.jpg" alt="" width="1419" height="960"></picture></div>
+        <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-5.JPG"><img src="assets/images/id-project-a/cte-5.jpg" alt="" width="1868" height="1623"></picture></div>
+        <div class="frame cte-sketch-frame sketch-lg"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-3.JPG"><img src="assets/images/id-project-a/cte-3.jpg" alt="" width="1430" height="1590"></picture></div>
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-6.JPG"><img src="assets/images/id-project-a/cte-6.jpg" alt="" width="1227" height="1332"></picture></div>
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-7.JPG"><img src="assets/images/id-project-a/cte-7.jpg" alt="" width="1146" height="1385"></picture></div>
       </div>
