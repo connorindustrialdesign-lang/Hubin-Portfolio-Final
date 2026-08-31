@@ -96,14 +96,24 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 12px;
       }
+      /* Every sketch is full-width and alone in its row on mobile (no
+         sibling to line up with), so let each box hug its own photo's
+         aspect ratio instead of forcing a square/16:9 shape - that's what
+         left tall blank bars above/below the landscape sketches. */
       .sketch-grid .cte-sketch-frame {
         grid-column: span 4;
+        aspect-ratio: auto;
+        height: auto;
+      }
+      .sketch-grid .cte-sketch-frame img {
+        height: auto;
       }
       .sketch-grid .cte-sketch-frame.sketch-sm {
         grid-column: span 2;
       }
       .sketch-grid .cte-sketch-frame.sketch-lg {
         grid-column: span 4;
+        aspect-ratio: auto;
       }
 
       /* Prototype and fabrication media (mobile only): break out to full-bleed by
