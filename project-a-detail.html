@@ -136,6 +136,22 @@
       .cte-hero-wrap img {
         width: 100% !important;
       }
+      /* The exploded-view frame kept its desktop min-height (480px) on
+         mobile, leaving a tall blank gap above the actual photo (contain
+         centers it) - the "3dm exploded" caption, pinned to the wrapper's
+         top-right corner, ended up floating in that gap instead of over the
+         image. The shared ".layout-grid .frame" rule also forces
+         aspect-ratio:1/1 + height:100% here (this frame is a descendant of
+         .layout-grid) - neutralize both so the frame hugs the photo. */
+      .cte-hero-wrap .frame.hero {
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        height: auto !important;
+      }
+      .cte-hero-wrap img {
+        height: auto !important;
+      }
       /* The machining photo had a fixed 280px crop band (object-fit:cover) -
          now that it's full screen width, that crop hid most of the shot.
          Show the whole photo at its natural ratio instead. The shared
