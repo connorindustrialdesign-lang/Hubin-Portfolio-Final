@@ -317,6 +317,11 @@
     flex-direction: column;
     gap: 20px;
   }
+  /* flex:1 1 0 (flex-basis:0) combined with overflow:hidden collapses each
+     frame to 0 height once stacked into a column - size by content instead. */
+  .four-image-row .frame {
+    flex: 0 1 auto;
+  }
 }
 .frame img.img-12 {
   object-fit: cover !important;

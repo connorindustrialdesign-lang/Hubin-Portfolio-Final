@@ -19,7 +19,7 @@
 
     .layout-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
     .column-stack { display: grid; gap: 20px; }
-    .frame { background: #f6f6f6; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; border-radius: 10px; }
+    .frame { background: #fff; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; border-radius: 10px; }
     .frame.hero { min-height: 520px; }
     .frame.hero-top { width: 100vw; margin-left: calc(-50vw + 50%); border-radius: 0; overflow: hidden; }
     .full-bleed-bottom-image { width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden; position: static; left: auto; right: auto; margin-right: 0; min-height: auto; background: transparent; }
@@ -27,7 +27,18 @@
     .frame.wide { grid-column: 1 / -1; min-height: 300px; }
     .frame.tall { min-height: 360px; }
 
-    .frame img { width: 100%; height: 100%; object-fit: contain; display: block; background: #fafafa; }
+    /* <picture> doesn't stretch to fill a flex .frame on its own (its auto
+       width falls back to the image's intrinsic size) - force it to. Show
+       the full image (no cropping) - any leftover letterbox space is white
+       like the page background, so it reads as margin, not a gray box. */
+    .frame picture { display: block; width: 100%; height: 100%; }
+    .frame img { width: 100%; height: 100%; object-fit: contain; display: block; background: #fff; }
+    /* Shared rule (styles.css) crops any .frame nested in a .layout-grid to
+       fill its square box - show the full image on this page instead. */
+    .layout-grid .frame img { object-fit: contain; }
+    /* This shared rule (styles.css) forces fill on any .frame.hero image,
+       distorting cte-9-new.png's aspect ratio - contain keeps it undistorted. */
+    .frame.hero img { object-fit: contain !important; }
     .frame-label { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.9); color: #111; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; padding: 8px 10px; }
 
     /* Concept Development sketches: size is controlled per-image with an
@@ -38,12 +49,6 @@
     .sketch-grid .cte-sketch-frame { grid-column: span 3; aspect-ratio: 1; margin-bottom: 0; }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
     .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; aspect-ratio: 16 / 9; }
-    /* Crop to fill instead of letterboxing - a sketch's own aspect ratio rarely
-       matches its box exactly, and gaps expose the frame's background color.
-       <picture> doesn't stretch to fill a flex parent on its own (its auto
-       width falls back to the image's intrinsic size) - force it to. */
-    .sketch-grid .cte-sketch-frame picture { display: block; width: 100%; height: 100%; }
-    .sketch-grid .cte-sketch-frame img { object-fit: cover; }
 
     @media (max-width: 1024px) {
       .project-shell { padding: 0 30px 72px; }
