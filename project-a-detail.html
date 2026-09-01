@@ -42,11 +42,18 @@
        ratio (Assembly section, all 2000x3000) and use even columns so both
        images in a row still line up - now the corners round real pixels. */
     .layout-grid { grid-template-columns: 1fr 1fr; }
-    /* 16px was technically applying (verified with getComputedStyle + an
-       exaggerated-radius test) but too subtle to read as rounded at all
-       against the dark, busy photo content right at these corners - bumped
-       until it's unmistakable regardless of what's drawn near the edge. */
-    .layout-grid .frame { aspect-ratio: 2 / 3; height: auto; border-radius: 36px; }
+    /* Safari has a known bug where overflow:hidden + border-radius doesn't
+       reliably clip a flex item that also has aspect-ratio set - it only
+       clipped the bottom, not the top (confirmed: user on Safari, not
+       reproducible in Chromium). Force a GPU compositing layer, which is
+       the standard workaround for this specific Safari clipping bug. */
+    .layout-grid .frame {
+      aspect-ratio: 2 / 3;
+      height: auto;
+      border-radius: 36px;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
     .layout-grid .frame img { object-fit: contain; }
     /* This shared rule (styles.css) forces fill on any .frame.hero image,
        distorting cte-9-new.png's aspect ratio - contain keeps it undistorted. */
