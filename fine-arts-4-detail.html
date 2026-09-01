@@ -124,39 +124,29 @@
 
         .painting-modal-back {
             position: absolute;
-            top: 16px;
-            left: 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: none;
-            background: rgba(255, 255, 255, 0.94);
-            color: #222;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 10px 14px;
-            border-radius: 999px;
-            cursor: pointer;
-            z-index: 3;
-        }
-
-        .painting-modal-back:hover {
-            background: #fff;
-        }
-
-        .painting-modal-back .back-arrow {
+            top: 20px;
+            left: 20px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.08);
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            z-index: 3;
+            color: #fff;
+        }
+
+        .painting-modal-back:hover {
+            opacity: 0.7;
         }
 
         .painting-modal-back svg {
-            width: 14px;
-            height: 14px;
+            width: 30px;
+            height: 30px;
+            stroke-width: 3;
         }
 
         .painting-modal-content {
@@ -242,8 +232,13 @@
             .painting-modal-back {
                 top: 12px;
                 left: 12px;
-                font-size: 13px;
-                padding: 9px 12px;
+                width: 38px;
+                height: 38px;
+            }
+
+            .painting-modal-back svg {
+                width: 24px;
+                height: 24px;
             }
 
             .painting-modal-content {
@@ -330,12 +325,9 @@
     <div class="painting-modal" id="painting-modal" aria-hidden="true">
         <div class="painting-modal-backdrop" id="painting-modal-backdrop"></div>
         <button class="painting-modal-back" id="painting-modal-back" aria-label="Back to Paintings">
-            <span class="back-arrow">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </span>
-            Back
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 19l-7-7 7-7"></path>
+            </svg>
         </button>
         <div class="painting-modal-content" role="dialog" aria-modal="true" aria-label="Painting full screen view">
             <img id="painting-modal-image" src="" alt="Painting full screen">

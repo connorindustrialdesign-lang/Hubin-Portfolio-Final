@@ -126,63 +126,49 @@
             max-width: 90vw;
             max-height: 90vh;
             background: none;
+            /* The image fills this whole box (see below), so without this,
+               clicks on any letterboxed space around it hit this wrapper
+               instead of passing through to the backdrop's close handler. */
+            pointer-events: none;
         }
 
         .gallery-modal-content img {
-            width: 100%;
-            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
             object-fit: contain;
             border-radius: 0;
+            pointer-events: auto;
         }
 
         .gallery-modal-back {
             position: absolute;
             top: 20px;
             left: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            font-family: 'Space Grotesk', sans-serif;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            transition: all 0.2s ease;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            color: #fff;
+            transition: opacity 0.2s ease;
             z-index: 2002;
+            pointer-events: auto;
         }
 
         .gallery-modal-back:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.5);
+            opacity: 0.7;
         }
 
-        .gallery-modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            width: 44px;
-            height: 44px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 32px;
-            font-weight: 300;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            z-index: 2002;
-        }
-
-        .gallery-modal-close:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.5);
+        .gallery-modal-back svg {
+            width: 30px;
+            height: 30px;
+            stroke-width: 3;
         }
 
         /* Tablet */
@@ -213,13 +199,13 @@
             .gallery-modal-back {
                 top: 16px;
                 left: 16px;
-                padding: 10px 16px;
-                font-size: 13px;
+                width: 38px;
+                height: 38px;
             }
 
-            .gallery-modal-close {
-                top: 16px;
-                right: 16px;
+            .gallery-modal-back svg {
+                width: 24px;
+                height: 24px;
             }
 
             .gallery-item-label h3 {
@@ -242,16 +228,13 @@
             .gallery-modal-back {
                 top: 12px;
                 left: 12px;
-                padding: 8px 12px;
-                font-size: 12px;
+                width: 34px;
+                height: 34px;
             }
 
-            .gallery-modal-close {
-                top: 12px;
-                right: 12px;
-                width: 40px;
-                height: 40px;
-                font-size: 28px;
+            .gallery-modal-back svg {
+                width: 20px;
+                height: 20px;
             }
 
             .gallery-item-label h3 {
@@ -300,14 +283,10 @@
         <div class="gallery-modal-backdrop" id="gallery-modal-backdrop"></div>
         <div class="gallery-modal-content" role="dialog" aria-modal="true" aria-label="Sculpture Viewer">
             <button class="gallery-modal-back" id="back-gallery-modal" aria-label="Back to Gallery">
-                <span>
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px;">
-                        <path d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </span>
-                Back
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 19l-7-7 7-7"></path>
+                </svg>
             </button>
-            <button class="gallery-modal-close" id="close-gallery-modal" aria-label="Close gallery">×</button>
             <img id="modal-image" src="" alt="Full size sculpture view">
         </div>
     </div>
@@ -338,7 +317,6 @@
             const modalImage = document.getElementById('modal-image');
             const backdrop = document.getElementById('gallery-modal-backdrop');
             const backButton = document.getElementById('back-gallery-modal');
-            const closeButton = document.getElementById('close-gallery-modal');
 
             // Generate gallery items
             galleryData.forEach((item, index) => {
@@ -367,7 +345,6 @@
             };
 
             backButton.addEventListener('click', closeModal);
-            closeButton.addEventListener('click', closeModal);
             backdrop.addEventListener('click', closeModal);
 
             // Escape key to close
