@@ -103,7 +103,12 @@
       height: auto;
     }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
-    .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; }
+    /* This particular sketch is a portrait photo - at the full 6-column
+       width its natural ratio makes it render huge (~1290px tall). Capping
+       with max-width (not a fixed width, which forced the grid track
+       itself to grow to fit it and overflowed the mobile layout) shrinks
+       it on desktop while leaving mobile's already-narrower column alone. */
+    .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; max-width: 650px; margin: 0 auto; }
 
     @media (max-width: 1024px) {
       .project-shell { padding: 0 30px 72px; }
@@ -302,7 +307,6 @@
       <div>
         <h1>CTE Pack</h1>
       </div>
-      <p>A modular project framework for concept, pack architecture, user interaction, and concept v.1</p>
     </div>
 
     <!-- SECTION 1: Problem & Context -->
