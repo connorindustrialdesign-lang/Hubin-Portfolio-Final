@@ -84,14 +84,18 @@
        still an issue here even after switching to display:block). Use the
        classic padding-bottom percentage trick instead - it predates and
        fully avoids the aspect-ratio property, so it isn't affected by that
-       bug. inset:0 on picture/img fills the padding-created box exactly. */
+       bug. inset:0 on picture/img fills the padding-created box exactly.
+       UPDATE: still wrong in Safari even with this - a small script at the
+       end of the page now measures each tile's actual width and sets an
+       explicit pixel height directly instead, so height:0/min-height here
+       is just a sane fallback for the instant before that script runs. */
     .sketch-grid .cte-sketch-frame {
       display: block;
       grid-column: span 3;
       position: relative;
       width: 100%;
       height: 0;
-      padding-bottom: 100%;
+      min-height: 200px;
       overflow: hidden;
       margin-bottom: 0 !important;
     }
@@ -109,7 +113,7 @@
       object-fit: contain;
     }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
-    .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; padding-bottom: 56.25%; }
+    .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; }
 
     @media (max-width: 1024px) {
       .project-shell { padding: 0 30px 72px; }
@@ -155,7 +159,7 @@
       .sketch-grid .cte-sketch-frame {
         grid-column: span 4;
         height: auto;
-        padding-bottom: 0;
+        min-height: 0;
       }
       .sketch-grid .cte-sketch-frame picture {
         position: static;
@@ -170,7 +174,6 @@
       }
       .sketch-grid .cte-sketch-frame.sketch-lg {
         grid-column: span 4;
-        padding-bottom: 0;
       }
 
       /* Prototype and fabrication media (mobile only): break out to full-bleed by
@@ -477,5 +480,32 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Concept Development sketches (desktop only): the CSS aspect-ratio
+    // property and the padding-bottom percentage trick both failed to size
+    // these correctly in Safari - measure each tile's actual rendered width
+    // and set an explicit pixel height directly, removing any CSS ratio
+    // property from the equation entirely.
+    (function () {
+      function sizeSketchTiles() {
+        var frames = document.querySelectorAll('.sketch-grid .cte-sketch-frame');
+        if (!frames.length) return;
+        var desktop = window.innerWidth > 768;
+        frames.forEach(function (frame) {
+          if (!desktop) {
+            frame.style.height = '';
+            return;
+          }
+          var width = frame.getBoundingClientRect().width;
+          if (!width) return;
+          var ratio = frame.classList.contains('sketch-lg') ? 9 / 16 : 1;
+          frame.style.height = Math.round(width * ratio) + 'px';
+        });
+      }
+      window.addEventListener('load', sizeSketchTiles);
+      window.addEventListener('resize', sizeSketchTiles);
+      sizeSketchTiles();
+    })();
+  </script>
 </body>
 </html>
