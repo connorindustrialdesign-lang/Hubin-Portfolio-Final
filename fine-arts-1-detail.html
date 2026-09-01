@@ -139,7 +139,6 @@
             height: auto;
             object-fit: contain;
             border-radius: 0;
-            pointer-events: auto;
         }
 
         .gallery-modal-back {
@@ -158,6 +157,14 @@
             color: #fff;
             transition: opacity 0.2s ease;
             z-index: 2002;
+        }
+
+        /* The modal fades out via opacity (not display:none, since that can't
+           be transitioned) - without scoping these to .is-open, the img/button
+           keep pointer-events:auto even while invisible and silently block
+           clicks/scroll on the real page underneath wherever they last sat. */
+        .gallery-modal.is-open .gallery-modal-content img,
+        .gallery-modal.is-open .gallery-modal-back {
             pointer-events: auto;
         }
 
