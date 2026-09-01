@@ -75,8 +75,10 @@
     /* Concept Development sketches: size is controlled per-image with an
        optional modifier class - add sketch-lg to make a sketch the focal
        point (full width), sketch-sm to shrink it (pairs up 2-3 per row); no
-       modifier = medium, the default (2 per row). */
-    .sketch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 32px; margin-bottom: 32px; }
+       modifier = medium, the default (2 per row). Row-gap is tighter than
+       column-gap - equal pixel gaps read as bigger vertically than
+       horizontally, so this is what actually looks even. */
+    .sketch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px 32px; margin-bottom: 32px; }
     .sketch-grid .cte-sketch-frame { grid-column: span 3; aspect-ratio: 1; margin-bottom: 0; }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
     .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; aspect-ratio: 16 / 9; }
@@ -296,7 +298,7 @@
       <h2>Problem & Context</h2>
       <p>I have always been excited for the moment when I would come across a design problem in the wild — outside of a classroom project. The funny part is, the problem did come to me in a classroom, but as the teacher and not the student. I noticed many of my students struggled keeping organized and rarely came to class with the bare essentials they needed to succeed. This brought the insight of realizing they needed a storage pack that would not allow them to be unorganized. It <em>only</em> carries the items they need without any space for clutter or garbage. It must keep all the necessities organized and also have every item visible from the outside — no hiding permitted. Only clean, preparedness.</p>
 
-      <h2 style="margin-top:48px;">Concept Development</h2>
+      <h2 style="margin-top:48px; margin-bottom:16px;">Concept Development</h2>
       <div class="sketch-grid">
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-1.JPG"><img src="assets/images/id-project-a/cte-1.jpg" alt="" width="1971" height="1493"></picture></div>
         <div class="frame cte-sketch-frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-2.JPG"><img src="assets/images/id-project-a/cte-2.jpg" alt="" width="2100" height="1527"></picture></div>
