@@ -169,6 +169,11 @@
             justify-content: center;
             padding: 84px 20px 20px;
             box-sizing: border-box;
+            /* This wrapper fills the whole screen just to center the image -
+               without this, clicks on the black space around the image hit
+               this wrapper (which has no close handler) instead of passing
+               through to the backdrop underneath. */
+            pointer-events: none;
         }
 
         .painting-modal-content img {
@@ -180,6 +185,7 @@
             display: block;
             border-radius: 8px;
             background: #fafaf8;
+            pointer-events: auto;
         }
 
         /* Tablet breakpoint */
