@@ -38,32 +38,35 @@
        forced square box also hid the rounded corners entirely: with
        object-fit:contain, the (2:3 portrait) photos left white letterbox
        space at the corners instead of touching them, so the rounding had
-       nothing visible to clip. Match the box to the photos' own aspect
-       ratio (Assembly section, all 2000x3000) and use even columns so both
-       images in a row still line up - now the corners round real pixels. */
+       nothing visible to clip. Use even columns so both images in a row
+       still line up - now the corners round real pixels. */
     .layout-grid { grid-template-columns: 1fr 1fr; }
-    /* Safari has a known bug where overflow:hidden + border-radius doesn't
-       reliably clip a flex item that also has aspect-ratio set on the SAME
-       box - it only clipped the bottom, not the top (confirmed: user on
-       Safari, translateZ(0) didn't fix it either). Split the two jobs onto
-       separate elements instead: .frame only sizes the box (aspect-ratio),
-       and a new inner .frame-clip does nothing but clip + round it. */
+    /* Safari has a bug clipping overflow:hidden+border-radius on a flex
+       item that also has aspect-ratio set (confirmed: still broken even
+       after translateZ(0) and splitting into two elements). Going back to
+       the simplest possible setup instead - the one that worked before any
+       of this: a plain block box (no flex, no aspect-ratio property) whose
+       height comes naturally from its content (the photo itself, which
+       already has the right proportions), the same way the rest of this
+       site's rounded photos already work correctly. */
     .layout-grid .frame {
-      aspect-ratio: 2 / 3;
-      height: auto;
-      overflow: visible;
-      border-radius: 0;
-      background: none;
-    }
-    .layout-grid .frame-clip {
       display: block;
-      width: 100%;
-      height: 100%;
+      aspect-ratio: auto;
+      height: auto;
       overflow: hidden;
       border-radius: 36px;
       background: #fff;
     }
-    .layout-grid .frame img { object-fit: contain; }
+    .layout-grid .frame picture {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .layout-grid .frame img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
     /* This shared rule (styles.css) forces fill on any .frame.hero image,
        distorting cte-9-new.png's aspect ratio - contain keeps it undistorted. */
     .frame.hero img { object-fit: contain !important; }
@@ -357,12 +360,12 @@
         <!-- box 21 and 22 removed from here; 21 will be placed at the end, 22 removed -->
       </div>
       <div class="layout-grid" style="gap: 32px;">
-        <div class="frame"><div class="frame-clip"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-21.JPG"><img src="assets/images/id-project-a/cte-21.JPG" alt="" width="2000" height="3000"></picture></div></div>
-        <div class="frame"><div class="frame-clip"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-23.JPG"><img src="assets/images/id-project-a/cte-23.JPG" alt="" width="2000" height="3000"></picture></div></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-21.JPG"><img src="assets/images/id-project-a/cte-21.JPG" alt="" width="2000" height="3000"></picture></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-23.JPG"><img src="assets/images/id-project-a/cte-23.JPG" alt="" width="2000" height="3000"></picture></div>
       </div>
       <div class="layout-grid" style="gap: 32px;">
-        <div class="frame"><div class="frame-clip"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-22.JPG"><img src="assets/images/id-project-a/cte-22.JPG" alt="" width="2000" height="3000"></picture></div></div>
-        <div class="frame"><div class="frame-clip"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-24.JPG"><img src="assets/images/id-project-a/cte-24.JPG" alt="" width="2000" height="3000"></picture></div></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-22.JPG"><img src="assets/images/id-project-a/cte-22.JPG" alt="" width="2000" height="3000"></picture></div>
+        <div class="frame"><picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/cte-24.JPG"><img src="assets/images/id-project-a/cte-24.JPG" alt="" width="2000" height="3000"></picture></div>
       </div>
 
       <!-- SECTION: Functions -->
