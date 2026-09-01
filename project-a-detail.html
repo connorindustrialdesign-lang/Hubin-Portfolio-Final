@@ -42,7 +42,11 @@
        ratio (Assembly section, all 2000x3000) and use even columns so both
        images in a row still line up - now the corners round real pixels. */
     .layout-grid { grid-template-columns: 1fr 1fr; }
-    .layout-grid .frame { aspect-ratio: 2 / 3; height: auto; border-radius: 16px; }
+    /* 16px was technically applying (verified with getComputedStyle + an
+       exaggerated-radius test) but too subtle to read as rounded at all
+       against the dark, busy photo content right at these corners - bumped
+       until it's unmistakable regardless of what's drawn near the edge. */
+    .layout-grid .frame { aspect-ratio: 2 / 3; height: auto; border-radius: 28px; }
     .layout-grid .frame img { object-fit: contain; }
     /* This shared rule (styles.css) forces fill on any .frame.hero image,
        distorting cte-9-new.png's aspect ratio - contain keeps it undistorted. */
