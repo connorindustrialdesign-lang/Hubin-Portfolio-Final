@@ -78,8 +78,12 @@
        modifier = medium, the default (2 per row). Row-gap is tighter than
        column-gap - equal pixel gaps read as bigger vertically than
        horizontally, so this is what actually looks even. */
-    .sketch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px 32px; margin-bottom: 32px; }
-    .sketch-grid .cte-sketch-frame { grid-column: span 3; aspect-ratio: 1; margin-bottom: 0; }
+    .sketch-grid { display: grid; grid-template-columns: repeat(6, 1fr); row-gap: 16px; column-gap: 32px; margin-bottom: 32px; }
+    /* display:block instead of the base .frame's flex - Safari has a bug
+       (found and fixed the same way on the Assembly section above) where a
+       flex box with aspect-ratio set can render taller than the ratio
+       dictates, which looked exactly like an oversized row-gap here. */
+    .sketch-grid .cte-sketch-frame { display: block; grid-column: span 3; aspect-ratio: 1; margin-bottom: 0 !important; }
     .sketch-grid .cte-sketch-frame.sketch-sm { grid-column: span 2; }
     .sketch-grid .cte-sketch-frame.sketch-lg { grid-column: span 6; aspect-ratio: 16 / 9; }
 
