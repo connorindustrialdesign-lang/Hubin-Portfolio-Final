@@ -61,24 +61,18 @@
       .certificate-modal.is-open { display: flex; }
       .certificate-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.70); }
       .certificate-modal-content { position: relative; width: min(900px, calc(100vw - 40px)); max-height: calc(100vh - 40px); background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.25); }
-      .certificate-modal-back { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 8px; border: none; background: rgba(255,255,255,0.92); color: #2b4f7d; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; cursor: pointer; z-index: 2; }
-      .certificate-modal-back:hover { background: #fff; }
-      .certificate-modal-back .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(91, 143, 212, 0.12); }
-      .certificate-modal-back svg { width: 14px; height: 14px; }
-      .certificate-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border: none; border-radius: 999px; background: rgba(0,0,0,0.08); color: #333; font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; }
-      .certificate-modal-close:hover { background: rgba(0,0,0,0.14); }
+      .certificate-modal-back { position: absolute; top: 20px; left: 20px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: none; background: none; padding: 0; cursor: pointer; color: #2b4f7d; z-index: 2; transition: opacity 0.2s ease; }
+      .certificate-modal-back:hover { opacity: 0.7; }
+      .certificate-modal-back svg { width: 30px; height: 30px; stroke-width: 3; }
       .certificate-modal img { width: 100%; height: auto; max-height: calc(100vh - 80px); display: block; object-fit: contain; background: #fff; }
 
       .letter-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 2000; }
       .letter-modal.is-open { display: flex; }
       .letter-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.70); }
       .letter-modal-content { position: relative; width: min(900px, calc(100vw - 40px)); max-height: calc(100vh - 40px); background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.25); }
-      .letter-modal-back { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 8px; border: none; background: rgba(255,255,255,0.92); color: #2b4f7d; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; cursor: pointer; z-index: 2; }
-      .letter-modal-back:hover { background: #fff; }
-      .letter-modal-back .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(91, 143, 212, 0.12); }
-      .letter-modal-back svg { width: 14px; height: 14px; }
-      .letter-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border: none; border-radius: 999px; background: rgba(0,0,0,0.08); color: #333; font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; }
-      .letter-modal-close:hover { background: rgba(0,0,0,0.14); }
+      .letter-modal-back { position: absolute; top: 20px; left: 20px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: none; background: none; padding: 0; cursor: pointer; color: #2b4f7d; z-index: 2; transition: opacity 0.2s ease; }
+      .letter-modal-back:hover { opacity: 0.7; }
+      .letter-modal-back svg { width: 30px; height: 30px; stroke-width: 3; }
       .letter-modal img { width: 100%; height: auto; max-height: calc(100vh - 80px); display: block; object-fit: contain; background: #fff; }
 
       @media (max-width: 1024px) {
@@ -199,14 +193,10 @@
         <div class="certificate-modal-backdrop" id="certificate-modal-backdrop"></div>
         <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-label="CTE Teaching Certificate">
           <button class="certificate-modal-back" id="back-certificate-modal" aria-label="Back to Project">
-            <span class="back-arrow">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </span>
-            Back to Project
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 19l-7-7 7-7"></path>
+            </svg>
           </button>
-          <button class="certificate-modal-close" id="close-certificate-modal" aria-label="Close certificate">×</button>
           <picture>
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/engineering%201%20%26%202/hubin-teaching-certificate-display.png">
             <img src="assets/images/engineering 1 & 2/hubin-teaching-certificate-display.png" alt="CTE Teaching Certificate" width="1800" height="2329">
@@ -218,14 +208,10 @@
         <div class="letter-modal-backdrop" id="letter-modal-backdrop"></div>
         <div class="letter-modal-content" role="dialog" aria-modal="true" aria-label="Letter of Recommendation">
           <button class="letter-modal-back" id="back-letter-modal" aria-label="Back to Project">
-            <span class="back-arrow">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </span>
-            Back to Project
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 19l-7-7 7-7"></path>
+            </svg>
           </button>
-          <button class="letter-modal-close" id="close-letter-modal" aria-label="Close letter">×</button>
           <picture>
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/engineering%201%20%26%202/CH%20Letter%20of%20Recommendation%20-%20Professional%203-2026.jpg">
             <img src="assets/images/engineering 1 & 2/CH Letter of Recommendation - Professional 3-2026.jpg" alt="Letter of Recommendation" width="2550" height="3300">
@@ -245,12 +231,11 @@
       document.addEventListener('DOMContentLoaded', () => {
         const openButton = document.getElementById('open-certificate-modal');
         const backButton = document.getElementById('back-certificate-modal');
-        const closeButton = document.getElementById('close-certificate-modal');
         const modal = document.getElementById('certificate-modal');
         const backdrop = document.getElementById('certificate-modal-backdrop');
         const modalContent = document.querySelector('.certificate-modal-content');
 
-        if (!openButton || !backButton || !closeButton || !modal || !backdrop || !modalContent) return;
+        if (!openButton || !backButton || !modal || !backdrop || !modalContent) return;
 
         const openModal = () => {
           modal.classList.add('is-open');
@@ -270,7 +255,6 @@
         });
 
         backButton.addEventListener('click', closeModal);
-        closeButton.addEventListener('click', closeModal);
         backdrop.addEventListener('click', closeModal);
         modal.addEventListener('click', (event) => {
           if (!event.target.closest('.certificate-modal-content')) {
@@ -287,12 +271,11 @@
         // Letter of Recommendation modal
         const openLetterBtn = document.getElementById('open-letter-modal');
         const backLetterBtn = document.getElementById('back-letter-modal');
-        const closeLetterBtn = document.getElementById('close-letter-modal');
         const letterModal = document.getElementById('letter-modal');
         const letterBackdrop = document.getElementById('letter-modal-backdrop');
         const letterContent = document.querySelector('.letter-modal-content');
 
-        if (openLetterBtn && backLetterBtn && closeLetterBtn && letterModal && letterBackdrop && letterContent) {
+        if (openLetterBtn && backLetterBtn && letterModal && letterBackdrop && letterContent) {
           const openLetterModal = () => {
             letterModal.classList.add('is-open');
             letterModal.setAttribute('aria-hidden', 'false');
@@ -311,7 +294,6 @@
           });
 
           backLetterBtn.addEventListener('click', closeLetterModal);
-          closeLetterBtn.addEventListener('click', closeLetterModal);
           letterBackdrop.addEventListener('click', closeLetterModal);
           letterModal.addEventListener('click', (event) => {
             if (!event.target.closest('.letter-modal-content')) {

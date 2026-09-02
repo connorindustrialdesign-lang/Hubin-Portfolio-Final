@@ -85,12 +85,9 @@
       .letter-modal.is-open { display: flex; }
       .letter-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.70); }
       .letter-modal-content { position: relative; width: min(900px, calc(100vw - 40px)); max-height: calc(100vh - 40px); background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,0,0,0.25); }
-      .letter-modal-back { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 8px; border: none; background: rgba(255,255,255,0.92); color: #2b4f7d; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; cursor: pointer; z-index: 2; }
-      .letter-modal-back:hover { background: #fff; }
-      .letter-modal-back .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(91, 143, 212, 0.12); }
-      .letter-modal-back svg { width: 14px; height: 14px; }
-      .letter-modal-close { position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; border: none; border-radius: 999px; background: rgba(0,0,0,0.08); color: #333; font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; }
-      .letter-modal-close:hover { background: rgba(0,0,0,0.14); }
+      .letter-modal-back { position: absolute; top: 20px; left: 20px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: none; background: none; padding: 0; cursor: pointer; color: #2b4f7d; z-index: 2; transition: opacity 0.2s ease; }
+      .letter-modal-back:hover { opacity: 0.7; }
+      .letter-modal-back svg { width: 30px; height: 30px; stroke-width: 3; }
       .letter-modal img { width: 100%; height: auto; max-height: calc(100vh - 80px); display: block; object-fit: contain; background: #fff; }
 
       .reference-blueprint { margin-bottom: 60px; }
@@ -287,14 +284,10 @@
         <div class="letter-modal-backdrop" id="letter-modal-backdrop"></div>
         <div class="letter-modal-content" role="dialog" aria-modal="true" aria-label="Letter of Recommendation">
           <button class="letter-modal-back" id="back-letter-modal" aria-label="Back to Project">
-            <span class="back-arrow">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </span>
-            Back to Project
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 19l-7-7 7-7"></path>
+            </svg>
           </button>
-          <button class="letter-modal-close" id="close-letter-modal" aria-label="Close letter">×</button>
           <picture>
             <source srcset="https://deovv8pnl76k0.cloudfront.net/images/shope/cad%20drawings%20-%20Shope/letter-display.png">
             <img src="assets/images/shope/cad drawings - Shope/letter-display.png" srcset="assets/images/shope/cad drawings - Shope/letter-display-sharp@2x.png 2x" alt="Letter of Recommendation from Shope Concrete Products" width="927" height="1200">
@@ -314,12 +307,11 @@
       document.addEventListener('DOMContentLoaded', () => {
         const openButton = document.getElementById('open-letter-modal');
         const backButton = document.getElementById('back-letter-modal');
-        const closeButton = document.getElementById('close-letter-modal');
         const modal = document.getElementById('letter-modal');
         const backdrop = document.getElementById('letter-modal-backdrop');
         const modalContent = document.querySelector('.letter-modal-content');
 
-        if (!openButton || !backButton || !closeButton || !modal || !backdrop || !modalContent) return;
+        if (!openButton || !backButton || !modal || !backdrop || !modalContent) return;
 
         const openModal = () => {
           modal.classList.add('is-open');
@@ -339,7 +331,6 @@
         });
 
         backButton.addEventListener('click', closeModal);
-        closeButton.addEventListener('click', closeModal);
         backdrop.addEventListener('click', closeModal);
         modal.addEventListener('click', (event) => {
           if (!event.target.closest('.letter-modal-content')) {
