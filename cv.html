@@ -59,6 +59,11 @@
       border-radius: 8px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     }
+    .back-nav { display: flex; align-items: center; gap: 12px; max-width: 900px; margin: 24px auto 0; padding: 0 24px; }
+    .back-nav a { display: inline-flex; align-items: center; gap: 8px; color: #5B8FD4; text-decoration: none; font-size: 16px; font-weight: 500; transition: color 0.3s; }
+    .back-nav a:hover { color: #7aa5e8; }
+    .back-arrow { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(91, 143, 212, 0.1); }
+    .back-arrow svg { width: 16px; height: 16px; }
     h1, h2 {
       font-weight: 700;
       margin-bottom: 8px;
@@ -156,12 +161,23 @@
     <style>
       @media print {
         #download-pdf-btn { display: none !important; }
+        .back-nav { display: none !important; }
       }
       #download-pdf-btn:hover {
         background: #095a7c;
       }
     </style>
 <body>
+  <div class="back-nav">
+    <a href="about.html">
+      <span class="back-arrow">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </span>
+      Back to Details
+    </a>
+  </div>
   <div class="cv-container">
     <div class="cv-header section">
       <div class="name">Connor Hubin</div>
@@ -336,6 +352,6 @@
     </div>
   </div>
 <script src="password-gate.js"></script>
-<script>applyPageGate();</script>
+<script>applyPageGate('about.html', 'Back to Details');</script>
 </body>
 </html>

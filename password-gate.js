@@ -16,8 +16,17 @@
     sessionStorage.setItem(STORAGE_KEY, '1');
   }
 
-  function gateHTML() {
+  function gateHTML(backHref, backText) {
+    var backNav = backHref ? (
+      '<a href="' + backHref + '" style="position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:8px;color:#5B8FD4;text-decoration:none;font-size:15px;font-weight:500;">' +
+        '<span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(91,143,212,0.1);">' +
+          '<svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19l-7-7 7-7"></path></svg>' +
+        '</span>' +
+        (backText || 'Back') +
+      '</a>'
+    ) : '';
     return '<div id="pw-gate" style="position:fixed;inset:0;z-index:9999;background:#fafaf8;display:flex;align-items:center;justify-content:center;font-family:Space Grotesk,sans-serif;">' +
+      backNav +
       '<div style="text-align:center;max-width:380px;padding:40px;">' +
         '<svg style="width:44px;height:44px;margin-bottom:18px;color:#bbb;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">' +
           '<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>' +
@@ -75,9 +84,9 @@
   }
 
   // Full-page gate for standalone protected pages
-  window.applyPageGate = function() {
+  window.applyPageGate = function(backHref, backText) {
     if (isUnlocked()) return;
-    document.body.insertAdjacentHTML('beforeend', gateHTML());
+    document.body.insertAdjacentHTML('beforeend', gateHTML(backHref, backText));
     var gate = document.getElementById('pw-gate');
     attachGateHandlers(gate);
   };
@@ -88,13 +97,16 @@
       if (isUnlocked()) { resolve(true); return; }
       document.body.insertAdjacentHTML('beforeend', gateHTML());
       var gate = document.getElementById('pw-gate');
-      // Add close button for modal context
+      // Add a back button matching the site's standard back-arrow style
       var closeBtn = document.createElement('button');
-      closeBtn.innerHTML = '&times;';
-      closeBtn.style.cssText = 'position:absolute;top:14px;right:14px;width:34px;height:34px;border:none;background:rgba(0,0,0,0.06);border-radius:50%;font-size:20px;cursor:pointer;color:#888;line-height:1;';
+      closeBtn.setAttribute('aria-label', 'Back');
+      closeBtn.innerHTML = '<span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(91,143,212,0.1);">' +
+        '<svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19l-7-7 7-7"></path></svg>' +
+      '</span> Back';
+      closeBtn.style.cssText = 'position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:8px;border:none;background:none;padding:0;cursor:pointer;color:#5B8FD4;font-size:15px;font-weight:500;font-family:inherit;';
       var inner = gate.querySelector('div');
       inner.style.position = 'relative';
-      inner.appendChild(closeBtn);
+      gate.insertBefore(closeBtn, inner);
       closeBtn.addEventListener('click', function() { gate.remove(); resolve(false); });
       attachGateHandlers(gate, function() { resolve(true); }, function() { resolve(false); });
     });
