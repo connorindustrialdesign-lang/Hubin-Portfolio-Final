@@ -22,9 +22,48 @@
       .drawing-item { aspect-ratio: 3 / 4; background: #f5f5f5; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
       .drawing-item:hover { transform: scale(1.02); }
       .drawing-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      
+
+      .drawing-modal { position: fixed; inset: 0; display: none; z-index: 5000; }
+      .drawing-modal.is-open { display: block; }
+      .drawing-modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.88); }
+      .drawing-modal-back { position: absolute; top: 20px; left: 20px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: none; background: none; padding: 0; cursor: pointer; z-index: 3; color: #fff; }
+      .drawing-modal-back:hover { opacity: 0.7; }
+      .drawing-modal-back svg { width: 30px; height: 30px; stroke-width: 3; }
+      .drawing-modal-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 84px 20px 20px;
+        box-sizing: border-box;
+        /* Fills the whole screen just to center the image - without this,
+           clicks on the black space around the image hit this wrapper
+           instead of passing through to the backdrop's close handler. */
+        pointer-events: none;
+      }
+      .drawing-modal-content img {
+        max-width: calc(100vw - 40px);
+        max-height: calc(100vh - 120px);
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        border-radius: 8px;
+        background: #fff;
+        pointer-events: auto;
+      }
+
       @media (max-width: 1024px) { .drawings-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 768px) { .drawings-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 768px) {
+        .drawings-grid { grid-template-columns: 1fr; }
+        .drawing-modal-back { top: 12px; left: 12px; width: 38px; height: 38px; }
+        .drawing-modal-back svg { width: 24px; height: 24px; }
+        .drawing-modal-content { padding: 72px 14px 14px; }
+        .drawing-modal-content img { max-width: calc(100vw - 28px); max-height: calc(100vh - 98px); }
+      }
     </style>
   </head>
   <body data-page="shope-portfolio">
@@ -82,6 +121,18 @@
       </section>
     </main>
 
+    <div class="drawing-modal" id="drawing-modal" aria-hidden="true">
+        <div class="drawing-modal-backdrop" id="drawing-modal-backdrop"></div>
+        <button class="drawing-modal-back" id="drawing-modal-back" aria-label="Back to Drawings">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <div class="drawing-modal-content" role="dialog" aria-modal="true" aria-label="Drawing full screen view">
+            <img id="drawing-modal-image" src="" alt="Drawing full screen">
+        </div>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
         <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
@@ -89,5 +140,44 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        (function () {
+            const modal = document.getElementById('drawing-modal');
+            const modalImage = document.getElementById('drawing-modal-image');
+            const backButton = document.getElementById('drawing-modal-back');
+            const backdrop = document.getElementById('drawing-modal-backdrop');
+            const drawingImages = document.querySelectorAll('.drawing-item img');
+
+            if (!modal || !modalImage || !backButton || !backdrop || !drawingImages.length) return;
+
+            const openModal = (img) => {
+                modalImage.src = img.currentSrc || img.src;
+                modalImage.alt = img.alt || 'Drawing full screen';
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                modalImage.src = '';
+                document.body.style.overflow = '';
+            };
+
+            drawingImages.forEach((img) => {
+                img.addEventListener('click', () => openModal(img));
+            });
+
+            backButton.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
   </body>
 </html>
