@@ -113,13 +113,6 @@
   display: block;
   border-radius: 0;
 }
-/* Desktop-only square corners (see .tile/.frame elsewhere) - restore rounding on mobile. */
-@media (max-width: 768px) {
-  .functions-grid .function-frame,
-  .functions-grid .function-frame img {
-    border-radius: 10px;
-  }
-}
 .function-caption {
   margin: 6px 0 0;
   font-size: 18px;
