@@ -93,18 +93,20 @@
       }
       @media (max-width: 768px) {
         /* Fit the whole hero (image + title + caption + button) in the
-           viewport with no scrolling and no cropping. The image and the
-           title/caption sit side by side in one flexible row (.hero-top-row)
-           that grows to fill whatever space is left after the button's own
-           height is taken out - the image is sized by height (auto width via
-           aspect-ratio), capped by max-width so the text column keeps room.
+           viewport with no scrolling and no cropping. The image is full-bleed
+           (no side margin) and fills all remaining height after the button's
+           own space is taken out; title/caption are overlaid on the image's
+           top-left corner instead of taking up their own space. object-fit:
+           contain keeps the whole photo visible (never crops), so depending
+           on the available height/width ratio a small letterbox gap can show
+           on the sides - that's the image's own natural shape, not a margin.
            display:contents on .hero-project-image lets its child (.hero-top-row)
            become a direct flex item of the wrapper instead of being boxed. */
         .hero-project {
           height: calc(100vh - 140px);
           min-height: calc(100vh - 140px);
           max-height: calc(100vh - 140px);
-          padding: 12px 8px 10px;
+          padding: 0 0 max(14px, env(safe-area-inset-bottom));
           align-items: stretch;
           overflow: hidden;
         }
@@ -120,50 +122,43 @@
         .hero-top-row {
           flex: 1 1 auto;
           min-height: 0;
-          min-width: 0;
           width: 100%;
-          display: flex;
-          flex-direction: row;
-          gap: 16px;
+          position: relative;
         }
         .hero-top-row a {
-          flex: 0 0 auto;
-          width: auto;
-          max-width: 55%;
-          height: 100%;
-          aspect-ratio: 2000 / 2550;
-          min-height: 0;
-          min-width: 0;
-          position: relative;
-          display: block;
-          overflow: hidden;
-          border-radius: 10px;
-        }
-        .hero-top-row a img {
           position: absolute;
           inset: 0;
+          display: block;
+        }
+        .hero-top-row a img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
+          object-fit: contain;
+          display: block;
+          border-radius: 0;
         }
         .hero-text-col {
-          flex: 1 1 auto;
-          min-width: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          z-index: 2;
+          max-width: 70%;
+          background: rgba(255, 255, 255, 0.88);
+          padding: 10px 14px;
+          border-radius: 12px;
         }
         .hero-project-text {
           font-size: 22px;
           margin-top: 0;
           margin-bottom: 0;
+          color: #1a1a1a;
         }
         .hero-project-caption {
           font-size: 12px;
           max-width: none;
           margin-top: 8px;
           margin-bottom: 0;
+          color: #1a1a1a;
         }
         .projects-button {
           font-size: 24px;
@@ -175,7 +170,7 @@
           display: flex;
           justify-content: center;
           width: 100%;
-          margin-top: 8px;
+          margin-top: 12px;
         }
         .hero-project-button-side .projects-button {
           width: 100%;
