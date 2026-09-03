@@ -93,12 +93,13 @@
       }
       @media (max-width: 768px) {
         /* Fit the whole hero (image + title + caption + button) in the
-           viewport with no scrolling and no cropping. Title (left) and
-           caption (right) share a row spanning the image's width, with the
-           Portfolio button centered in its own full-width row below.
-           display:contents on .hero-project-image lets its children (the
-           picture link, title, caption) become direct grid items of the
-           wrapper instead of being boxed inside it. */
+           viewport with no scrolling and no cropping. The image and the
+           title/caption sit side by side in one flexible row (.hero-top-row)
+           that grows to fill whatever space is left after the button's own
+           height is taken out - the image is sized by height (auto width via
+           aspect-ratio), capped by max-width so the text column keeps room.
+           display:contents on .hero-project-image lets its child (.hero-top-row)
+           become a direct flex item of the wrapper instead of being boxed. */
         .hero-project {
           height: calc(100vh - 140px);
           min-height: calc(100vh - 140px);
@@ -108,29 +109,29 @@
           overflow: hidden;
         }
         .hero-project-wrapper {
-          display: grid;
-          grid-template-columns: auto 1fr;
-          grid-template-rows: minmax(0, 1fr) auto auto;
-          grid-template-areas:
-            "image image"
-            "title caption"
-            "button button";
-          column-gap: 16px;
-          row-gap: 6px;
+          display: flex;
+          flex-direction: column;
           height: 100%;
           width: 100%;
         }
         .hero-project-image {
           display: contents;
         }
-        .hero-project-image a {
-          grid-area: image;
+        .hero-top-row {
+          flex: 1 1 auto;
+          min-height: 0;
+          min-width: 0;
           width: 100%;
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+        }
+        .hero-top-row a {
+          flex: 0 0 auto;
+          width: auto;
+          max-width: 55%;
+          height: 100%;
           aspect-ratio: 2000 / 2550;
-          height: auto;
-          max-height: 100%;
-          margin: 0 auto;
-          justify-self: center;
           min-height: 0;
           min-width: 0;
           position: relative;
@@ -138,7 +139,7 @@
           overflow: hidden;
           border-radius: 16px;
         }
-        .hero-project-image img {
+        .hero-top-row a img {
           position: absolute;
           inset: 0;
           width: 100%;
@@ -146,18 +147,22 @@
           object-fit: cover;
           border-radius: 16px;
         }
+        .hero-text-col {
+          flex: 1 1 auto;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
         .hero-project-text {
-          grid-area: title;
-          align-self: center;
+          font-size: 22px;
           margin-top: 0;
           margin-bottom: 0;
         }
         .hero-project-caption {
-          grid-area: caption;
-          align-self: center;
           font-size: 12px;
           max-width: none;
-          margin-top: 0;
+          margin-top: 8px;
           margin-bottom: 0;
         }
         .projects-button {
@@ -166,11 +171,11 @@
           border-radius: 16px;
         }
         .hero-project-button-side {
-          grid-area: button;
+          flex: 0 0 auto;
           display: flex;
           justify-content: center;
           width: 100%;
-          margin-top: -3px;
+          margin-top: 8px;
         }
         .hero-project-button-side .projects-button {
           width: 100%;
@@ -198,11 +203,15 @@
       <section class="hero-project" aria-label="Featured project">
         <div class="hero-project-wrapper">
           <div class="hero-project-image">
-            <a href="project-a-detail.html">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/ID%20project%20A%20hero%20shot%20%28homepage%29-v2.JPG"><img src="assets/images/id-project-a/ID project A hero shot (homepage)-v2.JPG" alt="Project A Hero Shot" width="2000" height="2550"></picture>
-            </a>
-            <div class="hero-project-text">CTE Pack</div>
-            <div class="hero-project-caption">Sandeblast 0.5&quot; &amp; 0.25&quot; plywood, zinc fasteners, nylon, and 0.125&quot; cork sheet</div>
+            <div class="hero-top-row">
+              <a href="project-a-detail.html">
+                <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/id-project-a/ID%20project%20A%20hero%20shot%20%28homepage%29-v2.JPG"><img src="assets/images/id-project-a/ID project A hero shot (homepage)-v2.JPG" alt="Project A Hero Shot" width="2000" height="2550"></picture>
+              </a>
+              <div class="hero-text-col">
+                <div class="hero-project-text">CTE Pack</div>
+                <div class="hero-project-caption">Sandeblast 0.5&quot; &amp; 0.25&quot; plywood, zinc fasteners, nylon, and 0.125&quot; cork sheet</div>
+              </div>
+            </div>
           </div>
           <div class="hero-project-button-side">
             <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
