@@ -132,8 +132,14 @@
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 8px;
+        border-radius: 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      /* Desktop-only square corners - restore rounding on mobile. */
+      @media (max-width: 768px) {
+        .hero-project-image img {
+          border-radius: 8px;
+        }
       }
       
       .category-section { 
@@ -153,7 +159,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-color: #f3f3f3;
-        border-radius: 20px;
+        border-radius: 0;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -370,7 +376,7 @@
           background-repeat: no-repeat;
           background-position: center;
           background-color: #f3f3f3;
-          border-radius: 20px;
+          border-radius: 0;
           overflow: hidden;
           width: 100vw;
           margin-left: calc(50% - 50vw);
@@ -385,6 +391,7 @@
           left: auto;
           margin-left: 0;
           margin-right: 0;
+          border-radius: 20px;
         }
 
         /* Preserve desktop-like 2-column structure on mobile for ID section */
@@ -471,6 +478,24 @@
           grid-column: 1 / -1 !important;
           grid-row: 3 !important;
           aspect-ratio: 2 / 1 !important;
+        }
+      }
+
+      /* Desktop-only square corners for these hero-style tiles (20px normally) -
+         restore rounding on mobile; !important needed to beat the inline styles. */
+      @media (max-width: 767px) {
+        a.tile[href="carte-detail.html"],
+        a.tile[href="carte-detail.html"] img,
+        a.tile[href="fabrication-2-detail.html"] img,
+        a.tile[href="fabrication-3-detail.html"] img,
+        a.tile[href="fabrication-4-detail.html"],
+        a.tile[href="fine-arts-1-detail.html"],
+        a.tile[href="fine-arts-1-detail.html"] img,
+        a.tile[href="fine-arts-3-detail.html"],
+        a.tile[href="fine-arts-3-detail.html"] img,
+        a.tile[href="fine-arts-2-detail.html"],
+        a.tile[href="fine-arts-2-detail.html"] img {
+          border-radius: 20px !important;
         }
       }
     </style>
@@ -577,22 +602,22 @@
       <section class="category-section" id="fabrication" data-category="fabrication">
         <section class="portfolio">
           <div class="grid">
-            <a class="tile" href="carte-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1.5; position: relative; overflow: hidden; border-radius: 20px;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/Carte/carte-indexpage.JPG"><img src="assets/images/Carte/carte-indexpage.JPG" alt="Carte Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="2000" height="1333"></picture>
+            <a class="tile" href="carte-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1.5; position: relative; overflow: hidden; border-radius: 0;">
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/Carte/carte-indexpage.JPG"><img src="assets/images/Carte/carte-indexpage.JPG" alt="Carte Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="2000" height="1333"></picture>
               <span class="tile-hover-title">Carte</span>
             </a>
 
             <a class="tile" href="fabrication-2-detail.html" style="grid-column: 1 / 3; aspect-ratio: 2 / 1; background: linear-gradient(135deg, #d98989 0%, #e5a1a1 100%); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-decoration: none;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/mero-indexpage.JPG"><img src="assets/images/fab project 2/mero-indexpage.JPG" alt="Fab Project 2 Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="2000" height="1500"></picture>
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%202/mero-indexpage.JPG"><img src="assets/images/fab project 2/mero-indexpage.JPG" alt="Fab Project 2 Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="2000" height="1500"></picture>
               <span class="tile-hover-title">MERO Hair Salon</span>
             </a>
 
             <a class="tile" href="fabrication-3-detail.html" style="grid-column: 3 / -1; aspect-ratio: 2 / 1; background: linear-gradient(135deg, #e5a1a1 0%, #f0b8b8 100%); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-decoration: none;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/fab%20project%203-indexpage.JPG"><img src="assets/images/fab project 3/fab project 3-indexpage.JPG" alt="Fab Project 3 Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="2000" height="1333"></picture>
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/fab%20project%203/fab%20project%203-indexpage.JPG"><img src="assets/images/fab project 3/fab project 3-indexpage.JPG" alt="Fab Project 3 Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="2000" height="1333"></picture>
               <span class="tile-hover-title">The Peak</span>
             </a>
 
-            <a class="tile" href="fabrication-4-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1.5; background: linear-gradient(135deg, #b8e5e5 0%, #a1d9d9 100%); display: flex; align-items: center; justify-content: center; margin-top: 12px; border-radius: 20px; transition: background 0.3s, transform 0.2s; cursor: pointer; overflow: hidden; position: relative;">
+            <a class="tile" href="fabrication-4-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1.5; background: linear-gradient(135deg, #b8e5e5 0%, #a1d9d9 100%); display: flex; align-items: center; justify-content: center; margin-top: 12px; border-radius: 0; transition: background 0.3s, transform 0.2s; cursor: pointer; overflow: hidden; position: relative;">
               <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/foundry/foundry-indexpage.jpeg"><img src="assets/images/foundry/foundry-indexpage.jpeg" alt="Foundry Project Hero Shot" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0;" width="2806" height="1175"></picture>
               <span class="tile-hover-title">Foundry</span>
             </a>
@@ -604,13 +629,13 @@
       <section class="category-section" id="fine-arts" data-category="fine-arts">
         <section class="portfolio">
           <div class="grid">
-            <a class="tile" href="fine-arts-1-detail.html" style="grid-column: 1 / 3; grid-row: 1; aspect-ratio: 2/1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 20px;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/sculptures/1.png"><img src="assets/images/sculptures/1.png" alt="Sculptures Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="1412" height="970"></picture>
+            <a class="tile" href="fine-arts-1-detail.html" style="grid-column: 1 / 3; grid-row: 1; aspect-ratio: 2/1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 0;">
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/sculptures/1.png"><img src="assets/images/sculptures/1.png" alt="Sculptures Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="1412" height="970"></picture>
               <span class="tile-hover-title">Sculptures</span>
             </a>
 
-            <a class="tile" href="fine-arts-3-detail.html" style="grid-column: 3; grid-row: 1; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 20px;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/wave/wave-indexpage.JPG"><img src="assets/images/wave/wave-indexpage.JPG" alt="Wave Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="2000" height="3000"></picture>
+            <a class="tile" href="fine-arts-3-detail.html" style="grid-column: 3; grid-row: 1; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 0;">
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/wave/wave-indexpage.JPG"><img src="assets/images/wave/wave-indexpage.JPG" alt="Wave Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="2000" height="3000"></picture>
               <span class="tile-hover-title">Wave</span>
             </a>
 
@@ -618,8 +643,8 @@
               <span class="tile-hover-title">Paintings</span>
             </a>
 
-            <a class="tile" href="fine-arts-2-detail.html" style="grid-column: 1 / -1; grid-row: 2; aspect-ratio: 4 / 2; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 20px;">
-              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/mountain/mountain-indexpage.JPG"><img src="assets/images/mountain/mountain-indexpage.JPG" alt="Mountain Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:20px;" width="2000" height="1333"></picture>
+            <a class="tile" href="fine-arts-2-detail.html" style="grid-column: 1 / -1; grid-row: 2; aspect-ratio: 4 / 2; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; position: relative; overflow: hidden; border-radius: 0;">
+              <picture><source srcset="https://deovv8pnl76k0.cloudfront.net/images/mountain/mountain-indexpage.JPG"><img src="assets/images/mountain/mountain-indexpage.JPG" alt="Mountain Hero" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:0; border-radius:0;" width="2000" height="1333"></picture>
               <span class="tile-hover-title">Mountain</span>
             </a>
           </div>
