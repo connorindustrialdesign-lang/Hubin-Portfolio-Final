@@ -394,6 +394,14 @@
           border-radius: 10px;
         }
 
+        /* Match Industrial Design/Fine Arts side margins on mobile - these two
+           sections had no override and fell back to the generic .grid padding,
+           which is noticeably wider (32px vs 10px sides). */
+        body[data-page="portfolio-wheel"] #engineering .grid,
+        body[data-page="portfolio-wheel"] #fabrication .grid {
+          padding: 16px 10px 0 10px;
+        }
+
         /* Preserve desktop-like 2-column structure on mobile for ID section */
         body[data-page="portfolio-wheel"] #industrial-design .grid {
           grid-template-columns: 1fr 1fr;
