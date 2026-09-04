@@ -91,6 +91,46 @@
           gap: 24px;
         }
       }
+      @media (min-width: 1025px) {
+        /* Unwrap the image/text nesting so the image, title, and caption can
+           each be placed independently on the grid - lets the button sit in
+           its own row at the bottom of the second column, bottom-aligned
+           with the image, with the title/caption stacked directly above it. */
+        .hero-project-image,
+        .hero-top-row,
+        .hero-text-col {
+          display: contents;
+        }
+        .hero-project-wrapper {
+          grid-template-rows: 1fr auto auto auto;
+          row-gap: 0;
+          align-items: stretch;
+        }
+        .hero-top-row a {
+          grid-column: 1;
+          grid-row: 1 / -1;
+          display: block;
+          width: 100%;
+          max-width: 600px;
+        }
+        .hero-project-text {
+          grid-column: 2;
+          grid-row: 2;
+          margin-top: 0;
+        }
+        .hero-project-caption {
+          grid-column: 2;
+          grid-row: 3;
+          margin-top: 0;
+        }
+        .hero-project-button-side {
+          grid-column: 2;
+          grid-row: 4;
+          align-self: end;
+          justify-self: start;
+          margin-top: 28px;
+        }
+      }
       @media (max-width: 768px) {
         /* Fit the whole hero (image + title + caption + button) in the
            viewport with no scrolling and no cropping. The image is full-bleed
