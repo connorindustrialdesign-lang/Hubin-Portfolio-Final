@@ -1026,19 +1026,6 @@ body.project-detail-page .thumb-label{
     font-size: 18px;
   }
 
-  /* --- Home hero section --- */
-  .hero-project-wrapper {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .hero-project {
-    padding: 20px 16px 32px;
-    min-height: auto;
-  }
-  .hero-project-image {
-    max-width: 100%;
-  }
-
   /* --- Gallery pages --- */
   .project-gallery {
     grid-template-columns: 1fr;
