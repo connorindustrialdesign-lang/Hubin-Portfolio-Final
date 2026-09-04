@@ -147,7 +147,7 @@
           min-height: calc(100dvh - 140px);
           max-height: calc(100dvh - 140px);
           padding: 0 0 max(14px, env(safe-area-inset-bottom));
-          align-items: stretch;
+          align-items: flex-start;
           overflow: hidden;
         }
         .hero-project-wrapper {
@@ -161,9 +161,10 @@
           display: contents;
         }
         .hero-top-row {
-          flex: 1 1 auto;
-          min-height: 0;
+          flex: 0 1 auto;
+          aspect-ratio: 2000 / 2550;
           width: 100%;
+          min-height: 0;
           position: relative;
         }
         .hero-top-row a {
