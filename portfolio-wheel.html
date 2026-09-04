@@ -394,11 +394,12 @@
           border-radius: 10px;
         }
 
-        /* Match Industrial Design/Fine Arts side margins on mobile - these two
-           sections had no override and fell back to the generic .grid padding,
-           which is noticeably wider (32px vs 10px sides). */
+        /* Match Industrial Design/Fine Arts side margins AND tile spacing on
+           mobile - these two sections had no override and fell back to the
+           generic .grid padding/gap, which is noticeably wider (32px vs 10px). */
         body[data-page="portfolio-wheel"] #engineering .grid,
         body[data-page="portfolio-wheel"] #fabrication .grid {
+          gap: 10px;
           padding: 16px 10px 0 10px;
         }
 
