@@ -132,6 +132,14 @@
         }
       }
       @media (max-width: 768px) {
+        /* Prevent iOS rubber-band overscroll bounce from revealing a gap
+           above/below the fixed header+category bar - content comfortably
+           fits within one screen now that the button floats over the image,
+           so there's no legitimate need for this page to scroll at all. */
+        body[data-page="home"] {
+          height: 100dvh;
+          overflow: hidden;
+        }
         /* Full-bleed image, sized purely by its own natural aspect ratio via
            plain block flow (width:100%, height:auto) rather than a fixed-
            height flex/JS calculation - this guarantees the image is always
@@ -190,8 +198,8 @@
           color: #D4A017;
         }
         .projects-button {
-          font-size: 18px;
-          padding: 12px 28px;
+          font-size: 21px;
+          padding: 10px 22px;
           border-radius: 14px;
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
         }
