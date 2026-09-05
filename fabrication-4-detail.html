@@ -21,7 +21,6 @@
         }
         .gallery-grid-1-6 .gallery-item { border-radius: 0; overflow: hidden; }
         .gallery-grid-1-6 .gallery-item img { width: 100%; height: auto; display: block; border-radius: 0; }
-        .gallery-grid-1-6 .img6 { grid-column: 3 / span 2; grid-row: 2; }
                 .top-section {
                     display: flex;
                     align-items: flex-start;
@@ -50,15 +49,13 @@
                 .gallery-row.same-size {
                     gap: 28px;
                 }
-                .gallery-row.same-size .gallery-item.large,
-                .gallery-row.same-size .gallery-item.small {
+                .gallery-row.same-size .gallery-item.large {
                     flex: 1;
                 }
                 .gallery-row.same-height {
                     align-items: flex-start;
                 }
-                .gallery-row.same-height .gallery-item.large,
-                .gallery-row.same-height .gallery-item.small {
+                .gallery-row.same-height .gallery-item.large {
                     flex: 1;
                 }
         body[data-page="fabrication"] {
@@ -115,29 +112,11 @@
             flex-direction: column;
             align-items: center;
         }
-        .gallery-item.small {
-            flex: 1;
-            max-width: 220px;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         .gallery-item img {
             width: 100%;
             object-fit: cover;
             display: block;
             border-radius: 0;
-        }
-        .gallery-text {
-            font-size: 16px;
-            color: #333;
-            margin: 16px 0 0 0;
-            padding: 0 12px;
-            text-align: left;
         }
         .img-number {
             font-size: 14px;
@@ -184,8 +163,7 @@
                 flex-direction: column;
                 gap: 16px;
             }
-            .gallery-item.large,
-            .gallery-item.small {
+            .gallery-item.large {
                 width: 100%;
                 max-width: 100%;
             }
