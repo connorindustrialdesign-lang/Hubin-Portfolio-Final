@@ -515,6 +515,7 @@ body{margin:0;font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;fon
 /* Header */
 .site-header{background:#fff;padding:20px 0;position:fixed;top:0;left:0;right:0;z-index:1001;width:100%;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
+.header-inner.container{max-width:none;margin:0}
 .site-name{font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;font-weight:700;letter-spacing:0.01em;font-size:clamp(20px,4vw,42px);margin:0}
 .site-name a{color:var(--text);text-decoration:none;transition:color .18s ease;}
 .site-name a:focus{outline:2px solid rgba(0,0,0,0.08);outline-offset:4px}
