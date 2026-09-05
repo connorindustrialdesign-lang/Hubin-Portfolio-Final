@@ -115,19 +115,19 @@
 }
 .function-caption {
   margin: 6px 0 0;
-  font-size: 18px;
+  font-size: 23px;
   color: #666;
   text-align: left;
   background: none;
 }
 @media (max-width: 1024px) {
   .function-caption {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 @media (max-width: 768px) {
   .function-caption {
-    font-size: 19px;
+    font-size: 22px;
   }
 }
 /* Use grid auto-fill for Assembly section to remove gaps and ensure perfect containment */
