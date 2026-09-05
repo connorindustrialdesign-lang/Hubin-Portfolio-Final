@@ -38,64 +38,11 @@
             display: block;
         }
 
-        .gallery-item.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .gallery-item.single {
-            grid-column: 1 / -1;
-        }
-
-        .gallery-item.highlight {
-            grid-column: 1 / -1;
-        }
-
-        .gallery-item.span-2 {
-            grid-column: span 2;
-        }
-
-        .project-header {
-            padding: 60px 40px 40px;
-            text-align: center;
-        }
-
-        .project-header h1 {
-            font-size: 48px;
-            margin: 0 0 10px 0;
-            font-weight: 700;
-        }
-
-        .project-header p {
-            font-size: 18px;
-            color: #666;
-            margin: 0;
-        }
-
-        .back-link:hover {
-            background: #333;
-        }
-
         @media (max-width: 1024px) {
             .project-gallery {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
                 padding: 30px;
-            }
-
-            .gallery-item.highlight {
-                grid-column: span 2;
-            }
-            
-            .project-header {
-                padding: 50px 30px 30px;
-            }
-
-            .project-header h1 {
-                font-size: 40px;
-            }
-
-            .project-header p {
-                font-size: 16px;
             }
         }
 
@@ -104,24 +51,6 @@
                 grid-template-columns: 1fr;
                 gap: 12px;
                 padding: 20px;
-            }
-
-            .gallery-item.full-width,
-            .gallery-item.single,
-            .gallery-item.highlight {
-                grid-column: 1;
-            }
-
-            .project-header {
-                padding: 40px 20px 20px;
-            }
-
-            .project-header h1 {
-                font-size: 32px;
-            }
-
-            .project-header p {
-                font-size: 16px;
             }
 
             /* --- Sobri gallery (mobile only): images already contain their own text,
@@ -165,19 +94,6 @@
                 grid-template-columns: 1fr;
                 gap: 10px;
                 padding: 16px;
-            }
-
-            .project-header {
-                padding: 30px 16px 16px;
-            }
-
-            .project-header h1 {
-                font-size: 24px;
-                margin: 0 0 8px 0;
-            }
-
-            .project-header p {
-                font-size: 14px;
             }
         }
     </style>

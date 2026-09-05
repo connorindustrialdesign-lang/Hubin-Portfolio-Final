@@ -32,20 +32,13 @@
     .project-header h1 { font-size: 72px; margin: 0; line-height: 1; letter-spacing: -2px; }
     .project-header p { font-size: 20px; color: #444; margin: 0; max-width: 560px; line-height: 1.6; }
 
-    .phase-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
-    .phase-card { background: #f4f4f4; padding: 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: space-between; }
-    .phase-card span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #666; font-weight: 600; }
-    .phase-card strong { font-size: 24px; font-weight: 700; line-height: 1.2; }
-
     .layout-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
-    .column-stack { display: grid; gap: 20px; }
     .frame { background: #fff; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; margin-bottom: 32px; border-radius: 0; }
     .frame.hero { min-height: 520px; }
     .frame.hero-top { width: 100vw; margin-left: calc(-50vw + 50%); border-radius: 0; overflow: hidden; }
     .full-bleed-bottom-image { width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden; position: static; left: auto; right: auto; margin-right: 0; min-height: auto; background: transparent; }
     .full-bleed-bottom-image img, .full-bleed-img { width: 100%; height: auto; display: block; border-radius: 0; object-fit: cover; background: transparent; }
     .frame.wide { grid-column: 1 / -1; min-height: 300px; }
-    .frame.tall { min-height: 360px; }
 
     /* <picture> doesn't stretch to fill a flex .frame on its own (its auto
        width falls back to the image's intrinsic size) - force it to. Show
@@ -90,7 +83,6 @@
     /* This shared rule (styles.css) forces fill on any .frame.hero image,
        distorting cte-9-new.png's aspect ratio - contain keeps it undistorted. */
     .frame.hero img { object-fit: contain !important; }
-    .frame-label { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.9); color: #111; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; padding: 8px 10px; }
 
     /* Concept Development sketches: size is controlled per-image with an
        optional modifier class - add sketch-lg to make a sketch the focal
@@ -135,7 +127,6 @@
       .project-header { grid-template-columns: 1fr; gap: 20px; padding: 52px 0 40px; }
       .project-header h1 { font-size: 54px; letter-spacing: -1px; }
       .project-header p { font-size: 18px; }
-      .phase-strip { grid-template-columns: repeat(2, 1fr); }
       .layout-grid { grid-template-columns: 1fr; }
       .frame.hero { min-height: 420px; }
     }
@@ -145,9 +136,8 @@
       .project-header { padding: 44px 0 32px; }
       .project-header h1 { font-size: 40px; }
       .project-header p { font-size: 17px; }
-      .phase-strip { grid-template-columns: 1fr; gap: 12px; }
       .frame.hero { min-height: 320px; }
-      .frame, .frame.tall, .frame.wide { min-height: 240px; }
+      .frame, .frame.wide { min-height: 240px; }
 
       /* Hero (mobile only): show the full photo at its natural ratio instead of a
          fixed-height crop - the crop was cutting off large parts of the shot and
@@ -276,9 +266,8 @@
       .project-header { padding: 34px 0 22px; }
       .project-header h1 { font-size: 30px; letter-spacing: -0.5px; }
       .project-header p { font-size: 15px; }
-      .phase-card strong { font-size: 20px; }
       .frame.hero { min-height: 260px; }
-      .frame, .frame.tall, .frame.wide { min-height: 190px; }
+      .frame, .frame.wide { min-height: 190px; }
 
       /* .project-shell padding drops to 16px at this breakpoint - match it. */
       .cte-proto-media,
