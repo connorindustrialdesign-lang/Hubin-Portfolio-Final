@@ -516,12 +516,15 @@ body{margin:0;font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;fon
 .site-header{background:#fff;padding:20px 0;position:fixed;top:0;left:0;right:0;z-index:1001;width:100%;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .header-inner.container{max-width:none;margin:0}
+@media (min-width:1025px){
+  .header-inner.container{padding:0 48px}
+}
 .site-name{font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;font-weight:700;letter-spacing:0.01em;font-size:clamp(20px,4vw,42px);margin:0}
 .site-name a{color:var(--text);text-decoration:none;transition:color .18s ease;}
 .site-name a:focus{outline:2px solid rgba(0,0,0,0.08);outline-offset:4px}
 .header-nav{display:flex;gap:20px;align-items:center}
 .nav-about{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--text);transition:opacity 0.2s ease;font-weight:600;font-size:0;line-height:1}
-.nav-about::before{content:'Details';font-size:18px;line-height:1}
+.nav-about::before{content:'Details';font-size:22px;line-height:1}
 .nav-about:hover{opacity:0.6}
 .nav-about svg{display:none}
 .nav-about::after{content:none}
