@@ -253,3 +253,35 @@
             <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
           </div>
         </div>
+      </section>
+    </main>
+    <script>
+      // Sets the mobile hero image row's height directly in JS rather than
+      // relying on CSS aspect-ratio + flex-shrink, which has been unreliable
+      // in Safari on this project before. Keeps the image at its natural
+      // (2000x2550) rendered size when there's room, shrinks it to fit when
+      // there isn't, so it never grows into an invisible letterbox gap and
+      // never pushes the Portfolio button off-screen.
+      (function () {
+        function sizeHeroImage() {
+          var row = document.querySelector('.hero-top-row');
+          var wrapper = document.querySelector('.hero-project-wrapper');
+          var buttonSide = document.querySelector('.hero-project-button-side');
+          if (!row || !wrapper || !buttonSide) return;
+          if (!window.matchMedia('(max-width: 768px)').matches) {
+            row.style.height = '';
+            return;
+          }
+          var wrapperHeight = wrapper.getBoundingClientRect().height;
+          var buttonSideSpace = buttonSide.offsetHeight + parseFloat(getComputedStyle(buttonSide).marginTop || '0');
+          var availableForRow = wrapperHeight - buttonSideSpace;
+          var naturalRenderHeight = row.clientWidth * (2550 / 2000);
+          var finalHeight = Math.max(0, Math.min(availableForRow, naturalRenderHeight));
+          row.style.height = finalHeight + 'px';
+        }
+        window.addEventListener('load', sizeHeroImage);
+        window.addEventListener('resize', sizeHeroImage);
+        window.addEventListener('orientationchange', sizeHeroImage);
+        sizeHeroImage();
+      })();
+    </script>
