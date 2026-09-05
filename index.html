@@ -132,28 +132,20 @@
         }
       }
       @media (max-width: 768px) {
-        /* Fit the whole hero (image + title + caption + button) in the
-           viewport with no scrolling and no cropping. The image is full-bleed
-           (no side margin) and fills all remaining height after the button's
-           own space is taken out; title/caption are overlaid on the image's
-           top-left corner instead of taking up their own space. object-fit:
-           contain keeps the whole photo visible (never crops), so depending
-           on the available height/width ratio a small letterbox gap can show
-           on the sides - that's the image's own natural shape, not a margin.
-           display:contents on .hero-project-image lets its child (.hero-top-row)
-           become a direct flex item of the wrapper instead of being boxed. */
+        /* Full-bleed image, sized purely by its own natural aspect ratio via
+           plain block flow (width:100%, height:auto) rather than a fixed-
+           height flex/JS calculation - this guarantees the image is always
+           full width and never internally letterboxed or shrunk, at the
+           cost of allowing the page to scroll a little on shorter devices
+           if the natural image height doesn't leave room for the button
+           within one screen. title/caption are overlaid on the image's
+           top-left corner instead of taking up their own space. */
         .hero-project {
-          height: calc(100dvh - 140px);
-          min-height: calc(100dvh - 140px);
-          max-height: calc(100dvh - 140px);
           padding: 0 0 max(14px, env(safe-area-inset-bottom));
-          align-items: flex-start;
-          overflow: hidden;
         }
         .hero-project-wrapper {
           display: flex;
           flex-direction: column;
-          height: 100%;
           width: 100%;
           gap: 0;
         }
@@ -161,22 +153,16 @@
           display: contents;
         }
         .hero-top-row {
-          flex: 0 1 auto;
-          aspect-ratio: 2000 / 2550;
           width: 100%;
-          min-height: 0;
           position: relative;
         }
         .hero-top-row a {
-          position: absolute;
-          inset: 0;
           display: block;
+          width: 100%;
         }
         .hero-top-row a img {
           width: 100%;
-          height: 100%;
-          object-fit: contain;
-          object-position: center top;
+          height: auto;
           display: block;
           border-radius: 0;
           box-shadow: none;
@@ -256,44 +242,3 @@
         </div>
       </section>
     </main>
-    <script>
-      // Sets the mobile hero image row's width AND height directly in JS
-      // rather than relying on CSS aspect-ratio + flex-shrink, which has
-      // been unreliable in Safari on this project before. Keeps the image
-      // at its natural (2000x2550) full-width rendered size when there's
-      // room; if the viewport is too short for that, shrinks BOTH
-      // dimensions together (not just height) so the row's own box always
-      // exactly matches the photo's aspect ratio - this avoids ever
-      // creating an internal object-fit:contain letterbox gap on any side,
-      // which is what happened when only height was being constrained.
-      (function () {
-        function sizeHeroImage() {
-          var row = document.querySelector('.hero-top-row');
-          var wrapper = document.querySelector('.hero-project-wrapper');
-          var buttonSide = document.querySelector('.hero-project-button-side');
-          if (!row || !wrapper || !buttonSide) return;
-          if (!window.matchMedia('(max-width: 768px)').matches) {
-            row.style.height = '';
-            row.style.width = '';
-            return;
-          }
-          var wrapperRect = wrapper.getBoundingClientRect();
-          var buttonSideSpace = buttonSide.offsetHeight + parseFloat(getComputedStyle(buttonSide).marginTop || '0');
-          var availableForRow = wrapperRect.height - buttonSideSpace;
-          var ratio = 2550 / 2000;
-          var naturalRenderHeight = wrapperRect.width * ratio;
-          if (naturalRenderHeight <= availableForRow) {
-            row.style.width = '';
-            row.style.height = naturalRenderHeight + 'px';
-          } else {
-            var finalHeight = Math.max(0, availableForRow);
-            row.style.height = finalHeight + 'px';
-            row.style.width = (finalHeight / ratio) + 'px';
-          }
-        }
-        window.addEventListener('load', sizeHeroImage);
-        window.addEventListener('resize', sizeHeroImage);
-        window.addEventListener('orientationchange', sizeHeroImage);
-        sizeHeroImage();
-      })();
-    </script>
