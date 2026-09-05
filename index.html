@@ -135,7 +135,18 @@
         /* Prevent iOS rubber-band overscroll bounce from revealing a gap
            above/below the fixed header+category bar - content comfortably
            fits within one screen now that the button floats over the image,
-           so there's no legitimate need for this page to scroll at all. */
+           so there's no legitimate need for this page to scroll at all.
+           html ALSO needs this, not just body - otherwise html itself can
+           still rubber-band independently, and during that bounce the
+           position:fixed header/category bar (fixed to the viewport) can
+           visually detach from the rest of the page, which is what made
+           this feel broken/disconnected instead of one solid page. This
+           is scoped to index.html's own <style> block, so it only affects
+           this page's <html> element, not any other page's. */
+        html {
+          height: 100%;
+          overflow: hidden;
+        }
         body[data-page="home"] {
           height: 100dvh;
           overflow: hidden;
