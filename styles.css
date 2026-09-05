@@ -709,8 +709,8 @@ main{width:100%;margin:0;padding:0}
   .nav-about::before{font-size:14px}
 
   /* Ensure content clears fixed header + 2x2 category bar on mobile */
-  body[data-page="home"]{padding-top:130px !important}
-  body[data-page="about"]{padding-top:130px !important}
+  body[data-page="home"]{padding-top:129px !important}
+  body[data-page="about"]{padding-top:129px !important}
 }
 
 /* Extra small phones */
