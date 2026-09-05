@@ -697,26 +697,42 @@
         document.documentElement.style.setProperty('--wheel-bar-h', `${barHeight}px`);
       }
 
-      // Scroll detection for category bar highlighting
+      // Category bar highlighting via IntersectionObserver instead of manual
+      // scroll-position math - a plain 'scroll' listener recomputing
+      // getBoundingClientRect() on every event can miss updates during fast/
+      // momentum touch scrolling on mobile (events can be throttled or
+      // coalesced), which was leaving a stale category highlighted after
+      // scrolling back up past it. IntersectionObserver is driven by the
+      // browser's own compositor-level tracking, not tied to scroll-event
+      // frequency, so it reliably stays in sync regardless of scroll speed.
+      const categorySectionIntersecting = new Map();
       function updateCategoryBar() {
         const sections = document.querySelectorAll('section.category-section[data-category]');
         const categoryLinks = document.querySelectorAll('.category-bar [data-category]');
         let currentCategory = 'industrial-design';
-        
+
         sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          // If section is in upper half of viewport, mark as current
-          if (rect.top <= window.innerHeight / 2) {
+          if (categorySectionIntersecting.get(section)) {
             currentCategory = section.getAttribute('data-category');
           }
         });
-        
+
         categoryLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('data-category') === currentCategory) {
-            link.classList.add('active');
-          }
+          link.classList.toggle('active', link.getAttribute('data-category') === currentCategory);
         });
+      }
+
+      function initCategoryBarObserver() {
+        const sections = document.querySelectorAll('section.category-section[data-category]');
+        if (!sections.length) return;
+        sections.forEach(section => categorySectionIntersecting.set(section, false));
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            categorySectionIntersecting.set(entry.target, entry.isIntersecting);
+          });
+          updateCategoryBar();
+        }, { rootMargin: '0px 0px -50% 0px', threshold: 0 });
+        sections.forEach(section => observer.observe(section));
       }
       
       // Scroll to hash anchor on page load
@@ -735,14 +751,13 @@
       
       document.addEventListener('DOMContentLoaded', () => {
         syncWheelOffsets();
-        updateCategoryBar();
+        initCategoryBarObserver();
         scrollToHash();
       });
       window.addEventListener('resize', syncWheelOffsets);
       window.addEventListener('load', syncWheelOffsets);
       window.addEventListener('scroll', () => {
         syncWheelOffsets();
-        updateCategoryBar();
       });
       window.addEventListener('hashchange', scrollToHash);
     </script>
