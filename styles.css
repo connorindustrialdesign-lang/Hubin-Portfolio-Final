@@ -695,7 +695,7 @@ main{width:100%;margin:0;padding:0}
   .tile--bottom-right{grid-column:1;grid-row:auto}
   
   /* Responsive category bar */
-  .category-bar{height:auto;flex-wrap:wrap;gap:0;display:grid;grid-template-columns:1fr 1fr;top:56px}
+  .category-bar{height:auto;flex-wrap:wrap;gap:0;display:grid;grid-template-columns:1fr 1fr;top:51px}
   .category-bar a{padding:10px 0;font-size:13px;line-height:1.3;text-align:center;border-bottom:1px solid rgba(255,255,255,0.1)}
   .category-bar a.active{border-bottom:3px solid currentColor}
   body.project-detail-page .category-bar{padding:8px 4px;top:0;gap:6px 10px}
@@ -709,8 +709,8 @@ main{width:100%;margin:0;padding:0}
   .nav-about::before{font-size:14px}
 
   /* Ensure content clears fixed header + 2x2 category bar on mobile */
-  body[data-page="home"]{padding-top:140px !important}
-  body[data-page="about"]{padding-top:140px !important}
+  body[data-page="home"]{padding-top:130px !important}
+  body[data-page="about"]{padding-top:130px !important}
 }
 
 /* Extra small phones */
@@ -723,7 +723,7 @@ main{width:100%;margin:0;padding:0}
   .category-bar a.active{border-bottom:3px solid currentColor}
   
   /* Hide site header completely on very small screens, show hamburger instead */
-  .site-header{padding:12px 0;background:#fafaf8}
+  .site-header{padding:12px 0;background:#fff}
   .site-name{font-size:16px}
   .nav-about{font-size:0}
   .nav-about::before{font-size:12px}
